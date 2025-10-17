@@ -25,3 +25,24 @@
 }
 
 /* Using Tailwind's container utility (configured in tailwind.config.cjs) */
+
+/* NORMAL HOVER EFFECTS */
+@layer components {
+  .service-card {
+    transition: all 0.3s ease-out;
+  }
+
+  .service-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  }
+
+  .highlight-card {
+    transition: all 0.3s ease-out;
+  }
+
+  .highlight-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  }
+}

@@ -1,8 +1,20 @@
-import React, { useLayoutEffect, useRef } from 'react';
+import React, { useLayoutEffect, useRef, useState, useEffect } from 'react';
+import { motion, AnimatePresence, useInView } from 'framer-motion';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Link } from 'react-router-dom';
 import HighlightCard from '../components/HighlightCard';
+import { 
+  LoadingScreen, 
+  FloatingElements, 
+  ScrollProgress,
+  pageVariants,
+  heroVariants,
+  titleVariants,
+  subtitleVariants,
+  sectionVariants,
+  cardVariants
+} from '../utils/pageAnimations.jsx';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -55,32 +67,51 @@ export default function About() {
   const servicesRef = useRef(null);
   const whyRef = useRef(null);
   const contactRef = useRef(null);
+  const progressRef = useRef(null);
+  useEffect(() => {
+
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const percent = docHeight > 0 ? Math.min(scrollY / docHeight, 1) : 0;
+      
+      // Update progress bar
+      if (progressRef.current) {
+        progressRef.current.style.transform = `scaleX(${percent})`;
+      }
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   useLayoutEffect(() => {
     const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (prefersReduced) return;
 
     const ctx = gsap.context(() => {
-      gsap.from(heroRef.current, { y: 40, opacity: 0, duration: 0.9, ease: 'power3.out' });
+      gsap.from(heroRef.current, { y: 25, opacity: 0, duration: 0.4, ease: 'power3.out' });
       gsap.from('.service-card', {
         scrollTrigger: { trigger: servicesRef.current, start: 'top 85%', once: true },
-        y: 30,
+        y: 20,
         opacity: 0,
-        stagger: 0.06,
-        duration: 0.6,
+        stagger: 0.04,
+        duration: 0.4,
         ease: 'power3.out',
       });
       gsap.from(whyRef.current, {
         scrollTrigger: { trigger: whyRef.current, start: 'top 85%', once: true },
-        y: 20,
+        y: 15,
         opacity: 0,
-        duration: 0.6,
+        duration: 0.4,
       });
       gsap.from(contactRef.current, {
         scrollTrigger: { trigger: contactRef.current, start: 'top 85%', once: true },
-        y: 20,
+        y: 15,
         opacity: 0,
-        duration: 0.6,
+        duration: 0.4,
       });
     }, rootRef);
 
@@ -88,30 +119,80 @@ export default function About() {
   }, []);
 
   return (
-    <div ref={rootRef}>
+    <div ref={rootRef} className="relative overflow-hidden">
+      {/* Loading Screen - Disabled for faster experience */}
+      {/* <AnimatePresence>
+        {isPageLoading && (
+          <LoadingScreen
+            isVisible={isPageLoading}
+            onComplete={() => setIsPageLoading(false)}
+          />
+        )}
+      </AnimatePresence> */}
+
+      {/* Floating Background Elements */}
+      <FloatingElements />
+
+      {/* Scroll Progress Indicator */}
+      <ScrollProgress progressRef={progressRef} />
+
       {/* Hero */}
-      <section ref={heroRef} className="py-24 px-6 bg-gradient-to-br from-lightBlue to-white">
+      <motion.section
+        ref={heroRef}
+        className="py-24 px-6 bg-gradient-to-br from-lightBlue to-white"
+        initial={{ opacity: 0, y: 25 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.1, duration: 0.4, ease: "easeOut" }}
+      >
         <div className="container mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
           <div className="md:col-span-7">
-            <h1 className="font-heading text-4xl md:text-5xl font-bold text-primary mb-4">
+            <motion.h1
+              className="font-heading text-4xl md:text-5xl font-bold text-primary mb-4"
+              variants={titleVariants}
+              initial="initial"
+              animate="animate"
+              transition={{ delay: 0.2, duration: 0.3, ease: "easeOut" }}
+              whileHover="hover"
+            >
               At Contentora Media, the right words transform your brand
-            </h1>
-            <p className="text-lg text-gray-700 max-w-3xl leading-relaxed">
+            </motion.h1>
+            <motion.p
+              className="text-lg text-gray-700 max-w-3xl leading-relaxed"
+              variants={subtitleVariants}
+              initial="initial"
+              animate="animate"
+              transition={{ delay: 0.3, duration: 0.3, ease: "easeOut" }}
+            >
               Content creation is more than writing. We craft content that reflects your brand's
               unique identity and builds meaningful connections. Our simple approach helps you
               communicate with clarity, creativity, and measurable impact.
-            </p>
-            <div className="mt-6 flex gap-4">
-              <Link to="/" className="inline-block bg-primary text-white px-5 py-3 rounded-lg">
-                Back to Home
-              </Link>
-              <a
-                href="#services"
-                className="inline-block border border-gray-300 px-5 py-3 rounded-lg"
+            </motion.p>
+            <motion.div
+              className="mt-6 flex gap-4"
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4, duration: 0.3, ease: "easeOut" }}
+            >
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
-                Our Services
-              </a>
-            </div>
+                <Link to="/" className="inline-block bg-primary text-white px-5 py-3 rounded-lg">
+                  Back to Home
+                </Link>
+              </motion.div>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <a
+                  href="#services"
+                  className="inline-block border border-gray-300 px-5 py-3 rounded-lg"
+                >
+                  Our Services
+                </a>
+              </motion.div>
+            </motion.div>
           </div>
 
           <div className="md:col-span-5">
@@ -124,33 +205,61 @@ export default function About() {
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Services list */}
-      <section id="services" ref={servicesRef} className="py-20 px-6 bg-white">
+      <motion.section
+        id="services"
+        ref={servicesRef}
+        className="py-20 px-6 bg-gray-50"
+        variants={sectionVariants}
+        initial="initial"
+        animate="animate"
+        transition={{ delay: 0.5, duration: 0.4, ease: "easeOut" }}
+      >
         <div className="container mx-auto">
-          <h2 className="font-heading text-3xl md:text-4xl font-bold text-gray-900 text-center mb-6">
+          <motion.h2
+            className="font-heading text-3xl md:text-4xl font-bold text-primary text-center mb-6"
+            variants={titleVariants}
+            initial="initial"
+            animate="animate"
+            transition={{ delay: 0.6, duration: 0.3, ease: "easeOut" }}
+            whileHover="hover"
+          >
             Our Services
-          </h2>
-          <p className="text-center text-gray-600 max-w-2xl mx-auto mb-10">
+          </motion.h2>
+          <motion.p
+            className="text-center text-gray-600 max-w-2xl mx-auto mb-10"
+            variants={subtitleVariants}
+            initial="initial"
+            animate="animate"
+            transition={{ delay: 0.7, duration: 0.3, ease: "easeOut" }}
+          >
             Whether you want to build awareness, launch a campaign, or strengthen your online
             presence — our services cover every stage of your content journey.
-          </p>
+          </motion.p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {services.map((s) => (
-              <div key={s.title} className="service-card bg-white p-6 rounded-lg shadow-sm h-full">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {services.map((s, index) => (
+              <motion.div 
+                key={s.title} 
+                className="service-card bg-blue-50 border border-gray-200 p-6 rounded-lg shadow-sm h-full"
+                variants={cardVariants}
+                initial="initial"
+                animate={cardVariants.animate(index)}
+                whileHover="hover"
+              >
                 <HighlightCard title={s.title} description={s.description} icon={s.icon} />
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Why choose us */}
-      <section ref={whyRef} className="py-20 px-6 bg-gray-50">
+      <section ref={whyRef} className="py-20 px-6 bg-white">
         <div className="container mx-auto max-w-5xl text-center">
-          <h2 className="font-heading text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary mb-4">
             Why choose Contentora Media?
           </h2>
           <p className="text-gray-700 mb-6">
@@ -158,21 +267,21 @@ export default function About() {
             time.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <article className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="font-heading font-semibold mb-2">Your brand, your voice</h3>
+          <div className="grid md:grid-cols-3 gap-6">
+            <article className="bg-orange-50 border border-gray-200 p-6 rounded-lg shadow-sm">
+              <h3 className="font-heading font-semibold mb-2 text-primary">Your brand, your voice</h3>
               <p className="text-sm text-gray-600">
                 We craft unique, plagiarism-free content that reflects your identity.
               </p>
             </article>
-            <article className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="font-heading font-semibold mb-2">Words that work</h3>
+            <article className="bg-orange-50 border border-gray-200 p-6 rounded-lg shadow-sm">
+              <h3 className="font-heading font-semibold mb-2 text-primary">Words that work</h3>
               <p className="text-sm text-gray-600">
                 Content written to engage, inform and convert your audience.
               </p>
             </article>
-            <article className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="font-heading font-semibold mb-2">Affordable excellence</h3>
+            <article className="bg-orange-50 border border-gray-200 p-6 rounded-lg shadow-sm">
+              <h3 className="font-heading font-semibold mb-2 text-primary">Affordable excellence</h3>
               <p className="text-sm text-gray-600">
                 High-quality content with flexible, budget-friendly packages.
               </p>
@@ -182,26 +291,26 @@ export default function About() {
       </section>
 
       {/* Values & process */}
-      <section className="py-20 px-6 bg-white">
+      <section className="py-20 px-6 bg-lightBlue">
         <div className="container mx-auto max-w-5xl">
-          <h3 className="font-heading text-2xl md:text-3xl font-semibold mb-6 text-center">
+          <h3 className="font-heading text-2xl md:text-3xl font-semibold mb-6 text-center text-primary">
             How we work
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <h4 className="font-semibold mb-2">Research & Strategy</h4>
+            <div className="bg-white border border-gray-200 p-6 rounded-lg shadow-sm">
+              <h4 className="font-semibold mb-2 text-primary">Research & Strategy</h4>
               <p className="text-sm text-gray-600">
                 We start by understanding your business, audience and competitors.
               </p>
             </div>
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <h4 className="font-semibold mb-2">Writing & Optimization</h4>
+            <div className="bg-white border border-gray-200 p-6 rounded-lg shadow-sm">
+              <h4 className="font-semibold mb-2 text-primary">Writing & Optimization</h4>
               <p className="text-sm text-gray-600">
                 Content is crafted for clarity, SEO and conversion.
               </p>
             </div>
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <h4 className="font-semibold mb-2">Review & Delivery</h4>
+            <div className="bg-white border border-gray-200 p-6 rounded-lg shadow-sm">
+              <h4 className="font-semibold mb-2 text-primary">Review & Delivery</h4>
               <p className="text-sm text-gray-600">
                 We refine and deliver on time, with revisions until it's right.
               </p>

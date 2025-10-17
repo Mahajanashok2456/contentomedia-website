@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 // Prefer the project root AVIF you provided; if absent, fall back to the asset folder AVIF
-import logoAvif from '/src/pages/without-background-1-A0xlZlnxy0tkOVrv.avif';
+import logoAvif from '/src/assets/images/logo.png';
 import logoWebp from '/src/assets/images/logo.webp';
 import logoSvg from '/src/assets/images/logo.svg';
 import logoPng from '/src/assets/images/logo.png';
+
 export default function Header() {
   const [open, setOpen] = useState(false);
   const location = useLocation();
@@ -35,19 +36,20 @@ export default function Header() {
             <source srcSet={logoAvif} type="image/avif" />
             <source srcSet={logoWebp} type="image/webp" />
             <source srcSet={logoSvg} type="image/svg+xml" />
+          
             <img
               src={logoPng}
               alt="Contentora Media logo"
               width={375}
               height={375}
-              className="w-[120px] h-[120px] object-contain"
+              className="w-[50px] h-[50px] object-contain"
             />
           </picture>
-          <span className="font-semibold">Contentora Media</span>
+          <span className="font-semibold">Contentora <span className='text-secondary'>Media</span></span>
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden md:flex items-center gap-6 font-body">
+        <nav className="hidden md:flex items-center gap-6 font-body font-semibold">
           <NavLink
             to="/"
             className={({ isActive }) => (isActive ? 'text-primary' : 'hover:text-primary')}
