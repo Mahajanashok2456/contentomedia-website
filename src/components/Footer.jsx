@@ -1,24 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import ContactForm from './ContactForm';
-import logoBtm from '/src/assets/images/image.png';
+import logoBtm from '../assets/images/image.png';
 
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-gray-300">
       <div className="container mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
         <div>
-            <img
-                        src={logoBtm}
-                        alt="Contentora Media logo"
-                        width={200}
-                        height={200
-                          
-                        }
-                        className="w-[50px] h-[50px] rounded-md mb-2 object-contain"
-                      />
+          <img
+            src={logoBtm}
+            alt="Contentora Media logo"
+            width={200}
+            height={200}
+            className="w-[50px] h-[50px] rounded-md mb-2 object-contain"
+          />
           <div className="font-heading text-xl text-white">Contentora Media</div>
-          <div className="mt-2 text-sm">Give your website wings to fly high and thrive with ContentOra Media!</div>
+          <div className="mt-2 text-sm">
+            Give your website wings to fly high and thrive with ContentOra Media!
+          </div>
         </div>
 
         <div>
@@ -56,19 +56,11 @@ export default function Footer() {
           </div> */}
         </div>
 
-
         <div>
           <div className="font-heading text-lg mb-4 text-white">Hours</div>
-          <div className="text-sm">
-           MON-SAT - 9:00 AM - 10:00 PM
-           
-          </div>
-          <div className="text-sm mt-2">
-            SUNDAY -   Closed
-          </div>
-
+          <div className="text-sm">MON-SAT - 9:00 AM - 10:00 PM</div>
+          <div className="text-sm mt-2">SUNDAY - Closed</div>
         </div>
-
       </div>
 
       <div className="border-t border-gray-800 py-6">

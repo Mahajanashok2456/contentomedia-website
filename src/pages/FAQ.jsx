@@ -1,6 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import FAQItem from '../components/FAQItem';
+import undrawIllustration from '../assets/images/undraw_on-the-way_zwi3.svg';
 
 const faqs = [
   {
@@ -9,14 +10,15 @@ const faqs = [
     answer:
       'Every piece of our content is written from scratch by our professional writers. We use advanced plagiarism detection tools and manual review processes to ensure 100% originality. Our content goes through multiple quality checks before delivery to guarantee it is completely unique and authentic.',
     iconType: 'plagiarism',
-    color: 'blue'
+    color: 'blue',
   },
   {
     id: 2,
     question: 'Can you write for my specific business or industry?',
-    answer: 'Absolutely! Our team consists of writers with expertise across various industries including technology, healthcare, finance, e-commerce, and more. We conduct thorough research on your industry, competitors, and target audience to create content that resonates with your specific market and business goals.',
+    answer:
+      'Absolutely! Our team consists of writers with expertise across various industries including technology, healthcare, finance, e-commerce, and more. We conduct thorough research on your industry, competitors, and target audience to create content that resonates with your specific market and business goals.',
     iconType: 'industry',
-    color: 'red'
+    color: 'red',
   },
   {
     id: 3,
@@ -24,22 +26,23 @@ const faqs = [
     answer:
       'Yes, we provide comprehensive SEO-friendly content that improves your search engine visibility while maintaining readability and natural flow. Our content includes proper keyword optimization, meta descriptions, internal linking suggestions, and follows the latest SEO best practices to help your content rank higher in search results.',
     iconType: 'seo',
-    color: 'blue'
+    color: 'blue',
   },
   {
     id: 4,
     question: 'What if I need my project completed quickly?',
-    answer: 'We offer express delivery services for urgent projects. Depending on the scope and complexity, we can deliver quality content within 24-48 hours for rush orders. We never compromise on quality, even with tight deadlines, ensuring you receive professional content that meets your standards.',
+    answer:
+      'We offer express delivery services for urgent projects. Depending on the scope and complexity, we can deliver quality content within 24-48 hours for rush orders. We never compromise on quality, even with tight deadlines, ensuring you receive professional content that meets your standards.',
     iconType: 'quick',
-    color: 'red'
+    color: 'red',
   },
   {
     id: 5,
     question: 'How do I start working with Contentora Media?',
     answer:
-      'Getting started is simple! You can reach out to us through our contact page, send us an email, or schedule a free consultation call. We\'ll discuss your content needs, goals, and requirements, then create a customized content strategy that fits your budget and timeline. Our team will guide you through every step of the process.',
+      "Getting started is simple! You can reach out to us through our contact page, send us an email, or schedule a free consultation call. We'll discuss your content needs, goals, and requirements, then create a customized content strategy that fits your budget and timeline. Our team will guide you through every step of the process.",
     iconType: 'start',
-    color: 'blue'
+    color: 'blue',
   },
   {
     id: 6,
@@ -47,15 +50,15 @@ const faqs = [
     answer:
       'We offer a comprehensive range of content services including blog posts, website copy, social media content, email marketing campaigns, technical documentation, product descriptions, press releases, and more. Each piece is tailored to your specific needs and brand voice.',
     iconType: 'content',
-    color: 'red'
+    color: 'red',
   },
   {
     id: 7,
     question: 'Do you provide revisions and edits?',
     answer:
-      'Yes, we include unlimited revisions in all our packages to ensure you\'re completely satisfied with the final content. We work closely with you to refine and perfect every piece until it meets your exact requirements and expectations.',
+      "Yes, we include unlimited revisions in all our packages to ensure you're completely satisfied with the final content. We work closely with you to refine and perfect every piece until it meets your exact requirements and expectations.",
     iconType: 'revisions',
-    color: 'blue'
+    color: 'blue',
   },
   {
     id: 8,
@@ -63,7 +66,7 @@ const faqs = [
     answer:
       'Our pricing is flexible and depends on the type of content, word count, complexity, and turnaround time. We offer competitive rates and various packages to fit different budgets. Contact us for a personalized quote based on your specific content needs.',
     iconType: 'pricing',
-    color: 'red'
+    color: 'red',
   },
 ];
 
@@ -71,7 +74,6 @@ export default function FAQ() {
   const illustrationRef = useRef(null);
   const progressRef = useRef(null);
   useEffect(() => {
-
     const handleScroll = () => {
       if (!illustrationRef.current) return;
       const scrollY = window.scrollY;
@@ -80,13 +82,13 @@ export default function FAQ() {
       const illustrationWidth = 80;
       const maxX = window.innerWidth - illustrationWidth;
       illustrationRef.current.style.transform = `translateX(${percent * maxX}px)`;
-      
+
       // Update progress bar
       if (progressRef.current) {
         progressRef.current.style.transform = `scaleX(${percent})`;
       }
     };
-    
+
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
@@ -99,18 +101,17 @@ export default function FAQ() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-lightBlue to-white py-20 px-4 relative overflow-hidden">
-
       {/* Animated Illustration */}
       <motion.div
         ref={illustrationRef}
         className="fixed left-0 bottom-10 z-40 w-20 h-20 pointer-events-none"
         initial={{ x: -100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
-        transition={{ delay: 1.2, duration: 0.8, ease: "easeOut" }}
+        transition={{ delay: 1.2, duration: 0.8, ease: 'easeOut' }}
         whileHover={{ scale: 1.1, rotate: 5 }}
       >
         <img
-          src="/src/assets/images/undraw_on-the-way_zwi3.svg"
+          src={undrawIllustration}
           alt="Moving Illustration"
           className="w-full h-full drop-shadow-lg"
         />
@@ -126,7 +127,7 @@ export default function FAQ() {
         transition={{
           duration: 4,
           repeat: Infinity,
-          ease: "easeInOut"
+          ease: 'easeInOut',
         }}
       />
       <motion.div
@@ -138,8 +139,8 @@ export default function FAQ() {
         transition={{
           duration: 3,
           repeat: Infinity,
-          ease: "easeInOut",
-          delay: 1
+          ease: 'easeInOut',
+          delay: 1,
         }}
       />
 
@@ -148,19 +149,19 @@ export default function FAQ() {
         className="max-w-7xl mx-auto mb-16"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.1, duration: 0.4, ease: "easeOut" }}
+        transition={{ delay: 0.1, duration: 0.4, ease: 'easeOut' }}
       >
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.2, duration: 0.3, ease: "easeOut" }}
+          transition={{ delay: 0.2, duration: 0.3, ease: 'easeOut' }}
         >
           <motion.h1
             className="font-heading text-4xl md:text-5xl font-bold text-primary tracking-tight mb-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3, duration: 0.3, ease: "easeOut" }}
+            transition={{ delay: 0.3, duration: 0.3, ease: 'easeOut' }}
             whileHover={{ scale: 1.02 }}
           >
             Frequently Asked Questions
@@ -169,7 +170,7 @@ export default function FAQ() {
             className="text-lg text-gray-700 max-w-2xl mx-auto"
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4, duration: 0.3, ease: "easeOut" }}
+            transition={{ delay: 0.4, duration: 0.3, ease: 'easeOut' }}
           >
             Find answers to common questions about our content writing services, process, and how to
             get started.
@@ -181,14 +182,14 @@ export default function FAQ() {
           className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5, duration: 0.4, ease: "easeOut" }}
+          transition={{ delay: 0.5, duration: 0.4, ease: 'easeOut' }}
         >
           {/* Left Column */}
           <motion.div
             className="space-y-0"
             initial={{ x: -30, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
-            transition={{ delay: 0.6, duration: 0.3, ease: "easeOut" }}
+            transition={{ delay: 0.6, duration: 0.3, ease: 'easeOut' }}
           >
             {leftColumnFaqs.map((faq, index) => (
               <FAQItem
@@ -208,7 +209,7 @@ export default function FAQ() {
             className="space-y-0"
             initial={{ x: 30, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
-            transition={{ delay: 0.7, duration: 0.3, ease: "easeOut" }}
+            transition={{ delay: 0.7, duration: 0.3, ease: 'easeOut' }}
           >
             {rightColumnFaqs.map((faq, index) => (
               <FAQItem

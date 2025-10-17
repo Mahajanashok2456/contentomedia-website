@@ -4,17 +4,18 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Link } from 'react-router-dom';
 import HighlightCard from '../components/HighlightCard';
-import { 
-  LoadingScreen, 
-  FloatingElements, 
+import {
+  LoadingScreen,
+  FloatingElements,
   ScrollProgress,
   pageVariants,
   heroVariants,
   titleVariants,
   subtitleVariants,
   sectionVariants,
-  cardVariants
+  cardVariants,
 } from '../utils/pageAnimations.jsx';
+import logoSvg from '../assets/images/logo.svg';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -69,18 +70,17 @@ export default function About() {
   const contactRef = useRef(null);
   const progressRef = useRef(null);
   useEffect(() => {
-
     const handleScroll = () => {
       const scrollY = window.scrollY;
       const docHeight = document.documentElement.scrollHeight - window.innerHeight;
       const percent = docHeight > 0 ? Math.min(scrollY / docHeight, 1) : 0;
-      
+
       // Update progress bar
       if (progressRef.current) {
         progressRef.current.style.transform = `scaleX(${percent})`;
       }
     };
-    
+
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
@@ -142,7 +142,7 @@ export default function About() {
         className="py-24 px-6 bg-gradient-to-br from-lightBlue to-white"
         initial={{ opacity: 0, y: 25 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.1, duration: 0.4, ease: "easeOut" }}
+        transition={{ delay: 0.1, duration: 0.4, ease: 'easeOut' }}
       >
         <div className="container mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
           <div className="md:col-span-7">
@@ -151,7 +151,7 @@ export default function About() {
               variants={titleVariants}
               initial="initial"
               animate="animate"
-              transition={{ delay: 0.2, duration: 0.3, ease: "easeOut" }}
+              transition={{ delay: 0.2, duration: 0.3, ease: 'easeOut' }}
               whileHover="hover"
             >
               At Contentora Media, the right words transform your brand
@@ -161,7 +161,7 @@ export default function About() {
               variants={subtitleVariants}
               initial="initial"
               animate="animate"
-              transition={{ delay: 0.3, duration: 0.3, ease: "easeOut" }}
+              transition={{ delay: 0.3, duration: 0.3, ease: 'easeOut' }}
             >
               Content creation is more than writing. We craft content that reflects your brand's
               unique identity and builds meaningful connections. Our simple approach helps you
@@ -171,20 +171,14 @@ export default function About() {
               className="mt-6 flex gap-4"
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4, duration: 0.3, ease: "easeOut" }}
+              transition={{ delay: 0.4, duration: 0.3, ease: 'easeOut' }}
             >
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 <Link to="/" className="inline-block bg-primary text-white px-5 py-3 rounded-lg">
                   Back to Home
                 </Link>
               </motion.div>
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 <a
                   href="#services"
                   className="inline-block border border-gray-300 px-5 py-3 rounded-lg"
@@ -197,11 +191,7 @@ export default function About() {
 
           <div className="md:col-span-5">
             <div className="rounded-2xl overflow-hidden shadow-xl bg-white">
-              <img
-                src="/src/assets/images/logo.svg"
-                alt="About media"
-                className="w-full h-56 object-cover"
-              />
+              <img src={logoSvg} alt="About media" className="w-full h-56 object-cover" />
             </div>
           </div>
         </div>
@@ -215,7 +205,7 @@ export default function About() {
         variants={sectionVariants}
         initial="initial"
         animate="animate"
-        transition={{ delay: 0.5, duration: 0.4, ease: "easeOut" }}
+        transition={{ delay: 0.5, duration: 0.4, ease: 'easeOut' }}
       >
         <div className="container mx-auto">
           <motion.h2
@@ -223,7 +213,7 @@ export default function About() {
             variants={titleVariants}
             initial="initial"
             animate="animate"
-            transition={{ delay: 0.6, duration: 0.3, ease: "easeOut" }}
+            transition={{ delay: 0.6, duration: 0.3, ease: 'easeOut' }}
             whileHover="hover"
           >
             Our Services
@@ -233,7 +223,7 @@ export default function About() {
             variants={subtitleVariants}
             initial="initial"
             animate="animate"
-            transition={{ delay: 0.7, duration: 0.3, ease: "easeOut" }}
+            transition={{ delay: 0.7, duration: 0.3, ease: 'easeOut' }}
           >
             Whether you want to build awareness, launch a campaign, or strengthen your online
             presence — our services cover every stage of your content journey.
@@ -241,8 +231,8 @@ export default function About() {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((s, index) => (
-              <motion.div 
-                key={s.title} 
+              <motion.div
+                key={s.title}
                 className="service-card bg-blue-50 border border-gray-200 p-6 rounded-lg shadow-sm h-full"
                 variants={cardVariants}
                 initial="initial"
@@ -269,7 +259,9 @@ export default function About() {
 
           <div className="grid md:grid-cols-3 gap-6">
             <article className="bg-orange-50 border border-gray-200 p-6 rounded-lg shadow-sm">
-              <h3 className="font-heading font-semibold mb-2 text-primary">Your brand, your voice</h3>
+              <h3 className="font-heading font-semibold mb-2 text-primary">
+                Your brand, your voice
+              </h3>
               <p className="text-sm text-gray-600">
                 We craft unique, plagiarism-free content that reflects your identity.
               </p>
@@ -281,7 +273,9 @@ export default function About() {
               </p>
             </article>
             <article className="bg-orange-50 border border-gray-200 p-6 rounded-lg shadow-sm">
-              <h3 className="font-heading font-semibold mb-2 text-primary">Affordable excellence</h3>
+              <h3 className="font-heading font-semibold mb-2 text-primary">
+                Affordable excellence
+              </h3>
               <p className="text-sm text-gray-600">
                 High-quality content with flexible, budget-friendly packages.
               </p>

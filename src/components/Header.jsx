@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 // Prefer the project root AVIF you provided; if absent, fall back to the asset folder AVIF
-import logoAvif from '/src/assets/images/logo.png';
-import logoWebp from '/src/assets/images/logo.webp';
-import logoSvg from '/src/assets/images/logo.svg';
-import logoPng from '/src/assets/images/logo.png';
+import logoAvif from '../assets/images/logo.png';
+import logoWebp from '../assets/images/logo.webp';
+import logoSvg from '../assets/images/logo.svg';
+import logoPng from '../assets/images/logo.png';
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -36,7 +36,7 @@ export default function Header() {
             <source srcSet={logoAvif} type="image/avif" />
             <source srcSet={logoWebp} type="image/webp" />
             <source srcSet={logoSvg} type="image/svg+xml" />
-          
+
             <img
               src={logoPng}
               alt="Contentora Media logo"
@@ -45,7 +45,9 @@ export default function Header() {
               className="w-[50px] h-[50px] object-contain"
             />
           </picture>
-          <span className="font-semibold">Contentora <span className='text-secondary'>Media</span></span>
+          <span className="font-semibold">
+            Contentora <span className="text-secondary">Media</span>
+          </span>
         </Link>
 
         {/* Desktop nav */}

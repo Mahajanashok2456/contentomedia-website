@@ -5,17 +5,19 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import ServiceCard from '../components/ServiceCard';
 import TestimonialSlider from '../components/TestimonialSlider';
-import { 
-  LoadingScreen, 
-  FloatingElements, 
+import {
+  LoadingScreen,
+  FloatingElements,
   ScrollProgress,
   pageVariants,
   heroVariants,
   titleVariants,
   subtitleVariants,
   sectionVariants,
-  cardVariants
+  cardVariants,
 } from '../utils/pageAnimations.jsx';
+import homeIcon from '../assets/images/homeicon.jpg';
+import bigImage from '../assets/images/bigImage.png';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -79,22 +81,21 @@ export default function Home() {
   const blogsRef = useRef();
   const newsletterRef = useRef();
   const progressRef = useRef(null);
-  
+
   const [newsletterEmail, setNewsletterEmail] = useState('');
 
   useEffect(() => {
-
     const handleScroll = () => {
       const scrollY = window.scrollY;
       const docHeight = document.documentElement.scrollHeight - window.innerHeight;
       const percent = docHeight > 0 ? Math.min(scrollY / docHeight, 1) : 0;
-      
+
       // Update progress bar
       if (progressRef.current) {
         progressRef.current.style.transform = `scaleX(${percent})`;
       }
     };
-    
+
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
@@ -237,7 +238,7 @@ export default function Home() {
         className="min-h-screen flex items-center bg-gradient-to-br from-lightBlue to-white"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.1, duration: 0.4, ease: "easeOut" }}
+        transition={{ delay: 0.1, duration: 0.4, ease: 'easeOut' }}
       >
         <div className="container mx-auto px-6 py-16">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
@@ -248,7 +249,7 @@ export default function Home() {
                 variants={titleVariants}
                 initial="initial"
                 animate="animate"
-                transition={{ delay: 0.2, duration: 0.3, ease: "easeOut" }}
+                transition={{ delay: 0.2, duration: 0.3, ease: 'easeOut' }}
                 whileHover="hover"
               >
                 Welcome to ContentOra Media
@@ -258,7 +259,7 @@ export default function Home() {
                 variants={subtitleVariants}
                 initial="initial"
                 animate="animate"
-                transition={{ delay: 0.3, duration: 0.3, ease: "easeOut" }}
+                transition={{ delay: 0.3, duration: 0.3, ease: 'easeOut' }}
               >
                 Your website looks unengaging or inconsistent, drives less traffic, or feels
                 irrelevant? No more. Our recognised collaborative team of reliable marketing
@@ -270,12 +271,9 @@ export default function Home() {
                 className="flex items-center gap-4 mb-6"
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4, duration: 0.3, ease: "easeOut" }}
+                transition={{ delay: 0.4, duration: 0.3, ease: 'easeOut' }}
               >
-                <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
+                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                   <Link
                     to="/about"
                     className="hero-cta bg-primary text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition font-semibold"
@@ -283,10 +281,7 @@ export default function Home() {
                     Start Your Free Strategy Session
                   </Link>
                 </motion.div>
-                <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
+                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                   <Link to="/faq" className="text-primary font-medium">
                     FAQ
                   </Link>
@@ -328,7 +323,7 @@ export default function Home() {
                 <div className="rounded-3xl overflow-hidden shadow-2xl">
                   <img
                     ref={heroImageRef}
-                    src="/src/assets/images/homeicon.jpg"
+                    src={homeIcon}
                     alt="media"
                     className="w-full h-96 object-cover"
                   />
@@ -386,7 +381,9 @@ export default function Home() {
               tabIndex={0}
             >
               <div className="text-4xl mb-4">⚡</div>
-              <h3 className="font-heading text-primary  font-semibold mb-2">Increased efficiency</h3>
+              <h3 className="font-heading text-primary  font-semibold mb-2">
+                Increased efficiency
+              </h3>
               <p className="text-sm text-gray-600">
                 Streamline content operations to save time and scale.
               </p>
@@ -410,7 +407,9 @@ export default function Home() {
               tabIndex={0}
             >
               <div className="text-4xl mb-4">📊</div>
-              <h3 className="font-heading text-primary  font-semibold mb-2">Data-driven innovation</h3>
+              <h3 className="font-heading text-primary  font-semibold mb-2">
+                Data-driven innovation
+              </h3>
               <p className="text-sm text-gray-600">
                 Use analytics to test, learn, and iterate fast.
               </p>
@@ -473,7 +472,9 @@ export default function Home() {
               tabIndex={0}
             >
               <div className="text-4xl mb-4">🏢</div>
-              <h4 className="font-heading text-primary  font-semibold mb-2">Small business or a start ups</h4>
+              <h4 className="font-heading text-primary  font-semibold mb-2">
+                Small business or a start ups
+              </h4>
               <p className="text-sm text-gray-600">
                 We care for small businesses and tailor strategies to budgets.
               </p>
@@ -485,7 +486,9 @@ export default function Home() {
               tabIndex={0}
             >
               <div className="text-4xl mb-4">🎁</div>
-              <h4 className="font-heading text-primary  font-semibold mb-2">Discount and Commitment</h4>
+              <h4 className="font-heading text-primary  font-semibold mb-2">
+                Discount and Commitment
+              </h4>
               <p className="text-sm text-gray-600">
                 50% introductory discount for initial months on select plans.
               </p>
@@ -514,11 +517,7 @@ export default function Home() {
           </div>
           <div>
             <div className="bg-lightBlue rounded-lg aspect-[5/4] flex items-center justify-center">
-              <img
-                src="/src/assets/images/bigImage.png"
-                alt="Decor"
-                className="w-full h-full object-fit rounded-xl"
-              />
+              <img src={bigImage} alt="Decor" className="w-full h-full object-fit rounded-xl" />
             </div>
           </div>
         </div>
@@ -527,9 +526,7 @@ export default function Home() {
       {/* Featured Services */}
       <section className="py-20 px-6 bg-gray-50">
         <div className="container mx-auto text-center mb-12">
-          <h2 className="font-heading text-primary text-3xl md:text-4xl font-bold">
-            Our Services
-          </h2>
+          <h2 className="font-heading text-primary text-3xl md:text-4xl font-bold">Our Services</h2>
           <p className="text-gray-600 mt-4">Custom solutions for your digital growth</p>
         </div>
 
@@ -676,25 +673,19 @@ export default function Home() {
           >
             View our Projects
           </Link>
-
         </div>
         {/* <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="bg-white p-6 rounded-lg shadow-sm">Project 1</div>
           <div className="bg-white p-6 rounded-lg shadow-sm">Project 2</div>
           <div className="bg-white p-6 rounded-lg shadow-sm">Project 3</div>
         </div> */}
- 
       </section>
-
 
       {/* Blogs */}
 
-      
-         <section ref={blogsRef} className="py-20 px-6 bg-white">
+      <section ref={blogsRef} className="py-20 px-6 bg-white">
         <div className="container mx-auto text-center mb-8">
-          <h2 className="font-heading text-3xl md:text-4xl text-primary font-bold">
-            Our Blogs
-          </h2>
+          <h2 className="font-heading text-3xl md:text-4xl text-primary font-bold">Our Blogs</h2>
           <p className="font-body text-xl font-bold text-gray-800 mt-4 mb-8">
             Read our blogs and get to know more about us on this journey!!
           </p>
@@ -705,12 +696,8 @@ export default function Home() {
           >
             Read more
           </Link>
-
         </div>
- 
       </section>
-
-
 
       {/* Newsletter */}
       <section ref={newsletterRef} className="py-12 px-6 bg-lightBlue">
@@ -732,7 +719,9 @@ export default function Home() {
               placeholder="Your email address"
               className="flex-1 p-2 rounded"
             />
-            <button className="bg-primary hover:bg-blue-600 text-white px-4 py-2 rounded">Submit</button>
+            <button className="bg-primary hover:bg-blue-600 text-white px-4 py-2 rounded">
+              Submit
+            </button>
           </form>
         </div>
       </section>
