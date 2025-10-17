@@ -6,8 +6,18 @@ import App from './App';
 import { ToastProvider } from './components/Toast';
 
 // Initialize AOS (Animate On Scroll) library
-import AOS from 'aos';
-AOS.init();
+// AOS is loaded globally via CDN in index.html
+document.addEventListener('DOMContentLoaded', function () {
+  if (typeof AOS !== 'undefined') {
+    AOS.init({
+      duration: 800,
+      once: true,
+      offset: 100,
+    });
+  } else {
+    console.warn('AOS library not loaded');
+  }
+});
 
 createRoot(document.getElementById('root')).render(
   <React.StrictMode>
