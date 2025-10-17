@@ -216,7 +216,7 @@ export default function About() {
             transition={{ delay: 0.6, duration: 0.3, ease: 'easeOut' }}
             whileHover="hover"
           >
-            Our Services
+            Our <span className="text-secondary">Services</span>
           </motion.h2>
           <motion.p
             className="text-center text-gray-600 max-w-2xl mx-auto mb-10"
@@ -250,7 +250,7 @@ export default function About() {
       <section ref={whyRef} className="py-20 px-6 bg-white">
         <div className="container mx-auto max-w-5xl text-center">
           <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary mb-4">
-            Why choose Contentora Media?
+            Why choose <span className="text-secondary">Contentora Media</span>?
           </h2>
           <p className="text-gray-700 mb-6">
             We deliver impactful, human-first content that's original, affordable and delivered on
@@ -316,7 +316,8 @@ export default function About() {
       {/* Contact */}
       <section
         ref={contactRef}
-        className="py-20 px-6 bg-gradient-to-r from-primary to-secondary text-white"
+        className="py-20 px-6 text-white"
+        style={{ backgroundColor: '#ff6f00ff' }}
       >
         <div className="container mx-auto text-center">
           <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4">Get in touch</h2>
