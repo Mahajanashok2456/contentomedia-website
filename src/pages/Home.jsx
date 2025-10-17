@@ -649,7 +649,7 @@ export default function Home() {
       </section>
 
       {/* Projects / Social proof CTA */}
-      <section className="py-20 px-6 bg-white">
+      <section className="py-20 px-6 bg-orange-50">
         <div className="container mx-auto text-center mb-8">
           <h2 className="font-heading text-3xl md:text-4xl text-secondary font-bold">
             Our Projects
