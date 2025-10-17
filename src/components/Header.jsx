@@ -22,6 +22,7 @@ export default function Header() {
   const navLinks = [
     { to: '/', label: 'Home' },
     { to: '/about', label: 'About' },
+    { to: '/services', label: 'Services' },
     { to: '/faq', label: 'FAQ' },
   ];
 
@@ -65,6 +66,12 @@ export default function Header() {
             About
           </NavLink>
           <NavLink
+            to="/services"
+            className={({ isActive }) => (isActive ? 'text-primary' : 'hover:text-primary')}
+          >
+            Services
+          </NavLink>
+          <NavLink
             to="/faq"
             className={({ isActive }) => (isActive ? 'text-primary' : 'hover:text-primary')}
           >
@@ -104,6 +111,9 @@ export default function Header() {
             </Link>
             <Link to="/about" onClick={closeMenu} className="block font-body">
               About
+            </Link>
+            <Link to="/services" onClick={closeMenu} className="block font-body">
+              Services
             </Link>
             <Link to="/faq" onClick={closeMenu} className="block font-body">
               FAQ
