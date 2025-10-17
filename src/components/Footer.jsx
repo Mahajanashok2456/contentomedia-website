@@ -5,7 +5,39 @@ import logoBtm from '../assets/images/image.png';
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-gray-300">
+    <footer
+      className="text-gray-300"
+      style={{
+        background: `linear-gradient(to bottom, #FB923C, #1A202C)`,
+      }}
+    >
+      {/* CTA Section */}
+      <section className="py-16 px-6 text-white">
+        <div className="container mx-auto text-center">
+          <h2 className="font-heading text-3xl md:text-4xl font-bold">
+            Ready to Elevate Your Content?
+          </h2>
+          <p className="font-body text-lg mt-4 mb-8">
+            Contact us to discuss your content needs and get a custom quote.
+          </p>
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4">
+            <Link
+              to="/about"
+              className="bg-white text-primary px-8 py-3 rounded-lg hover:bg-gray-100 transition"
+            >
+              About Us
+            </Link>
+            <Link
+              to="/faq"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-primary transition"
+            >
+              FAQ
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Main Footer Content */}
       <div className="container mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
         <div>
           <img

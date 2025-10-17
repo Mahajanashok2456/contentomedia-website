@@ -725,26 +725,6 @@ export default function Home() {
           </form>
         </div>
       </section>
-
-      {/* CTA */}
-      <section className="py-16 px-6 bg-orange-400  text-white">
-        <div className="container mx-auto text-center">
-          <h2 className="font-heading text-3xl md:text-4xl font-bold">
-            Ready to Elevate Your Content?
-          </h2>
-          <p className="font-body text-lg mt-4 mb-8">
-            Contact us to discuss your content needs and get a custom quote.
-          </p>
-          <div className="flex flex-col md:flex-row items-center justify-center gap-4">
-            <Link to="/about" className="bg-white text-primary px-8 py-3 rounded-lg">
-              About Us
-            </Link>
-            <Link to="/faq" className="border-2 border-white text-white px-8 py-3 rounded-lg">
-              FAQ
-            </Link>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }
