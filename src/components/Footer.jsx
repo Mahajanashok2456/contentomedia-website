@@ -5,14 +5,9 @@ import logoBtm from '../assets/images/image.png';
 
 export default function Footer() {
   return (
-    <footer
-      className="text-gray-300"
-      style={{
-        background: `linear-gradient(to bottom, #FB923C, #1A202C)`,
-      }}
-    >
+    <footer className="bg-gray-900 text-gray-300">
       {/* CTA Section */}
-      <section className="py-16 px-6 text-white">
+      <section className="py-16 px-6 text-white" style={{ backgroundColor: '#FB923C' }}>
         <div className="container mx-auto text-center">
           <h2 className="font-heading text-3xl md:text-4xl font-bold">
             Ready to Elevate Your Content?
