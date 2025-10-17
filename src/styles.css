@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Poppins:wght@600;700&family=Inter:wght@400;600;700&family=Source+Sans+3:wght@300;400;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  body {
+    font-family: theme('fontFamily.body');
+    @apply bg-white text-gray-800;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: theme('fontFamily.heading');
+  }
+}
+
+/* Using Tailwind's container utility (configured in tailwind.config.cjs) */
+
+/* NORMAL HOVER EFFECTS */
+@layer components {
+  .service-card {
+    transition: all 0.3s ease-out;
+  }
+
+  .service-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  }
+
+  .highlight-card {
+    transition: all 0.3s ease-out;
+  }
+
+  .highlight-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  }
+}
