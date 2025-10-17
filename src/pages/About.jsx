@@ -206,6 +206,7 @@ export default function About() {
         initial="initial"
         animate="animate"
         transition={{ delay: 0.5, duration: 0.4, ease: 'easeOut' }}
+        data-aos="fade-up"
       >
         <div className="container mx-auto">
           <motion.h2
