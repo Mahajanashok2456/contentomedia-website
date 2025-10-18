@@ -317,8 +317,7 @@ export default function About() {
       {/* Contact */}
       <section
         ref={contactRef}
-        className="py-20 px-6 text-white"
-        style={{ backgroundColor: '#FB923C' }}
+        className="py-20 px-6 bg-orange-400 text-white"
       >
         <div className="container mx-auto text-center">
           <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4">Get in touch</h2>

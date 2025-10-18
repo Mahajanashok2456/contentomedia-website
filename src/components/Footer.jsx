@@ -16,7 +16,7 @@ export default function Footer() {
             height={200}
             className="w-[50px] h-[50px] rounded-md mb-2 object-contain"
           />
-          <div className="font-heading text-xl text-white">Contentora Media</div>
+          <div className="font-heading text-xl text-white">ContentOra Media</div>
           <div className="mt-2 text-sm">
             Give your website wings to fly high and thrive with ContentOra Media!
           </div>
@@ -48,7 +48,7 @@ export default function Footer() {
           <div className="text-sm mt-2">
             Phone:{' '}
             <a href="tel:+15551234567" className="hover:text-secondary">
-              +1 (555) 123-4567
+              +91 8450049032
             </a>
           </div>
 
