@@ -350,7 +350,7 @@ export default function Home() {
       </motion.section>
 
       {/* Welcome / Value props */}
-      <section className="py-16 px-6 bg-white">
+       <section className="py-16 px-6 bg-white">
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto text-center mb-8">
             <h2 className="welcome-title font-heading text-3xl md:text-4xl font-bold text-primary">
@@ -368,7 +368,7 @@ export default function Home() {
               role="article"
               tabIndex={0}
             >
-              <div className="text-4xl mb-4">🔍</div>
+              <div className="text-4xl place-items-center mb-4"><img src="/src/assets/icons/clientInsight.png" className='w-12 h-12' alt="" /></div>
               <h3 className="font-heading text-secondary font-semibold mb-2">Client insights</h3>
               <p className="text-sm text-gray-600">
                 Understand who your customers truly are and what they want.
@@ -380,10 +380,8 @@ export default function Home() {
               role="article"
               tabIndex={0}
             >
-              <div className="text-4xl mb-4">⚡</div>
-              <h3 className="font-heading text-primary  font-semibold mb-2">
-                Increased efficiency
-              </h3>
+              <div className="text-4xl place-items-center mb-4"><img src="/src/assets/icons/increased.png" className='w-12 h-12' alt="" /></div>
+              <h3 className="font-heading text-primary  font-semibold mb-2">Increased efficiency</h3>
               <p className="text-sm text-gray-600">
                 Streamline content operations to save time and scale.
               </p>
@@ -394,7 +392,7 @@ export default function Home() {
               role="article"
               tabIndex={0}
             >
-              <div className="text-4xl mb-4">🤖</div>
+              <div className="text-4xl place-items-center mb-4"><img src="/src/assets/icons/process.png" className='w-12 h-12' alt="" /></div>
               <h3 className="font-heading text-secondary font-semibold mb-2">Process automation</h3>
               <p className="text-sm text-gray-600">
                 Automate repetitive tasks to focus on strategy.
@@ -406,10 +404,8 @@ export default function Home() {
               role="article"
               tabIndex={0}
             >
-              <div className="text-4xl mb-4">📊</div>
-              <h3 className="font-heading text-primary  font-semibold mb-2">
-                Data-driven innovation
-              </h3>
+              <div className="text-4xl place-items-center mb-4"><img src="/src/assets/icons/dataDriven.png" className='w-12 h-12' alt="" /></div>
+              <h3 className="font-heading text-primary  font-semibold mb-2">Data-driven innovation</h3>
               <p className="text-sm text-gray-600">
                 Use analytics to test, learn, and iterate fast.
               </p>
@@ -420,7 +416,7 @@ export default function Home() {
               role="article"
               tabIndex={0}
             >
-              <div className="text-4xl mb-4">💵</div>
+              <div className="text-4xl place-items-center mb-4"><img src="/src/assets/icons/costs.png" className='w-12 h-12' alt="" /></div>
               <h3 className="font-heading text-secondary font-semibold mb-2">Reduced costs</h3>
               <p className="text-sm text-gray-600">
                 Cut expenses, optimize resources, and boost profitability effectively.
@@ -432,7 +428,7 @@ export default function Home() {
               role="article"
               tabIndex={0}
             >
-              <div className="text-4xl mb-4">💡</div>
+              <div className="text-4xl place-items-center mb-4"><img src="/src/assets/icons/market.png" className='w-12 h-12' alt="" /></div>
               <h3 className="font-heading text-primary  font-semibold mb-2">Market insights</h3>
               <p className="text-sm text-gray-600">
                 Uncover trends, analyze data, and inform business strategies effectively.
@@ -459,7 +455,7 @@ export default function Home() {
               role="article"
               tabIndex={0}
             >
-              <div className="text-4xl mb-4">✅</div>
+              <div className="text-4xl place-items-center mb-4"><img src="/src/assets/icons/noguess.png" className='w-12 h-12' alt="" /></div>
               <h4 className="font-heading text-primary  font-semibold mb-2">No guess works</h4>
               <p className="text-sm text-gray-600">
                 Decisions backed by data, research and insights.
@@ -471,8 +467,8 @@ export default function Home() {
               role="article"
               tabIndex={0}
             >
-              <div className="text-4xl mb-4">🏢</div>
-              <h4 className="font-heading text-primary  font-semibold mb-2">
+              <div className="text-4xl place-items-center mb-4"><img src="/src/assets/icons/smallBusiness.png" className='w-11 h-11' alt="" /></div>
+              <h4 className="font-heading text-primary font-semibold mb-2">
                 Small business or a start ups
               </h4>
               <p className="text-sm text-gray-600">
@@ -485,7 +481,7 @@ export default function Home() {
               role="article"
               tabIndex={0}
             >
-              <div className="text-4xl mb-4">🎁</div>
+              <div className="text-4xl place-items-center mb-4"><img src="/src/assets/icons/discount.png" className='w-14 h-12' alt="" /></div>
               <h4 className="font-heading text-primary  font-semibold mb-2">
                 Discount and Commitment
               </h4>
@@ -653,7 +649,7 @@ export default function Home() {
       </section>
 
       {/* Projects / Social proof CTA */}
-      <section className="py-20 px-6 bg-white">
+      <section className="py-20 px-6 bg-orange-100">
         <div className="container mx-auto text-center mb-8">
           <h2 className="font-heading text-3xl md:text-4xl text-secondary font-bold">
             Our Projects
@@ -723,6 +719,26 @@ export default function Home() {
               Submit
             </button>
           </form>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-16 px-6 bg-orange-400  text-white">
+        <div className="container mx-auto text-center">
+          <h2 className="font-heading text-3xl md:text-4xl font-bold">
+            Ready to Elevate Your Content?
+          </h2>
+          <p className="font-body text-lg mt-4 mb-8">
+            Contact us to discuss your content needs and get a custom quote.
+          </p>
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4">
+            <Link to="/about" className="bg-white text-primary hover:bg-orange-200 px-8 py-3 rounded-lg">
+              About Us
+            </Link>
+            <Link to="/faq" className="border-2 border-white hover:border-orange-600 text-white px-8 py-3 rounded-lg">
+              FAQ
+            </Link>
+          </div>
         </div>
       </section>
     </div>
