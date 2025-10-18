@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 export default function ServiceCard({ title, description, icon,}) {
   return (
     <motion.article
-      className="bg-white border-2 border-gray-300 hover:border-primary p-6 rounded-xl shadow-lg hover:shadow-xl cursor-pointer relative group transition-all duration-300"
+      className="bg-white border-2 border-gray-300 hover:border-primary p-6 rounded-xl shadow-lg h-full hover:shadow-xl cursor-pointer relative group transition-all duration-300"
       style={{
         transformStyle: 'preserve-3d',
         backfaceVisibility: 'hidden'

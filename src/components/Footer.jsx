@@ -6,7 +6,6 @@ import logoBtm from '../assets/images/image.png';
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-gray-300">
-      {/* Main Footer Content */}
       <div className="container mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
         <div>
           <img
@@ -16,7 +15,7 @@ export default function Footer() {
             height={200}
             className="w-[50px] h-[50px] rounded-md mb-2 object-contain"
           />
-          <div className="font-heading text-xl text-white">Contentora Media</div>
+          <div className="font-heading text-xl text-white">ContentOra Media</div>
           <div className="mt-2 text-sm">
             Give your website wings to fly high and thrive with ContentOra Media!
           </div>
@@ -48,7 +47,7 @@ export default function Footer() {
           <div className="text-sm mt-2">
             Phone:{' '}
             <a href="tel:+15551234567" className="hover:text-secondary">
-              +1 (555) 123-4567
+              +91 8450049032
             </a>
           </div>
 
