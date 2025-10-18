@@ -6,7 +6,6 @@ import logoBtm from '../assets/images/image.png';
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-gray-300">
-      {/* Main Footer Content */}
       <div className="container mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
         <div>
           <img
