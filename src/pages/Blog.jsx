@@ -1,19 +1,6 @@
-import React, { useState } from 'react';
-import {
-  FaShoppingCart,
-  FaHeartbeat,
-  FaBrain,
-  FaSeedling,
-  FaArrowRight,
-  FaBookOpen,
-} from 'react-icons/fa';
-
-const categories = [
-  { id: 'ecommerce', name: 'eCommerce', icon: FaShoppingCart },
-  { id: 'marketing', name: 'Marketing', icon: FaBrain },
-  { id: 'health', name: 'Health & Wellness', icon: FaHeartbeat },
-  { id: 'agriculture', name: 'Agriculture', icon: FaSeedling },
-];
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { FaBookOpen } from 'react-icons/fa';
 
 const blogPosts = [
   {
@@ -53,8 +40,6 @@ const blogPosts = [
 ];
 
 export default function Blog() {
-  const [activeCategory, setActiveCategory] = useState('all');
-
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
@@ -74,51 +59,34 @@ export default function Blog() {
         </div>
       </section>
 
-      {/* Filter/Category Section */}
+      {/* Blog Posts Grid */}
       <section className="py-16 px-6 bg-gray-50" data-aos="fade-up">
         <div className="container mx-auto max-w-6xl">
           <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary text-center mb-12">
-            How will you benefit?
+            The more you know
           </h2>
 
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
-            <button
-              onClick={() => setActiveCategory('all')}
-              className={`px-6 py-3 rounded-full font-semibold transition-colors duration-300 flex items-center gap-2 ${
-                activeCategory === 'all'
-                  ? 'bg-primary text-white'
-                  : 'bg-white text-primary border-2 border-primary hover:bg-primary hover:text-white'
-              }`}
-            >
-              All Posts
-            </button>
-            {categories.map((category) => (
-              <button
-                key={category.id}
-                onClick={() => setActiveCategory(category.id)}
-                className={`px-6 py-3 rounded-full font-semibold transition-colors duration-300 flex items-center gap-2 ${
-                  activeCategory === category.id
-                    ? 'bg-secondary text-white'
-                    : 'bg-white text-secondary border-2 border-secondary hover:bg-secondary hover:text-white'
-                }`}
-              >
-                <category.icon className="text-lg" />
-                {category.name}
-              </button>
-            ))}
-          </div>
-
-          {/* Blog Posts Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-            {blogPosts
-              .filter((post) => activeCategory === 'all' || post.category === activeCategory)
-              .map((post, index) => (
-                <article
+            {blogPosts.map((post, index) => {
+              const slug = post.title
+                .toLowerCase()
+                .replace(/[^a-z0-9]+/g, '-')
+                .replace(/^-+|-+$/g, '');
+
+              return (
+                <Link
                   key={post.id}
-                  className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+                  to={`/blog/${slug}`}
+                  className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 block"
                   data-aos="fade-up"
                   data-aos-delay={index * 100}
                 >
+                  <img
+                    src={`https://source.unsplash.com/random/400x250?${post.category}`}
+                    alt={post.title}
+                    className="w-full h-48 object-cover"
+                  />
+
                   <div className="p-6">
                     <div className="flex items-center justify-between mb-3">
                       <span className="text-sm text-gray-500">{post.date}</span>
@@ -135,14 +103,11 @@ export default function Blog() {
                       <span className="text-sm font-medium text-secondary capitalize">
                         {post.category}
                       </span>
-                      <div className="flex items-center text-primary font-semibold hover:text-secondary transition-colors duration-300 cursor-pointer">
-                        Read More
-                        <FaArrowRight className="ml-2 text-sm" />
-                      </div>
                     </div>
                   </div>
-                </article>
-              ))}
+                </Link>
+              );
+            })}
           </div>
         </div>
       </section>
