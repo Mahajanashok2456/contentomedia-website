@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaBookOpen } from 'react-icons/fa';
 
-const blogPosts = [
+const allBlogPosts = [
   {
     id: 1,
     title: 'How to become a freelance digital marketer?',
@@ -37,9 +37,34 @@ const blogPosts = [
     readTime: '8 min read',
     date: 'Oct 8, 2025',
   },
+  {
+    id: 5,
+    title: 'Content marketing strategies that actually work',
+    excerpt:
+      'Proven content marketing techniques that drive real results for businesses of all sizes...',
+    category: 'marketing',
+    readTime: '6 min read',
+    date: 'Oct 5, 2025',
+  },
+  {
+    id: 6,
+    title: 'Building a successful online store from scratch',
+    excerpt:
+      "Step-by-step guide to launching and growing your eCommerce business in today's digital landscape...",
+    category: 'ecommerce',
+    readTime: '9 min read',
+    date: 'Oct 3, 2025',
+  },
 ];
 
 export default function Blog() {
+  const [currentPage, setCurrentPage] = useState(1);
+  const postsPerPage = 4;
+
+  // Calculate pagination
+  const indexOfLastPost = currentPage * postsPerPage;
+  const indexOfFirstPost = indexOfLastPost - postsPerPage;
+  const currentPosts = allBlogPosts.slice(indexOfFirstPost, indexOfLastPost);
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
@@ -67,7 +92,7 @@ export default function Blog() {
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-            {blogPosts.map((post, index) => {
+            {currentPosts.map((post, index) => {
               const slug = post.title
                 .toLowerCase()
                 .replace(/[^a-z0-9]+/g, '-')
@@ -116,10 +141,24 @@ export default function Blog() {
       <section className="py-12 px-6 bg-white" data-aos="fade-up">
         <div className="container mx-auto max-w-4xl text-center">
           <div className="flex justify-center items-center gap-2">
-            <button className="w-10 h-10 rounded-full bg-primary text-white font-semibold">
+            <button
+              onClick={() => setCurrentPage(1)}
+              className={`w-10 h-10 rounded-full font-semibold transition-colors duration-300 ${
+                currentPage === 1
+                  ? 'bg-primary text-white'
+                  : 'bg-gray-200 text-gray-700 hover:bg-primary hover:text-white'
+              }`}
+            >
               1
             </button>
-            <button className="w-10 h-10 rounded-full bg-gray-200 text-gray-700 font-semibold hover:bg-primary hover:text-white transition-colors duration-300">
+            <button
+              onClick={() => setCurrentPage(2)}
+              className={`w-10 h-10 rounded-full font-semibold transition-colors duration-300 ${
+                currentPage === 2
+                  ? 'bg-primary text-white'
+                  : 'bg-gray-200 text-gray-700 hover:bg-primary hover:text-white'
+              }`}
+            >
               2
             </button>
           </div>
