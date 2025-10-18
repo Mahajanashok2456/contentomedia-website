@@ -455,7 +455,7 @@ export default function Home() {
               role="article"
               tabIndex={0}
             >
-              <div className="text-4xl mb-4">✅</div>
+              <div className="text-4xl place-items-center mb-4"><img src="/src/assets/icons/noguess.png" className='w-12 h-12' alt="" /></div>
               <h4 className="font-heading text-primary  font-semibold mb-2">No guess works</h4>
               <p className="text-sm text-gray-600">
                 Decisions backed by data, research and insights.
@@ -467,8 +467,8 @@ export default function Home() {
               role="article"
               tabIndex={0}
             >
-              <div className="text-4xl mb-4">🏢</div>
-              <h4 className="font-heading text-primary  font-semibold mb-2">
+              <div className="text-4xl place-items-center mb-4"><img src="/src/assets/icons/smallBusiness.png" className='w-11 h-11' alt="" /></div>
+              <h4 className="font-heading text-primary font-semibold mb-2">
                 Small business or a start ups
               </h4>
               <p className="text-sm text-gray-600">
@@ -481,7 +481,7 @@ export default function Home() {
               role="article"
               tabIndex={0}
             >
-              <div className="text-4xl mb-4">🎁</div>
+              <div className="text-4xl place-items-center mb-4"><img src="/src/assets/icons/discount.png" className='w-14 h-12' alt="" /></div>
               <h4 className="font-heading text-primary  font-semibold mb-2">
                 Discount and Commitment
               </h4>
@@ -649,7 +649,7 @@ export default function Home() {
       </section>
 
       {/* Projects / Social proof CTA */}
-      <section className="py-20 px-6 bg-orange-50">
+      <section className="py-20 px-6 bg-orange-100">
         <div className="container mx-auto text-center mb-8">
           <h2 className="font-heading text-3xl md:text-4xl text-secondary font-bold">
             Our Projects
@@ -732,10 +732,10 @@ export default function Home() {
             Contact us to discuss your content needs and get a custom quote.
           </p>
           <div className="flex flex-col md:flex-row items-center justify-center gap-4">
-            <Link to="/about" className="bg-white text-primary px-8 py-3 rounded-lg">
+            <Link to="/about" className="bg-white text-primary hover:bg-orange-200 px-8 py-3 rounded-lg">
               About Us
             </Link>
-            <Link to="/faq" className="border-2 border-white text-white px-8 py-3 rounded-lg">
+            <Link to="/faq" className="border-2 border-white hover:border-orange-600 text-white px-8 py-3 rounded-lg">
               FAQ
             </Link>
           </div>
