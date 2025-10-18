@@ -202,6 +202,7 @@ export default function About() {
         id="services"
         ref={servicesRef}
         className="py-20 px-6 bg-gray-50"
+        data-aos="fade-up"
         variants={sectionVariants}
         initial="initial"
         animate="animate"
@@ -247,7 +248,7 @@ export default function About() {
       </motion.section>
 
       {/* Why choose us */}
-      <section ref={whyRef} className="py-20 px-6 bg-white">
+      <section ref={whyRef} className="py-20 px-6 bg-white" data-aos="fade-up">
         <div className="container mx-auto max-w-5xl text-center">
           <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary mb-4">
             Why choose Contentora Media?
@@ -285,7 +286,7 @@ export default function About() {
       </section>
 
       {/* Values & process */}
-      <section className="py-20 px-6 bg-lightBlue">
+      <section className="py-20 px-6 bg-lightBlue" data-aos="fade-up">
         <div className="container mx-auto max-w-5xl">
           <h3 className="font-heading text-2xl md:text-3xl font-semibold mb-6 text-center text-primary">
             How we work
@@ -314,10 +315,7 @@ export default function About() {
       </section>
 
       {/* Contact */}
-      <section
-        ref={contactRef}
-        className="py-20 px-6 bg-orange-400 text-white"
-      >
+      <section ref={contactRef} className="py-20 px-6 bg-orange-400 text-white" data-aos="fade-up">
         <div className="container mx-auto text-center">
           <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4">Get in touch</h2>
           <p className="mb-6">

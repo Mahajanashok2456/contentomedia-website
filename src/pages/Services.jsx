@@ -179,7 +179,7 @@ export default function Services() {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 px-6 bg-gray-50">
+      <section className="py-20 px-6 bg-gray-50" data-aos="fade-up">
         <div className="container mx-auto">
           <motion.div
             className="text-center mb-16"
@@ -231,7 +231,7 @@ export default function Services() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 px-6 bg-white">
+      <section className="py-20 px-6 bg-white" data-aos="fade-up">
         <div className="container mx-auto">
           <motion.div
             className="text-center mb-16"
@@ -275,7 +275,7 @@ export default function Services() {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 px-6 bg-gray-50">
+      <section className="py-20 px-6 bg-gray-50" data-aos="fade-up">
         <div className="container mx-auto">
           <motion.div
             className="text-center mb-16"
@@ -341,7 +341,7 @@ export default function Services() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 px-6 bg-white">
+      <section className="py-20 px-6 bg-white" data-aos="fade-up">
         <div className="container mx-auto max-w-3xl">
           <motion.div
             className="text-center mb-12"

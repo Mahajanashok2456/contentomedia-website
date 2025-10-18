@@ -350,7 +350,7 @@ export default function Home() {
       </motion.section>
 
       {/* Welcome / Value props */}
-       <section className="py-16 px-6 bg-white">
+      <section className="py-16 px-6 bg-white" data-aos="fade-up">
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto text-center mb-8">
             <h2 className="welcome-title font-heading text-3xl md:text-4xl font-bold text-primary">
@@ -368,7 +368,9 @@ export default function Home() {
               role="article"
               tabIndex={0}
             >
-              <div className="text-4xl place-items-center mb-4"><img src="/src/assets/icons/clientInsight.png" className='w-12 h-12' alt="" /></div>
+              <div className="text-4xl place-items-center mb-4">
+                <img src="/src/assets/icons/clientInsight.png" className="w-12 h-12" alt="" />
+              </div>
               <h3 className="font-heading text-secondary font-semibold mb-2">Client insights</h3>
               <p className="text-sm text-gray-600">
                 Understand who your customers truly are and what they want.
@@ -380,8 +382,12 @@ export default function Home() {
               role="article"
               tabIndex={0}
             >
-              <div className="text-4xl place-items-center mb-4"><img src="/src/assets/icons/increased.png" className='w-12 h-12' alt="" /></div>
-              <h3 className="font-heading text-primary  font-semibold mb-2">Increased efficiency</h3>
+              <div className="text-4xl place-items-center mb-4">
+                <img src="/src/assets/icons/increased.png" className="w-12 h-12" alt="" />
+              </div>
+              <h3 className="font-heading text-primary  font-semibold mb-2">
+                Increased efficiency
+              </h3>
               <p className="text-sm text-gray-600">
                 Streamline content operations to save time and scale.
               </p>
@@ -392,7 +398,9 @@ export default function Home() {
               role="article"
               tabIndex={0}
             >
-              <div className="text-4xl place-items-center mb-4"><img src="/src/assets/icons/process.png" className='w-12 h-12' alt="" /></div>
+              <div className="text-4xl place-items-center mb-4">
+                <img src="/src/assets/icons/process.png" className="w-12 h-12" alt="" />
+              </div>
               <h3 className="font-heading text-secondary font-semibold mb-2">Process automation</h3>
               <p className="text-sm text-gray-600">
                 Automate repetitive tasks to focus on strategy.
@@ -404,8 +412,12 @@ export default function Home() {
               role="article"
               tabIndex={0}
             >
-              <div className="text-4xl place-items-center mb-4"><img src="/src/assets/icons/dataDriven.png" className='w-12 h-12' alt="" /></div>
-              <h3 className="font-heading text-primary  font-semibold mb-2">Data-driven innovation</h3>
+              <div className="text-4xl place-items-center mb-4">
+                <img src="/src/assets/icons/dataDriven.png" className="w-12 h-12" alt="" />
+              </div>
+              <h3 className="font-heading text-primary  font-semibold mb-2">
+                Data-driven innovation
+              </h3>
               <p className="text-sm text-gray-600">
                 Use analytics to test, learn, and iterate fast.
               </p>
@@ -416,7 +428,9 @@ export default function Home() {
               role="article"
               tabIndex={0}
             >
-              <div className="text-4xl place-items-center mb-4"><img src="/src/assets/icons/costs.png" className='w-12 h-12' alt="" /></div>
+              <div className="text-4xl place-items-center mb-4">
+                <img src="/src/assets/icons/costs.png" className="w-12 h-12" alt="" />
+              </div>
               <h3 className="font-heading text-secondary font-semibold mb-2">Reduced costs</h3>
               <p className="text-sm text-gray-600">
                 Cut expenses, optimize resources, and boost profitability effectively.
@@ -428,7 +442,9 @@ export default function Home() {
               role="article"
               tabIndex={0}
             >
-              <div className="text-4xl place-items-center mb-4"><img src="/src/assets/icons/market.png" className='w-12 h-12' alt="" /></div>
+              <div className="text-4xl place-items-center mb-4">
+                <img src="/src/assets/icons/market.png" className="w-12 h-12" alt="" />
+              </div>
               <h3 className="font-heading text-primary  font-semibold mb-2">Market insights</h3>
               <p className="text-sm text-gray-600">
                 Uncover trends, analyze data, and inform business strategies effectively.
@@ -439,7 +455,7 @@ export default function Home() {
       </section>
 
       {/* You are not just Our Client */}
-      <section className="py-16 px-6 bg-gray-50">
+      <section className="py-16 px-6 bg-gray-50" data-aos="fade-up">
         <div className="container mx-auto max-w-5xl text-center">
           <h2 className="font-heading text-3xl md:text-4xl text-primary font-bold mb-4">
             You are not just <span className="text-secondary">Our</span> Client!
@@ -455,7 +471,9 @@ export default function Home() {
               role="article"
               tabIndex={0}
             >
-              <div className="text-4xl place-items-center mb-4"><img src="/src/assets/icons/noguess.png" className='w-12 h-12' alt="" /></div>
+              <div className="text-4xl place-items-center mb-4">
+                <img src="/src/assets/icons/noguess.png" className="w-12 h-12" alt="" />
+              </div>
               <h4 className="font-heading text-primary  font-semibold mb-2">No guess works</h4>
               <p className="text-sm text-gray-600">
                 Decisions backed by data, research and insights.
@@ -467,7 +485,9 @@ export default function Home() {
               role="article"
               tabIndex={0}
             >
-              <div className="text-4xl place-items-center mb-4"><img src="/src/assets/icons/smallBusiness.png" className='w-11 h-11' alt="" /></div>
+              <div className="text-4xl place-items-center mb-4">
+                <img src="/src/assets/icons/smallBusiness.png" className="w-11 h-11" alt="" />
+              </div>
               <h4 className="font-heading text-primary font-semibold mb-2">
                 Small business or a start ups
               </h4>
@@ -481,7 +501,9 @@ export default function Home() {
               role="article"
               tabIndex={0}
             >
-              <div className="text-4xl place-items-center mb-4"><img src="/src/assets/icons/discount.png" className='w-14 h-12' alt="" /></div>
+              <div className="text-4xl place-items-center mb-4">
+                <img src="/src/assets/icons/discount.png" className="w-14 h-12" alt="" />
+              </div>
               <h4 className="font-heading text-primary  font-semibold mb-2">
                 Discount and Commitment
               </h4>
@@ -494,7 +516,7 @@ export default function Home() {
       </section>
 
       {/* About / House where affordability... */}
-      <section className="py-20 px-6 bg-white">
+      <section className="py-20 px-6 bg-white" data-aos="fade-up">
         <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           <div>
             <h2 className="font-heading text-primary text-3xl md:text-4xl font-bold mb-4">
@@ -520,7 +542,7 @@ export default function Home() {
       </section>
 
       {/* Featured Services */}
-      <section className="py-20 px-6 bg-gray-50">
+      <section className="py-20 px-6 bg-gray-50" data-aos="fade-up">
         <div className="container mx-auto text-center mb-12">
           <h2 className="font-heading text-primary text-3xl md:text-4xl font-bold">Our Services</h2>
           <p className="text-gray-600 mt-4">Custom solutions for your digital growth</p>
@@ -539,7 +561,7 @@ export default function Home() {
       </section>
 
       {/* Why Us */}
-      <section className="py-20 px-6 bg-white">
+      <section className="py-20 px-6 bg-white" data-aos="fade-up">
         <div className="container mx-auto max-w-5xl">
           <h2 className="font-heading text-3xl text-primary md:text-4xl font-bold text-center mb-6">
             Why Us?
@@ -572,7 +594,7 @@ export default function Home() {
       </section>
 
       {/* Services */}
-      <section ref={servicesRef} className="py-20 px-6 bg-white">
+      <section ref={servicesRef} className="py-20 px-6 bg-white" data-aos="fade-up">
         <div className="container mx-auto text-center mb-12">
           <h2 className="font-heading text-primary text-4xl md:text-5xl font-bold text-gray-900">
             Our <span className="text-secondary">Content</span> Writing Services
@@ -600,7 +622,11 @@ export default function Home() {
       </section>
 
       {/* Testimonials */}
-      <section ref={testimonialsRef} className="py-20 px-6 bg-lightBlue testimonials">
+      <section
+        ref={testimonialsRef}
+        className="py-20 px-6 bg-lightBlue testimonials"
+        data-aos="fade-up"
+      >
         <div className="container mx-auto text-center mb-12">
           <h2 className="font-heading text-4xl md:text-5xl text-primary font-bold text-gray-900">
             What Our <span className="text-secondary">Clients</span> Say
@@ -613,7 +639,7 @@ export default function Home() {
       </section>
 
       {/* Pricing / Plans */}
-      <section ref={pricingRef} className="py-20 px-6 bg-white">
+      <section ref={pricingRef} className="py-20 px-6 bg-white" data-aos="fade-up">
         <div className="container mx-auto text-center mb-8">
           <h2 className="font-heading text-3xl md:text-4xl text-primary font-bold">
             Allot your budget rationally with us
@@ -649,7 +675,7 @@ export default function Home() {
       </section>
 
       {/* Projects / Social proof CTA */}
-      <section className="py-20 px-6 bg-orange-100">
+      <section className="py-20 px-6 bg-orange-100" data-aos="fade-up">
         <div className="container mx-auto text-center mb-8">
           <h2 className="font-heading text-3xl md:text-4xl text-secondary font-bold">
             Our Projects
@@ -679,7 +705,7 @@ export default function Home() {
 
       {/* Blogs */}
 
-      <section ref={blogsRef} className="py-20 px-6 bg-white">
+      <section ref={blogsRef} className="py-20 px-6 bg-white" data-aos="fade-up">
         <div className="container mx-auto text-center mb-8">
           <h2 className="font-heading text-3xl md:text-4xl text-primary font-bold">Our Blogs</h2>
           <p className="font-body text-xl font-bold text-gray-800 mt-4 mb-8">
@@ -696,7 +722,7 @@ export default function Home() {
       </section>
 
       {/* Newsletter */}
-      <section ref={newsletterRef} className="py-12 px-6 bg-lightBlue">
+      <section ref={newsletterRef} className="py-12 px-6 bg-lightBlue" data-aos="fade-up">
         <div className="container mx-auto max-w-2xl text-center">
           <h3 className="font-heading text-primary text-2xl font-bold mb-4">Join our Newsletter</h3>
           <p className="mb-4">
@@ -723,7 +749,7 @@ export default function Home() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 px-6 bg-orange-400  text-white">
+      <section className="py-16 px-6 bg-orange-400  text-white" data-aos="fade-up">
         <div className="container mx-auto text-center">
           <h2 className="font-heading text-3xl md:text-4xl font-bold">
             Ready to Elevate Your Content?
@@ -732,10 +758,16 @@ export default function Home() {
             Contact us to discuss your content needs and get a custom quote.
           </p>
           <div className="flex flex-col md:flex-row items-center justify-center gap-4">
-            <Link to="/about" className="bg-white text-primary hover:bg-orange-200 px-8 py-3 rounded-lg">
+            <Link
+              to="/about"
+              className="bg-white text-primary hover:bg-orange-200 px-8 py-3 rounded-lg"
+            >
               About Us
             </Link>
-            <Link to="/faq" className="border-2 border-white hover:border-orange-600 text-white px-8 py-3 rounded-lg">
+            <Link
+              to="/faq"
+              className="border-2 border-white hover:border-orange-600 text-white px-8 py-3 rounded-lg"
+            >
               FAQ
             </Link>
           </div>
