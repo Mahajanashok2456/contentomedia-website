@@ -33,6 +33,9 @@ export default function Footer() {
             <Link to="/faq" className="hover:text-secondary">
               FAQ
             </Link>
+            <Link to="/privacy-policy" className="hover:text-secondary">
+              Privacy Policy
+            </Link>
           </nav>
         </div>
 
