@@ -26,6 +26,7 @@ export default function Header() {
     { to: '/projects', label: 'Projects' },
     { to: '/blog', label: 'Blog' },
     { to: '/faq', label: 'FAQ' },
+    { to: '/contact', label: 'Contact' },
   ];
 
   return (
@@ -91,6 +92,12 @@ export default function Header() {
           >
             FAQ
           </NavLink>
+          <NavLink
+            to="/contact"
+            className={({ isActive }) => (isActive ? 'text-primary' : 'hover:text-primary')}
+          >
+            Contact
+          </NavLink>
         </nav>
 
         {/* Mobile hamburger */}
@@ -137,6 +144,9 @@ export default function Header() {
             </Link>
             <Link to="/faq" onClick={closeMenu} className="block font-body">
               FAQ
+            </Link>
+            <Link to="/contact" onClick={closeMenu} className="block font-body">
+              Contact
             </Link>
           </div>
         </div>
