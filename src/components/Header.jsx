@@ -23,6 +23,7 @@ export default function Header() {
     { to: '/', label: 'Home' },
     { to: '/about', label: 'About' },
     { to: '/services', label: 'Services' },
+    { to: '/projects', label: 'Projects' },
     { to: '/blog', label: 'Blog' },
     { to: '/faq', label: 'FAQ' },
   ];
@@ -73,6 +74,12 @@ export default function Header() {
             Services
           </NavLink>
           <NavLink
+            to="/projects"
+            className={({ isActive }) => (isActive ? 'text-primary' : 'hover:text-primary')}
+          >
+            Projects
+          </NavLink>
+          <NavLink
             to="/blog"
             className={({ isActive }) => (isActive ? 'text-primary' : 'hover:text-primary')}
           >
@@ -121,6 +128,9 @@ export default function Header() {
             </Link>
             <Link to="/services" onClick={closeMenu} className="block font-body">
               Services
+            </Link>
+            <Link to="/projects" onClick={closeMenu} className="block font-body">
+              Projects
             </Link>
             <Link to="/blog" onClick={closeMenu} className="block font-body">
               Blog
