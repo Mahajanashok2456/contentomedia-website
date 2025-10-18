@@ -27,6 +27,7 @@ export default function Header() {
     { to: '/blog', label: 'Blog' },
     { to: '/faq', label: 'FAQ' },
     { to: '/contact', label: 'Contact' },
+    { to: '/privacy-policy', label: 'Privacy Policy' },
   ];
 
   return (
@@ -98,6 +99,12 @@ export default function Header() {
           >
             Contact
           </NavLink>
+          <NavLink
+            to="/privacy-policy"
+            className={({ isActive }) => (isActive ? 'text-primary' : 'hover:text-primary')}
+          >
+            Privacy Policy
+          </NavLink>
         </nav>
 
         {/* Mobile hamburger */}
@@ -147,6 +154,9 @@ export default function Header() {
             </Link>
             <Link to="/contact" onClick={closeMenu} className="block font-body">
               Contact
+            </Link>
+            <Link to="/privacy-policy" onClick={closeMenu} className="block font-body">
+              Privacy Policy
             </Link>
           </div>
         </div>
