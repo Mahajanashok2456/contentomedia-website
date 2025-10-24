@@ -4,6 +4,22 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Link } from 'react-router-dom';
 import HighlightCard from '../components/HighlightCard';
+import { FaUsers, FaBloggerB, FaCopyright, FaEdit  } from 'react-icons/fa';
+import { CgWebsite, CgInsights } from 'react-icons/cg';
+import { TiMediaPlay } from "react-icons/ti";
+import { TbSeo } from "react-icons/tb";
+import { SiCkeditor4  } from "react-icons/si";
+import { DiHtml5Multimedia } from "react-icons/di";
+import { BiSolidBookContent } from "react-icons/bi";
+import { MdInsights, MdAddBusiness } from "react-icons/md";
+import { BsGraphUpArrow, BsDatabaseFillGear } from "react-icons/bs";
+import { VscServerProcess } from "react-icons/vsc";
+import { FaSackDollar, FaHandHoldingDollar } from "react-icons/fa6";
+import { GiThink } from "react-icons/gi";
+import { RiFileCopy2Fill } from "react-icons/ri";
+import { ImBooks } from "react-icons/im";
+
+
 import {
   LoadingScreen,
   FloatingElements,
@@ -23,42 +39,42 @@ const services = [
   {
     title: 'Blog & Article Writing',
     description: 'Insightful, research-backed blog posts tailored to your audience.',
-    icon: '📝',
+    icon: FaBloggerB,
   },
   {
     title: 'Website Content',
     description: 'Homepage, service pages and landing pages written to convert.',
-    icon: '🌐',
+    icon: CgWebsite,
   },
   {
     title: 'Copywriting',
     description: 'Ad copy, sales pages and email campaigns that drive action.',
-    icon: '✍️',
+    icon: RiFileCopy2Fill,
   },
   {
     title: 'Social Media Content',
     description: 'Captions, campaigns and storytelling to grow your reach.',
-    icon: '📣',
+    icon: TiMediaPlay,
   },
   {
     title: 'SEO Content',
     description: 'Keyword-led content that ranks without losing voice.',
-    icon: '🔎',
+    icon: TbSeo,
   },
   {
     title: 'Technical & Academic Writing',
     description: 'Manuals, papers, reports and documentation with clarity and accuracy.',
-    icon: '📚',
+    icon: ImBooks,
   },
   {
     title: 'Editing & Proofreading',
     description: 'Refinement of tone, grammar and flow to publish-ready content.',
-    icon: '✂️',
+    icon: FaEdit,
   },
   {
     title: 'Ghostwriting',
     description: 'Original content produced under your byline — stress-free.',
-    icon: '�️',
+    icon: SiCkeditor4,
   },
 ];
 
@@ -240,7 +256,7 @@ export default function About() {
                 animate={cardVariants.animate(index)}
                 whileHover="hover"
               >
-                <HighlightCard title={s.title} description={s.description} icon={s.icon} />
+                <HighlightCard title={s.title} description={s.description} icon={<s.icon className='text-blue-900 text-2xl'/>} />
               </motion.div>
             ))}
           </div>
@@ -248,8 +264,8 @@ export default function About() {
       </motion.section>
 
       {/* Why choose us */}
-      <section ref={whyRef} className="py-20 px-6 bg-white" data-aos="fade-up">
-        <div className="container mx-auto max-w-5xl text-center">
+      <section  className="py-20 px-6 bg-white" data-aos="fade-up">
+        <div ref={whyRef} className="container mx-auto max-w-5xl text-center">
           <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary mb-4">
             Why choose Contentora Media?
           </h2>
@@ -315,8 +331,8 @@ export default function About() {
       </section>
 
       {/* Contact */}
-      <section ref={contactRef} className="py-20 px-6 bg-orange-400 text-white" data-aos="fade-up">
-        <div className="container mx-auto text-center">
+      <section  className="py-20 px-6 bg-orange-400 text-white" data-aos="fade-up">
+        <div ref={contactRef} className="container mx-auto text-center">
           <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4">Get in touch</h2>
           <p className="mb-6">
             Have a project or an idea? Tell us about it — we’ll help you bring it to life.

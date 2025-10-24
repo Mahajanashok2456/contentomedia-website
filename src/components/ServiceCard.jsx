@@ -18,7 +18,8 @@ export default function ServiceCard({ title, description, icon,}) {
       <div className="absolute bottom-2 left-2 w-1 h-1 bg-secondary rounded-full opacity-0 group-hover:opacity-80 group-hover:animate-pulse transition-all duration-300 delay-200" />
 
       <div className="relative z-10">
-        {icon && <div className="text-4xl mb-4 group-hover:scale-105 transition-transform duration-300">{icon}</div>}
+        {/* {icon && <div className="text-4xl bg-primary/90 mb-4 group-hover:scale-105 transition-transform duration-300">{icon}</div>} */}
+        {icon && <div className="flex items-center justify-center w-12 h-12 bg-secondary/80 rounded-full mb-6">{icon}</div> }
         <h3 className="font-heading text-xl text-gray-800 font-semibold mb-2 group-hover:text-primary transition-colors duration-300">{title}</h3>
         <p className="font-body text-gray-600 text-sm flex-1">{description}</p>
       </div>

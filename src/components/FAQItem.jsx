@@ -121,13 +121,13 @@ export default function FAQItem({
             backgroundColor: (() => {
               // First 4 icons (Q01-Q04): Soft blue colors
               if (index < 4) {
-                return index % 2 === 0 ? '#D7E3F0' : '#B3CCE6';
+                return index % 2 === 0 ? '#8cbdf1ff' : '#67abf4ff';
               }
               // Last 4 icons (Q05-Q08): Muted orange colors
-              return index % 2 === 0 ? '#FFE0B2' : '#FFCC80';
+              return index % 2 === 0 ? '#f6ca88ff' : '#f7ba5dff';
             })(),
             transition: 'background-color 0.3s ease',
-            filter: index < 4 ? 'blur(2px)' : 'none',
+            
           }}
           initial={{ scale: 0 }}
           animate={
