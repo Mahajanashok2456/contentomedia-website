@@ -5,6 +5,20 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import ServiceCard from '../components/ServiceCard';
 import TestimonialSlider from '../components/TestimonialSlider';
+import { FaUsers, FaBloggerB, FaCopyright } from 'react-icons/fa';
+import { CgWebsite, CgInsights } from 'react-icons/cg';
+import { TiMediaPlay } from "react-icons/ti";
+import { TbSeo } from "react-icons/tb";
+import { SiTaichigraphics } from "react-icons/si";
+import { DiHtml5Multimedia } from "react-icons/di";
+import { BiSolidBookContent } from "react-icons/bi";
+import { MdInsights, MdAddBusiness } from "react-icons/md";
+import { BsGraphUpArrow, BsDatabaseFillGear } from "react-icons/bs";
+import { VscServerProcess } from "react-icons/vsc";
+import { FaSackDollar, FaHandHoldingDollar } from "react-icons/fa6";
+import { GiThink } from "react-icons/gi";
+
+
 import {
   LoadingScreen,
   FloatingElements,
@@ -16,7 +30,7 @@ import {
   sectionVariants,
   cardVariants,
 } from '../utils/pageAnimations.jsx';
-import homeIcon from '../assets/images/homeicon.jpg';
+import homeVideo from '../assets/videos/homeVideo.mp4';
 import bigImage from '../assets/images/bigImage.png';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -25,28 +39,28 @@ const services = [
   {
     title: 'Blog Writing',
     description: 'Engaging blog posts that attract and retain readers.',
-    icon: '📝',
+    icon: FaBloggerB,
   },
   {
     title: 'Website Content',
     description: 'Clear, SEO-friendly website pages that convert.',
-    icon: '🌐',
+    icon: CgWebsite,
   },
-  { title: 'Copywriting', description: 'High-converting sales and landing page copy.', icon: '✍️' },
+  { title: 'Copywriting', description: 'High-converting sales and landing page copy.', icon: FaCopyright },
   {
     title: 'Social Media Content',
     description: 'Short-form content tailored to each platform.',
-    icon: '📣',
+    icon: TiMediaPlay,
   },
   {
     title: 'SEO Writing',
     description: 'Keyword-optimized content for organic growth.',
-    icon: '🔎',
+    icon: TbSeo,
   },
   {
     title: 'Graphic Designing',
     description: 'Visuals that communicate your brand message.',
-    icon: '🎨',
+    icon: SiTaichigraphics,
   },
 ];
 
@@ -55,17 +69,17 @@ const featuredServices = [
     title: 'Social Media Management',
     description:
       'Posting schedules, community management, trend research and competitor analysis to grow your channels.',
-    icon: '📱',
+    icon: DiHtml5Multimedia,
   },
   {
     title: 'Content Writing',
     description: 'Strong content foundations for websites and blogs that boost SEO and engagement.',
-    icon: '✍️',
+    icon: BiSolidBookContent,
   },
   {
     title: 'Graphic Designing',
     description: 'Visual designs that elevate your brand and convert visitors into customers.',
-    icon: '🎨',
+    icon: SiTaichigraphics,
   },
 ];
 
@@ -321,12 +335,14 @@ export default function Home() {
             <div className="md:col-span-6 lg:col-span-5">
               <div className="relative w-full max-w-lg mx-auto">
                 <div className="rounded-3xl overflow-hidden shadow-2xl">
-                  <img
+                  {/* <img
                     ref={heroImageRef}
                     src={homeIcon}
                     alt="media"
                     className="w-full h-96 object-cover"
-                  />
+                  /> */}
+                  <video autoPlay muted loop ref={heroImageRef} src={homeVideo} alt="media"
+                    className="w-full h-96 object-cover" ></video>
                 </div>
 
                 {/* overlay small cards */}
@@ -368,8 +384,8 @@ export default function Home() {
               role="article"
               tabIndex={0}
             >
-              <div className="text-4xl place-items-center mb-4">
-                <img src="/src/assets/icons/clientInsight.png" className="w-12 h-12" alt="" />
+              <div className="flex items-center justify-center w-12 h-12 bg-secondary/80 rounded-full mb-6 mx-auto">
+                <MdInsights className="text-white text-2xl" />
               </div>
               <h3 className="font-heading text-secondary font-semibold mb-2">Client insights</h3>
               <p className="text-sm text-gray-600">
@@ -382,8 +398,8 @@ export default function Home() {
               role="article"
               tabIndex={0}
             >
-              <div className="text-4xl place-items-center mb-4">
-                <img src="/src/assets/icons/increased.png" className="w-12 h-12" alt="" />
+              <div className="flex items-center justify-center w-12 h-12 bg-primary/80 rounded-full mb-6 mx-auto">
+                <BsGraphUpArrow className="text-white text-2xl" />
               </div>
               <h3 className="font-heading text-primary  font-semibold mb-2">
                 Increased efficiency
@@ -398,8 +414,8 @@ export default function Home() {
               role="article"
               tabIndex={0}
             >
-              <div className="text-4xl place-items-center mb-4">
-                <img src="/src/assets/icons/process.png" className="w-12 h-12" alt="" />
+              <div className="flex items-center justify-center w-12 h-12 bg-secondary/80 rounded-full mb-6 mx-auto">
+                <VscServerProcess className="text-white text-2xl" />
               </div>
               <h3 className="font-heading text-secondary font-semibold mb-2">Process automation</h3>
               <p className="text-sm text-gray-600">
@@ -412,8 +428,8 @@ export default function Home() {
               role="article"
               tabIndex={0}
             >
-              <div className="text-4xl place-items-center mb-4">
-                <img src="/src/assets/icons/dataDriven.png" className="w-12 h-12" alt="" />
+              <div className="flex items-center justify-center w-12 h-12 bg-primary/80 rounded-full mb-6 mx-auto">
+                <BsDatabaseFillGear className="text-white text-2xl" />
               </div>
               <h3 className="font-heading text-primary  font-semibold mb-2">
                 Data-driven innovation
@@ -428,8 +444,8 @@ export default function Home() {
               role="article"
               tabIndex={0}
             >
-              <div className="text-4xl place-items-center mb-4">
-                <img src="/src/assets/icons/costs.png" className="w-12 h-12" alt="" />
+              <div className="flex items-center justify-center w-12 h-12 bg-secondary/80 rounded-full mb-6 mx-auto">
+                <FaSackDollar className="text-white text-2xl" />
               </div>
               <h3 className="font-heading text-secondary font-semibold mb-2">Reduced costs</h3>
               <p className="text-sm text-gray-600">
@@ -442,8 +458,8 @@ export default function Home() {
               role="article"
               tabIndex={0}
             >
-              <div className="text-4xl place-items-center mb-4">
-                <img src="/src/assets/icons/market.png" className="w-12 h-12" alt="" />
+              <div className="flex items-center justify-center w-12 h-12 bg-primary/80 rounded-full mb-6 mx-auto">
+                <CgInsights className="text-white text-3xl" />
               </div>
               <h3 className="font-heading text-primary  font-semibold mb-2">Market insights</h3>
               <p className="text-sm text-gray-600">
@@ -471,8 +487,8 @@ export default function Home() {
               role="article"
               tabIndex={0}
             >
-              <div className="text-4xl place-items-center mb-4">
-                <img src="/src/assets/icons/noguess.png" className="w-12 h-12" alt="" />
+             <div className="flex items-center justify-center w-12 h-12 bg-primary/80 rounded-full mb-6 mx-auto">
+                <GiThink className="text-white text-2xl" />
               </div>
               <h4 className="font-heading text-primary  font-semibold mb-2">No guess works</h4>
               <p className="text-sm text-gray-600">
@@ -485,8 +501,8 @@ export default function Home() {
               role="article"
               tabIndex={0}
             >
-              <div className="text-4xl place-items-center mb-4">
-                <img src="/src/assets/icons/smallBusiness.png" className="w-11 h-11" alt="" />
+              <div className="flex items-center justify-center w-12 h-12 bg-primary/80 rounded-full mb-6 mx-auto">
+                <MdAddBusiness className="text-white text-2xl" />
               </div>
               <h4 className="font-heading text-primary font-semibold mb-2">
                 Small business or a start ups
@@ -501,8 +517,8 @@ export default function Home() {
               role="article"
               tabIndex={0}
             >
-              <div className="text-4xl place-items-center mb-4">
-                <img src="/src/assets/icons/discount.png" className="w-14 h-12" alt="" />
+              <div className="flex items-center justify-center w-12 h-12 bg-primary/80 rounded-full mb-6 mx-auto">
+                <FaHandHoldingDollar className="text-white text-2xl" />
               </div>
               <h4 className="font-heading text-primary  font-semibold mb-2">
                 Discount and Commitment
@@ -554,7 +570,7 @@ export default function Home() {
               key={f.title}
               className="service-card featured-card bg-blue-50 border border-gray-200 p-6 rounded-lg shadow-sm h-full flex flex-col"
             >
-              <ServiceCard title={f.title} description={f.description} icon={f.icon} />
+              <ServiceCard title={f.title} description={f.description} icon={<f.icon className="text-white text-2xl" />} />
             </div>
           ))}
         </div>
@@ -605,16 +621,17 @@ export default function Home() {
         </div>
 
         <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          
           {services.map((s) => (
-            <div
+           <div
               key={s.title}
               className="service-card bg-orange-50 border-gray-200 p-6 rounded-lg shadow-sm h-full flex flex-col"
             >
+            
               <ServiceCard
-                className={s.customClass}
                 title={s.title}
                 description={s.description}
-                icon={s.icon}
+                icon={<s.icon className="text-white text-2xl" />}
               />
             </div>
           ))}
@@ -623,11 +640,11 @@ export default function Home() {
 
       {/* Testimonials */}
       <section
-        ref={testimonialsRef}
+        
         className="py-20 px-6 bg-lightBlue testimonials"
         data-aos="fade-up"
       >
-        <div className="container mx-auto text-center mb-12">
+        <div ref={testimonialsRef} className="container mx-auto text-center mb-12">
           <h2 className="font-heading text-4xl md:text-5xl text-primary font-bold text-gray-900">
             What Our <span className="text-secondary">Clients</span> Say
           </h2>
@@ -722,8 +739,8 @@ export default function Home() {
       </section>
 
       {/* Newsletter */}
-      <section ref={newsletterRef} className="py-12 px-6 bg-lightBlue" data-aos="fade-up">
-        <div className="container mx-auto max-w-2xl text-center">
+      <section className="py-12 px-6 bg-lightBlue" data-aos="fade-up">
+        <div ref={newsletterRef} className="container mx-auto max-w-2xl text-center">
           <h3 className="font-heading text-primary text-2xl font-bold mb-4">Join our Newsletter</h3>
           <p className="mb-4">
             Our newsletter shares freelance marketing tips, digital marketing trends and case
