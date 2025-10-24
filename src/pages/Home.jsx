@@ -30,7 +30,7 @@ import {
   sectionVariants,
   cardVariants,
 } from '../utils/pageAnimations.jsx';
-import homeIcon from '../assets/images/homeicon.jpg';
+import homeVideo from '../assets/videos/homeVideo.mp4';
 import bigImage from '../assets/images/bigImage.png';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -335,12 +335,14 @@ export default function Home() {
             <div className="md:col-span-6 lg:col-span-5">
               <div className="relative w-full max-w-lg mx-auto">
                 <div className="rounded-3xl overflow-hidden shadow-2xl">
-                  <img
+                  {/* <img
                     ref={heroImageRef}
                     src={homeIcon}
                     alt="media"
                     className="w-full h-96 object-cover"
-                  />
+                  /> */}
+                  <video autoPlay muted loop ref={heroImageRef} src={homeVideo} alt="media"
+                    className="w-full h-96 object-cover" ></video>
                 </div>
 
                 {/* overlay small cards */}
