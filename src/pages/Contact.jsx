@@ -6,7 +6,7 @@ const Contact = () => {
   return (
     <div className="min-h-screen">
       {/* Hero/Intro Section */}
-      <section className="py-20 px-6 bg-gray-50" data-aos="fade-up">
+      <section className="py-20 px-6 bg-gradient-to-br from-lightBlue to-white" data-aos="fade-up">
         <div className="container mx-auto max-w-4xl text-center">
           <h1 className="font-heading text-4xl md:text-5xl font-bold text-primary mb-8">
             Want to Get in <span className="text-secondary">Touch</span>? Write to <span className="text-secondary">us!</span>
