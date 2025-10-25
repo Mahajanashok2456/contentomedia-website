@@ -198,7 +198,6 @@ export default function FAQ() {
                 answer={faq.answer}
                 iconType={faq.iconType}
                 color={faq.color}
-                questionNumber={`Q${String(faq.id).padStart(2, '0')}`}
                 index={index}
               />
             ))}
@@ -218,7 +217,6 @@ export default function FAQ() {
                 answer={faq.answer}
                 iconType={faq.iconType}
                 color={faq.color}
-                questionNumber={`Q${String(faq.id).padStart(2, '0')}`}
                 index={index + 4}
               />
             ))}
