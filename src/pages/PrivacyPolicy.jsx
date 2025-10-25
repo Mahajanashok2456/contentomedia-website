@@ -203,18 +203,18 @@ const PrivacyPolicy = () => {
             </h2>
             <div className="bg-gray-50 p-6 rounded-lg space-y-2">
               <p className="text-lg text-gray-700">
-                📞{' '}
+                {' '}
                 <a href="tel:+918450049032" className="text-secondary hover:underline">
                   +91 8450049032
                 </a>
               </p>
               <p className="text-lg text-gray-700">
-                📧{' '}
+                {' '}
                 <a
                   href="mailto:sales@contentoramedia.com"
                   className="text-secondary hover:underline"
                 >
-                  sales@contentoramedia.com
+                  info@contentora.media
                 </a>
               </p>
             </div>
@@ -222,8 +222,8 @@ const PrivacyPolicy = () => {
 
           {/* Company Tagline Section */}
           <section className="text-center" data-aos="fade-up" data-aos-delay="1100">
-            <h2 className="font-heading text-2xl md:text-3xl font-bold text-secondary mb-4">
-              ContentOra Media
+            <h2 className="font-heading text-2xl md:text-3xl font-bold text-primary mb-4">
+              ContentOra <span className="text-secondary">Media</span>
             </h2>
             <p className="text-lg text-gray-700 italic">
               Give your website wings to fly high and thrive with ContentOra Media!

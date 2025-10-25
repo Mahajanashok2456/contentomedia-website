@@ -1,5 +1,6 @@
 import React from 'react';
-import { FaLinkedin, FaInstagram, FaTwitter } from 'react-icons/fa';
+import { FaLinkedin, FaInstagram, FaTwitter, FaFacebookSquare, FaPhoneAlt } from 'react-icons/fa';
+import { IoMailUnread } from "react-icons/io5";
 
 const Contact = () => {
   return (
@@ -8,7 +9,7 @@ const Contact = () => {
       <section className="py-20 px-6 bg-gray-50" data-aos="fade-up">
         <div className="container mx-auto max-w-4xl text-center">
           <h1 className="font-heading text-4xl md:text-5xl font-bold text-primary mb-8">
-            Want to Get in Touch? Write to us!
+            Want to Get in <span className="text-secondary">Touch</span>? Write to <span className="text-secondary">us!</span>
           </h1>
           <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
             For any enquiries, or if you are in the market for freelance digital marketing
@@ -22,7 +23,7 @@ const Contact = () => {
         <div className="container mx-auto max-w-4xl">
           <div className="text-center mb-12">
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary mb-4">
-              Follow us!
+              <span className="text-secondary">Follow</span> us!
             </h2>
             <p className="text-lg text-gray-700">
               Stay connected with ContentOra Media on social media
@@ -54,6 +55,14 @@ const Contact = () => {
             >
               <FaTwitter className="text-4xl text-gray-600 group-hover:text-secondary transition-colors duration-300" />
             </a>
+            <a
+              href="https://www.facebook.com/profile.php?id=100089201208162"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group"
+            >
+              <FaFacebookSquare className="text-4xl text-gray-600 group-hover:text-secondary transition-colors duration-300" />
+            </a>
           </div>
         </div>
       </section>
@@ -63,7 +72,7 @@ const Contact = () => {
         <div className="container mx-auto max-w-4xl">
           <div className="text-center mb-12">
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary mb-4">
-              Contact us
+              Contact <span className="text-secondary">us</span>
             </h2>
             <p className="text-lg text-gray-700">
               Whether you have a request, a query, or want to work with us, use the form below to
@@ -182,13 +191,8 @@ const Contact = () => {
             <div>
               <h3 className="font-heading text-2xl font-bold mb-4">Contacts</h3>
               <div className="space-y-2 text-gray-300">
-                <p>📧 info@contentora.media</p>
-                <p>📞 +1 (555) 123-4567</p>
-                <p>
-                  📍 123 Business Ave, Suite 100
-                  <br />
-                  New York, NY 10001
-                </p>
+                <div className="flex items-center"> <IoMailUnread className='text-lg mr-1.5' /> <p> info@contentora.media </p></div>
+                <div className="flex items-center"> <FaPhoneAlt className='text-md mr-1.5' /> <p> +91 8450049032 </p></div>
               </div>
             </div>
           </div>
