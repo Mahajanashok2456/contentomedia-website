@@ -32,6 +32,7 @@ import {
   cardVariants,
 } from '../utils/pageAnimations.jsx';
 import logoSvg from '../assets/images/logo.svg';
+import AboutImg from '../assets/images/about.png';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -147,7 +148,7 @@ export default function About() {
       </AnimatePresence> */}
 
       {/* Floating Background Elements */}
-      <FloatingElements />
+      
 
       {/* Scroll Progress Indicator */}
       <ScrollProgress progressRef={progressRef} />
@@ -170,7 +171,7 @@ export default function About() {
               transition={{ delay: 0.2, duration: 0.3, ease: 'easeOut' }}
               whileHover="hover"
             >
-              At Contentora Media, the right words transform your brand
+              At Contentora <span className="text-secondary">Media</span>, the right words transform your brand
             </motion.h1>
             <motion.p
               className="text-lg text-gray-700 max-w-3xl leading-relaxed"
@@ -207,7 +208,7 @@ export default function About() {
 
           <div className="md:col-span-5">
             <div className="rounded-2xl overflow-hidden shadow-xl bg-white">
-              <img src={logoSvg} alt="About media" className="w-full h-56 object-cover" />
+              <img src={AboutImg} alt="About media" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -233,7 +234,7 @@ export default function About() {
             transition={{ delay: 0.6, duration: 0.3, ease: 'easeOut' }}
             whileHover="hover"
           >
-            Our Services
+            Our <span className="text-secondary">Services</span>
           </motion.h2>
           <motion.p
             className="text-center text-gray-600 max-w-2xl mx-auto mb-10"
@@ -267,7 +268,7 @@ export default function About() {
       <section  className="py-20 px-6 bg-white" data-aos="fade-up">
         <div ref={whyRef} className="container mx-auto max-w-5xl text-center">
           <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary mb-4">
-            Why choose Contentora Media?
+            Why choose Contentora <span className="text-secondary">Media</span>?
           </h2>
           <p className="text-gray-700 mb-6">
             We deliver impactful, human-first content that's original, affordable and delivered on
@@ -305,7 +306,7 @@ export default function About() {
       <section className="py-20 px-6 bg-lightBlue" data-aos="fade-up">
         <div className="container mx-auto max-w-5xl">
           <h3 className="font-heading text-2xl md:text-3xl font-semibold mb-6 text-center text-primary">
-            How we work
+            How we <span className="text-secondary">work</span>
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-white border border-gray-200 p-6 rounded-lg shadow-sm">
@@ -346,7 +347,7 @@ export default function About() {
             </a>
           </div>
           <div className="mt-8">
-            <Link to="/" className="inline-block bg-white text-primary px-6 py-3 rounded-lg">
+            <Link to="/" className="inline-block bg-white text-primary hover:bg-orange-100 px-6 py-3 rounded-lg">
               Back to Home
             </Link>
           </div>

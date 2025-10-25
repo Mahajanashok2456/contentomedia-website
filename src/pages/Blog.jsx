@@ -74,7 +74,7 @@ export default function Blog() {
             <FaBookOpen className="text-6xl text-primary mr-4" />
           </div>
           <h1 className="font-heading text-4xl md:text-5xl font-bold text-primary mb-6">
-            What's cooking inside our house?
+            What's <span className="text-secondary">cooking</span> inside our house?
           </h1>
           <p className="text-lg md:text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto">
             Get the latest tips, discussions, market trends, and expert insights on digital
@@ -88,7 +88,7 @@ export default function Blog() {
       <section className="py-16 px-6 bg-gray-50" data-aos="fade-up">
         <div className="container mx-auto max-w-6xl">
           <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary text-center mb-12">
-            The more you know
+            The <span className="text-secondary">more</span> you know
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">

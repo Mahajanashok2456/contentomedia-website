@@ -50,7 +50,7 @@ export default function Projects() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            OUR PROJECTS
+            OUR <span className="text-secondary">PROJECTS</span>
           </motion.h1>
           <motion.p
             className="text-lg md:text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto"
@@ -149,7 +149,7 @@ export default function Projects() {
                   <div className="flex items-center">
                     <span className="font-semibold text-gray-800 mr-3">Phone:</span>
                     <a href="tel:+15551234567" className="text-secondary hover:underline">
-                      +1 (555) 123-4567
+                       +91 8450049032
                     </a>
                   </div>
                 </div>
@@ -180,7 +180,7 @@ export default function Projects() {
               viewport={{ once: true }}
             >
               <h4 className="font-heading text-2xl font-bold text-primary mb-4">
-                ContentOra Media
+                ContentOra <span className="text-secondary">Media</span>
               </h4>
               <p className="text-gray-700 leading-relaxed">
                 Your trusted partner in digital marketing and content creation. We transform ideas

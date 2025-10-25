@@ -59,49 +59,49 @@ export default function Header() {
         <nav className="hidden md:flex items-center gap-6 font-body font-semibold">
           <NavLink
             to="/"
-            className={({ isActive }) => (isActive ? 'text-primary' : 'hover:text-primary')}
+            className={({ isActive }) => (isActive ? 'text-secondary' : 'hover:text-secondary hover:underline')}
           >
             Home
           </NavLink>
           <NavLink
             to="/about"
-            className={({ isActive }) => (isActive ? 'text-primary' : 'hover:text-primary')}
+            className={({ isActive }) => (isActive ? 'text-secondary' : 'hover:text-secondary hover:underline')}
           >
             About
           </NavLink>
           <NavLink
             to="/services"
-            className={({ isActive }) => (isActive ? 'text-primary' : 'hover:text-primary')}
+            className={({ isActive }) => (isActive ? 'text-secondary' : 'hover:text-secondary hover:underline')}
           >
             Services
           </NavLink>
           <NavLink
             to="/projects"
-            className={({ isActive }) => (isActive ? 'text-primary' : 'hover:text-primary')}
+            className={({ isActive }) => (isActive ? 'text-secondary' : 'hover:text-secondary hover:underline')}
           >
             Projects
           </NavLink>
           <NavLink
             to="/blog"
-            className={({ isActive }) => (isActive ? 'text-primary' : 'hover:text-primary')}
+            className={({ isActive }) => (isActive ? 'text-secondary' : 'hover:text-secondary hover:underline')}
           >
             Blog
           </NavLink>
           <NavLink
             to="/faq"
-            className={({ isActive }) => (isActive ? 'text-primary' : 'hover:text-primary')}
+            className={({ isActive }) => (isActive ? 'text-secondary' : 'hover:text-secondary hover:underline')}
           >
             FAQ
           </NavLink>
           <NavLink
             to="/contact"
-            className={({ isActive }) => (isActive ? 'text-primary' : 'hover:text-primary')}
+            className={({ isActive }) => (isActive ? 'text-secondary' : 'hover:text-secondary hover:underline')}
           >
             Contact
           </NavLink>
           <NavLink
             to="/privacy-policy"
-            className={({ isActive }) => (isActive ? 'text-primary' : 'hover:text-primary')}
+            className={({ isActive }) => (isActive ? 'text-secondary' : 'hover:text-secondary hover:underline')}
           >
             Privacy Policy
           </NavLink>

@@ -18,7 +18,6 @@ import { VscServerProcess } from "react-icons/vsc";
 import { FaSackDollar, FaHandHoldingDollar } from "react-icons/fa6";
 import { GiThink } from "react-icons/gi";
 
-
 import {
   LoadingScreen,
   FloatingElements,
@@ -241,7 +240,9 @@ export default function Home() {
       </AnimatePresence> */}
 
       {/* Floating Background Elements */}
-      <FloatingElements />
+      
+      
+     
 
       {/* Scroll Progress Indicator */}
       <ScrollProgress progressRef={progressRef} />
@@ -253,8 +254,12 @@ export default function Home() {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.1, duration: 0.4, ease: 'easeOut' }}
+        
       >
+        
+      
         <div className="container mx-auto px-6 py-16">
+          
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
             {/* Left: content */}
             <div className="md:col-span-6 lg:col-span-7">
@@ -266,7 +271,7 @@ export default function Home() {
                 transition={{ delay: 0.2, duration: 0.3, ease: 'easeOut' }}
                 whileHover="hover"
               >
-                Welcome to ContentOra Media
+                Welcome to ContentOra <span className="text-secondary">Media</span>
               </motion.h1>
               <motion.p
                 className="hero-sub font-body text-lg md:text-xl text-gray-700 mb-6 max-w-prose"
@@ -659,7 +664,7 @@ export default function Home() {
       <section ref={pricingRef} className="py-20 px-6 bg-white" data-aos="fade-up">
         <div className="container mx-auto text-center mb-8">
           <h2 className="font-heading text-3xl md:text-4xl text-primary font-bold">
-            Allot your budget rationally with us
+            Allot your <span className="text-secondary">budget</span> rationally with us
           </h2>
           <p className="font-body text-lg text-gray-800 my-6 px-8">
             We don't claim us best but we prove with results. We have all prices fair put in front
@@ -671,19 +676,19 @@ export default function Home() {
         </div>
 
         <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="pricing-card bg-white p-6 rounded-lg shadow-sm text-center">
+          <div className="pricing-card bg-white p-6 rounded-lg shadow-md text-center">
             <h3 className="font-heading text-xl font-semibold text-secondary">Simple Plan</h3>
-            <div className="text-2xl font-bold mt-2">$60/month</div>
+            {/* <div className="text-2xl font-bold mt-2">$240/month</div> */}
             <p className="mt-4 text-sm text-gray-600">Best for freelancers or small startups</p>
           </div>
-          <div className="pricing-card bg-white p-6 rounded-lg shadow-sm text-center border-2 border-primary">
+          <div className="pricing-card bg-white p-6 rounded-lg shadow-md text-center border-2 border-primary">
             <h3 className="font-heading text-xl font-semibold text-secondary">Business Plan</h3>
-            <div className="text-2xl font-bold mt-2">$120/month</div>
+            {/* <div className="text-2xl font-bold mt-2">$120/month</div> */}
             <p className="mt-4 text-sm text-gray-600">Ideal for growing brands or SMEs</p>
           </div>
-          <div className="pricing-card bg-white p-6 rounded-lg shadow-sm text-center">
+          <div className="pricing-card bg-white p-6 rounded-lg shadow-md text-center">
             <h3 className="font-heading text-xl font-semibold text-secondary">Premium Plan</h3>
-            <div className="text-2xl font-bold mt-2">$240/month</div>
+            {/* <div className="text-2xl font-bold mt-2">$240/month</div> */}
             <p className="mt-4 text-sm text-gray-600">
               Designed for established brands with aggressive growth goals
             </p>
@@ -788,6 +793,7 @@ export default function Home() {
               FAQ
             </Link>
           </div>
+    
         </div>
       </section>
     </div>

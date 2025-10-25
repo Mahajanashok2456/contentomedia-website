@@ -118,7 +118,7 @@ export default function FAQ() {
       </motion.div>
 
       {/* Floating Background Elements */}
-      <motion.div
+      {/* <motion.div
         className="absolute top-20 left-10 w-32 h-32 bg-primary opacity-5 rounded-full"
         animate={{
           y: [0, -20, 0],
@@ -142,7 +142,7 @@ export default function FAQ() {
           ease: 'easeInOut',
           delay: 1,
         }}
-      />
+      /> */}
 
       {/* Hero Section */}
       <motion.div

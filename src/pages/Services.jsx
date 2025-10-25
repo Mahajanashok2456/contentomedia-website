@@ -310,10 +310,10 @@ export default function Services() {
 
                 <div className="text-center mb-8">
                   <h3 className="font-heading text-xl font-bold text-primary mb-2">{plan.name}</h3>
-                  <div className="flex items-center justify-center">
-                    <span className="text-4xl font-bold text-secondary">{plan.price}</span>
-                    <span className="text-gray-500 ml-1">{plan.period}</span>
-                  </div>
+                  {/* <div className="flex items-center justify-center">
+                    {/* <span className="text-4xl font-bold text-secondary">{plan.price}</span> */}
+                    {/* <span className="text-gray-500 ml-1">{plan.period}</span> */}
+                  {/* </div> */}
                 </div>
 
                 <div className="space-y-3">
@@ -441,9 +441,9 @@ export default function Services() {
             >
               {/* Contact Information */}
               <div>
-                <h4 className="font-heading text-xl font-bold text-primary mb-4">Get in Touch</h4>
+                <h4 className="font-heading text-2xl font-bold text-primary mb-4 text-center">Get in <span className="text-secondary">Touch</span></h4>
                 <div className="space-y-3">
-                  <div className="flex items-center">
+                  {/* <div className="flex items-center">
                     <span className="font-semibold text-gray-800 mr-3">Email:</span>
                     <a
                       href="mailto:info@contentoramedia.com"
@@ -451,13 +451,13 @@ export default function Services() {
                     >
                       info@contentoramedia.com
                     </a>
-                  </div>
-                  <div className="flex items-center">
+                  </div> */}
+                  {/* <div className="flex items-center">
                     <span className="font-semibold text-gray-800 mr-3">Phone:</span>
                     <a href="tel:+15551234567" className="text-secondary hover:underline">
                       +1 (555) 123-4567
                     </a>
-                  </div>
+                  </div> */}
                 </div>
               </div>
 
