@@ -164,7 +164,7 @@ export default function FAQ() {
             transition={{ delay: 0.3, duration: 0.3, ease: 'easeOut' }}
             whileHover={{ scale: 1.02 }}
           >
-            Frequently Asked Questions
+            Frequently <span className="text-secondary">Asked</span> Questions
           </motion.h1>
           <motion.p
             className="text-lg text-gray-700 max-w-2xl mx-auto"

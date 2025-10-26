@@ -161,19 +161,19 @@ export default function Services() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            Professional <span className="text-secondary">Services</span>
+            Content Writing <span className="text-secondary">Services</span>
           </motion.h1>
           <motion.p
-            className="text-lg md:text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto"
+            className="text-lg md:text-xl text-gray-700 leading-relaxed max-w-8xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            We don't just create content—we craft strategies for each business of any size in any
-            industry that drive real results. For whatever reason – be it to increase visibility
-            online, with your audience or ultimately leads? Don't hesitate in using our content
-            writing services, social media management or data driven marketing strategies as all are
-            tailored according to your unique business.
+            At Contentora Media, we believe that the right words can transform the way people see your brand. Content creation and writing goes beyond just written material.  The​‍​‌‍​‍‌​‍​‌‍​‍‌ content is specially made to be a true reflection of your brand's distinct personality. Its primary goal is to establish deep relationships with your target audience. Our approach is simple. We help you communicate with your audience in a way that gives them clarity. We aim to provide you with creativity and help you to create a good impact on your audience.
+
+            <br />
+
+            Whether you are trying to establish an online presence or to launch a social media campaign, or to strengthen your social media presence.  Our content writing services will help give your brand recognition and credibility.
           </motion.p>
         </div>
       </section>

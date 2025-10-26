@@ -9,6 +9,7 @@ import { CgWebsite, CgInsights } from 'react-icons/cg';
 import { TiMediaPlay } from "react-icons/ti";
 import { TbSeo } from "react-icons/tb";
 import { SiCkeditor4  } from "react-icons/si";
+import { RiEdit2Fill } from "react-icons/ri";
 import { DiHtml5Multimedia } from "react-icons/di";
 import { BiSolidBookContent } from "react-icons/bi";
 import { MdInsights, MdAddBusiness } from "react-icons/md";
@@ -39,42 +40,51 @@ gsap.registerPlugin(ScrollTrigger);
 const services = [
   {
     title: 'Blog & Article Writing',
-    description: 'Insightful, research-backed blog posts tailored to your audience.',
+    description: 'We are skilled at creating insightful, engaging and easy-to-read blogs. We write articles that position your brand as an authority. Each piece is well researched and is tailored to your audience. The blogs are designed to keep your readers interested from the first line to the last line.',
     icon: FaBloggerB,
   },
   {
     title: 'Website Content',
-    description: 'Homepage, service pages and landing pages written to convert.',
+    description: 'Your website is your digital identity. We craft homepages, service pages, landing pages and about us sections that are concise. These sections are written in such a way that they become impactful. They are built to make a lasting impression.',
     icon: CgWebsite,
   },
-  {
-    title: 'Copywriting',
-    description: 'Ad copy, sales pages and email campaigns that drive action.',
-    icon: RiFileCopy2Fill,
-  },
+ 
   {
     title: 'Social Media Content',
-    description: 'Captions, campaigns and storytelling to grow your reach.',
+    description: 'The key factors for an engaging social media are creativity and consistency. We write engaging captions, campaign content and storytelling posts that spark conversation and will increase your reach.',
     icon: TiMediaPlay,
   },
   {
     title: 'SEO Content',
-    description: 'Keyword-led content that ranks without losing voice.',
+    description: 'We balance creativity with strategy. Our SEO content naturally blends keywords into blogs. We also provide SEO optimized content for product descriptions. This will help your business rank higher without losing the human touch.',
     icon: TbSeo,
   },
   {
-    title: 'Technical & Academic Writing',
-    description: 'Manuals, papers, reports and documentation with clarity and accuracy.',
+    title: 'Technical Writing',
+    description: 'We believe that complex ideas need clarity. We specialize in writing manuals, white papers, case study and product documentation. We provide content that is accurate and easy to understand. ',
     icon: ImBooks,
   },
+
+   {
+    title: 'Academic and research writing ',
+    description: 'For students and professionals, we provide content that is structured according to their academic needs. We provide research papers, essays and reports. Our content is well researched, original and with the right citations. We also present your abstract thoughts with clarity.',
+    icon: FaEdit,
+  },
+
+   {
+    title: 'Creative writing',
+    description: 'We can write stories, scripts and speeches with a fresh perspective. Our creative writing services will be the right choice for any work that is going to be rooted in creativity and originality.',
+    icon: RiEdit2Fill,
+  },
+
   {
     title: 'Editing & Proofreading',
-    description: 'Refinement of tone, grammar and flow to publish-ready content.',
-    icon: FaEdit,
+    description: 'We believe that good writing needs a careful eye. We are skilled at refining content by checking grammar, tone, style and structure. We make sure it is polished, professional and ready to share.',
+    icon: RiFileCopy2Fill,
   },
   {
     title: 'Ghostwriting',
-    description: 'Original content produced under your byline — stress-free.',
+    description: 'If you have ideas, but you don\'t have the time to put them into words, we can write for you. With our ghost writing services, you get original human-written content under your name. We write all types of blogs, books and articles. You can be stress-free while we do all the work behind the scenes.',
     icon: SiCkeditor4,
   },
 ];
@@ -148,7 +158,6 @@ export default function About() {
       </AnimatePresence> */}
 
       {/* Floating Background Elements */}
-      
 
       {/* Scroll Progress Indicator */}
       <ScrollProgress progressRef={progressRef} />
@@ -171,7 +180,8 @@ export default function About() {
               transition={{ delay: 0.2, duration: 0.3, ease: 'easeOut' }}
               whileHover="hover"
             >
-              At Contentora <span className="text-secondary">Media</span>, the right words transform your brand
+              At Contentora <span className="text-secondary">Media</span>, the right words transform
+              your brand
             </motion.h1>
             <motion.p
               className="text-lg text-gray-700 max-w-3xl leading-relaxed"
@@ -247,7 +257,7 @@ export default function About() {
             presence — our services cover every stage of your content journey.
           </motion.p>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((s, index) => (
               <motion.div
                 key={s.title}
@@ -257,7 +267,11 @@ export default function About() {
                 animate={cardVariants.animate(index)}
                 whileHover="hover"
               >
-                <HighlightCard title={s.title} description={s.description} icon={<s.icon className='text-blue-900 text-2xl'/>} />
+                <HighlightCard
+                  title={s.title}
+                  description={s.description}
+                  icon={<s.icon className="text-blue-900 text-2xl" />}
+                />
               </motion.div>
             ))}
           </div>
@@ -265,37 +279,80 @@ export default function About() {
       </motion.section>
 
       {/* Why choose us */}
-      <section  className="py-20 px-6 bg-white" data-aos="fade-up">
+      <section className="py-20 px-6 bg-white" data-aos="fade-up">
         <div ref={whyRef} className="container mx-auto max-w-5xl text-center">
           <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary mb-4">
             Why choose Contentora <span className="text-secondary">Media</span>?
           </h2>
-          <p className="text-gray-700 mb-6">
-            We deliver impactful, human-first content that's original, affordable and delivered on
-            time.
+          <p className="text-gray-700 mb-7">
+            We focus on delivering our clients content that is impactful. The content delivered will
+            connect with your audience and brand value. We ensure that it feels unique and
+            relatable. We custom-edit and make our content to reflect your brand's unique identity
+            and value. We pride ourselves on creating unique, AI and plagiarism free content. You
+            can trust us with your brand's digital image.We provide a variety of flexible and
+            affordable packages. We facilitate the access to quality content for small, medium and
+            large industries. We value your time, so we provide valuable content without much delay.
+            We guarantee reliable delivery without making any compromises on the quality.
           </p>
 
+           <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary mb-8 mt-20">
+            Why are we the <span className="text-secondary">best?</span>
+          </h2>
+
           <div className="grid md:grid-cols-3 gap-6">
+
+            <article className="bg-orange-50 border border-gray-200 p-6 rounded-lg shadow-sm">
+              <h3 className="font-heading font-semibold mb-2 text-primary">Human first approach</h3>
+              <p className="text-sm text-gray-600">
+                We write for people. We make sure our human-written content is ranked high in the algorithm by integrating keywords in it. We also ensure that your message will content automatically with your audience.
+              </p>
+            </article>
+
             <article className="bg-orange-50 border border-gray-200 p-6 rounded-lg shadow-sm">
               <h3 className="font-heading font-semibold mb-2 text-primary">
                 Your brand, your voice
               </h3>
               <p className="text-sm text-gray-600">
-                We craft unique, plagiarism-free content that reflects your identity.
+               We firmly believe that your brand deserves its own unique identity. Your brand awareness depends on the content that is visible on your website and social media handle. We are dedicated to custom designing and making your content that is AI and plagiarism-free.
+
               </p>
             </article>
-            <article className="bg-orange-50 border border-gray-200 p-6 rounded-lg shadow-sm">
-              <h3 className="font-heading font-semibold mb-2 text-primary">Words that work</h3>
-              <p className="text-sm text-gray-600">
-                Content written to engage, inform and convert your audience.
-              </p>
-            </article>
+            
             <article className="bg-orange-50 border border-gray-200 p-6 rounded-lg shadow-sm">
               <h3 className="font-heading font-semibold mb-2 text-primary">
                 Affordable excellence
               </h3>
               <p className="text-sm text-gray-600">
-                High-quality content with flexible, budget-friendly packages.
+                We don't think that top-notch content has to be accompanied by a lot of money. We have put together budget-friendly packages for you to choose from.
+
+              </p>
+            </article>
+
+            <article className="bg-orange-50 border border-gray-200 p-6 rounded-lg shadow-sm">
+              <h3 className="font-heading font-semibold mb-2 text-primary">
+               Original and authentic 
+              </h3>
+              <p className="text-sm text-gray-600">
+                Everything we write is written from scratch. It is double-checked to ensure it is AI and plagiarism-free.
+              </p>
+            </article>
+
+            <article className="bg-orange-50 border border-gray-200 p-6 rounded-lg shadow-sm">
+              <h3 className="font-heading font-semibold mb-2 text-primary">
+                On time, every time
+              </h3>
+              <p className="text-sm text-gray-600">
+                We respect deadlines as much as we respect quality. Your projects are always delivered when you need them.
+              </p>
+            </article>
+
+            <article className="bg-orange-50 border border-gray-200 p-6 rounded-lg shadow-sm">
+              <h3 className="font-heading font-semibold mb-2 text-primary">
+                Diverse expertise 
+              </h3>
+              <p className="text-sm text-gray-600">
+                We create blogs, websites, webpages, e-books, technical documents and creative pieces. We cover a wide range of services under one roof.
+
               </p>
             </article>
           </div>
@@ -332,7 +389,7 @@ export default function About() {
       </section>
 
       {/* Contact */}
-      <section  className="py-20 px-6 bg-orange-400 text-white" data-aos="fade-up">
+      <section className="py-20 px-6 bg-orange-400 text-white" data-aos="fade-up">
         <div ref={contactRef} className="container mx-auto text-center">
           <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4">Get in touch</h2>
           <p className="mb-6">
@@ -347,7 +404,10 @@ export default function About() {
             </a>
           </div>
           <div className="mt-8">
-            <Link to="/" className="inline-block bg-white text-primary hover:bg-orange-100 px-6 py-3 rounded-lg">
+            <Link
+              to="/"
+              className="inline-block bg-white text-primary hover:bg-orange-100 px-6 py-3 rounded-lg"
+            >
               Back to Home
             </Link>
           </div>
