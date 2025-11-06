@@ -5,18 +5,20 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import ServiceCard from '../components/ServiceCard';
 import TestimonialSlider from '../components/TestimonialSlider';
-import { FaUsers, FaBloggerB, FaCopyright } from 'react-icons/fa';
+import { FaUsers, FaBloggerB, FaCopyright, FaStar, FaFileAlt } from 'react-icons/fa';
 import { CgWebsite, CgInsights } from 'react-icons/cg';
-import { TiMediaPlay } from "react-icons/ti";
-import { TbSeo } from "react-icons/tb";
-import { SiTaichigraphics } from "react-icons/si";
-import { DiHtml5Multimedia } from "react-icons/di";
-import { BiSolidBookContent } from "react-icons/bi";
-import { MdInsights, MdAddBusiness } from "react-icons/md";
-import { BsGraphUpArrow, BsDatabaseFillGear } from "react-icons/bs";
-import { VscServerProcess } from "react-icons/vsc";
-import { FaSackDollar, FaHandHoldingDollar } from "react-icons/fa6";
-import { GiThink } from "react-icons/gi";
+import { TiMediaPlay } from 'react-icons/ti';
+import { TbSeo } from 'react-icons/tb';
+import { SiTaichigraphics } from 'react-icons/si';
+import { DiHtml5Multimedia } from 'react-icons/di';
+import { BiSolidBookContent } from 'react-icons/bi';
+import { MdInsights, MdAddBusiness, MdEmail } from 'react-icons/md';
+import { BsGraphUpArrow, BsDatabaseFillGear } from 'react-icons/bs';
+import { VscServerProcess } from 'react-icons/vsc';
+import { FaSackDollar, FaHandHoldingDollar } from 'react-icons/fa6';
+import { GiThink } from 'react-icons/gi';
+
+import { RiWhatsappLine } from 'react-icons/ri';
 
 import {
   LoadingScreen,
@@ -36,30 +38,64 @@ gsap.registerPlugin(ScrollTrigger);
 
 const services = [
   {
-    title: 'Blog Writing',
-    description: 'Engaging blog posts that attract and retain readers.',
-    icon: FaBloggerB,
-  },
-  {
-    title: 'Website Content',
-    description: 'Clear, SEO-friendly website pages that convert.',
-    icon: CgWebsite,
-  },
-  { title: 'Copywriting', description: 'High-converting sales and landing page copy.', icon: FaCopyright },
-  {
-    title: 'Social Media Content',
-    description: 'Short-form content tailored to each platform.',
+    title: 'Social Media Management',
+    description: 'Comprehensive social media strategy and content management.',
     icon: TiMediaPlay,
   },
   {
-    title: 'SEO Writing',
-    description: 'Keyword-optimized content for organic growth.',
+    title: 'PPC',
+    description: 'Pay-per-click advertising campaigns for targeted traffic.',
+    icon: BsGraphUpArrow,
+  },
+  {
+    title: 'Content Writing',
+    description: 'High-quality, engaging content for all platforms.',
+    icon: BiSolidBookContent,
+  },
+  {
+    title: 'Proofreading',
+    description: 'Professional proofreading and editing services.',
+    icon: FaCopyright,
+  },
+  {
+    title: 'Paid Guest Posting',
+    description: 'Strategic guest posting to build authority.',
+    icon: FaBloggerB,
+  },
+  {
+    title: 'SEO',
+    description: 'Search engine optimization for better visibility.',
     icon: TbSeo,
   },
   {
-    title: 'Graphic Designing',
-    description: 'Visuals that communicate your brand message.',
-    icon: SiTaichigraphics,
+    title: 'Hiring',
+    description: 'Talent acquisition and recruitment services.',
+    icon: MdAddBusiness,
+  },
+  {
+    title: 'WhatsApp Marketing',
+    description: 'Direct marketing through WhatsApp channels.',
+    icon: RiWhatsappLine,
+  },
+  {
+    title: 'Email Marketing',
+    description: 'Effective email campaigns to engage audiences.',
+    icon: MdEmail,
+  },
+  {
+    title: 'Reviews',
+    description: 'Managing and generating customer reviews.',
+    icon: FaStar,
+  },
+  {
+    title: 'CV Writing',
+    description: 'Professional CV and resume writing services.',
+    icon: FaFileAlt,
+  },
+  {
+    title: 'Website Development',
+    description: 'Custom website design and development.',
+    icon: CgWebsite,
   },
 ];
 
@@ -68,7 +104,7 @@ const featuredServices = [
     title: 'Social Media Management',
     description:
       'Posting schedules, community management, trend research and competitor analysis to grow your channels.',
-    icon: DiHtml5Multimedia,
+    icon: TiMediaPlay,
   },
   {
     title: 'Content Writing',
@@ -76,9 +112,9 @@ const featuredServices = [
     icon: BiSolidBookContent,
   },
   {
-    title: 'Graphic Designing',
-    description: 'Visual designs that elevate your brand and convert visitors into customers.',
-    icon: SiTaichigraphics,
+    title: 'SEO',
+    description: 'Optimize your online presence for better search engine rankings and visibility.',
+    icon: TbSeo,
   },
 ];
 
@@ -240,9 +276,6 @@ export default function Home() {
       </AnimatePresence> */}
 
       {/* Floating Background Elements */}
-      
-      
-     
 
       {/* Scroll Progress Indicator */}
       <ScrollProgress progressRef={progressRef} />
@@ -254,12 +287,8 @@ export default function Home() {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.1, duration: 0.4, ease: 'easeOut' }}
-        
       >
-        
-      
         <div className="container mx-auto px-6 py-16">
-          
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
             {/* Left: content */}
             <div className="md:col-span-6 lg:col-span-7">
@@ -271,7 +300,7 @@ export default function Home() {
                 transition={{ delay: 0.2, duration: 0.3, ease: 'easeOut' }}
                 whileHover="hover"
               >
-                Welcome to ContentOra <span className="text-secondary">Media</span>
+                Welcome to ContentOra<span className="text-secondary"> Media</span>
               </motion.h1>
               <motion.p
                 className="hero-sub font-body text-lg md:text-xl text-gray-700 mb-6 max-w-prose"
@@ -280,10 +309,11 @@ export default function Home() {
                 animate="animate"
                 transition={{ delay: 0.3, duration: 0.3, ease: 'easeOut' }}
               >
-                Your website looks unengaging or inconsistent, drives less traffic, or feels
-                irrelevant? No more. Our recognised collaborative team of reliable marketing
-                freelancers uses custom digital marketing strategies to find your right audience and
-                convert them into loyal customers.
+                ContentOra Media offers tailored digital marketing strategies to enhance business
+                engagement and customer loyalty. The team of freelancers focuses on aligning
+                marketing plans with specific business goals and industry needs, allowing clients to
+                concentrate on growth while they manage digital operations. Their creative approach
+                aims to make brands memorable and establish valuable online relationships.
               </motion.p>
 
               <motion.div
@@ -297,12 +327,12 @@ export default function Home() {
                     to="/about"
                     className="hero-cta bg-primary text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition font-semibold"
                   >
-                    Start Your Free Strategy Session
+                    Get Your Free Consultation
                   </Link>
                 </motion.div>
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                  <Link to="/faq" className="text-primary font-medium">
-                    FAQ
+                  <Link to="/services" className="text-primary font-medium">
+                    Explore Services
                   </Link>
                 </motion.div>
               </motion.div>
@@ -319,19 +349,19 @@ export default function Home() {
                       strokeLinejoin="round"
                     />
                   </svg>
-                  Data-driven growth
+                  Comprehensive Services
                 </span>
                 <span className="inline-flex items-center gap-2 bg-white/90 rounded-full px-4 py-2 shadow text-sm font-medium text-primary">
                   <svg width="16" height="16" viewBox="0 0 24 24" className="inline-block">
                     <rect x="4" y="4" width="16" height="16" rx="3" fill="#2563eb" />
                   </svg>
-                  Affordable strategies
+                  Proven Results
                 </span>
                 <span className="inline-flex items-center gap-2 bg-white/90 rounded-full px-4 py-2 shadow text-sm font-medium text-primary">
                   <svg width="16" height="16" viewBox="0 0 24 24" className="inline-block">
                     <path d="M12 2a10 10 0 110 20 10 10 0 010-20z" fill="#2563eb" />
                   </svg>
-                  Reliable team
+                  Expert Team
                 </span>
               </div>
             </div>
@@ -346,8 +376,14 @@ export default function Home() {
                     alt="media"
                     className="w-full h-96 object-cover"
                   /> */}
-                  <video autoPlay muted loop ref={heroImageRef} src={homeVideo} alt="media"
-                    className="w-full h-96 object-cover" ></video>
+                  <video
+                    autoPlay
+                    muted
+                    loop
+                    ref={heroImageRef}
+                    src={homeVideo}
+                    className="w-full h-96 object-cover"
+                  ></video>
                 </div>
 
                 {/* overlay small cards */}
@@ -378,12 +414,14 @@ export default function Home() {
               How will you <span className="text-secondary">benefit?</span>
             </h2>
             <p className="welcome-sub font-body text-lg text-gray-700 mt-4">
-              Understanding overarching trends of your business and market saves time, money and
-              energy — and helps you dominate your market.
+              Understanding your business tendencies and market environment enables informed
+              decisions and resource exploitation. Early identification of opportunities and
+              challenges allows you to outperform competitors, saving time and money while ensuring
+              brand prominence and adaptability in a rapidly changing digital landscape.
             </p>
           </div>
 
-          <div ref={benefitsRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div ref={benefitsRef} className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <article
               className="benefit-card bg-orange-50 p-8 rounded-xl shadow-md text-center transform transition-transform hover:-translate-y-3 hover:shadow-xl"
               role="article"
@@ -392,9 +430,9 @@ export default function Home() {
               <div className="flex items-center justify-center w-12 h-12 bg-secondary/80 rounded-full mb-6 mx-auto">
                 <MdInsights className="text-white text-2xl" />
               </div>
-              <h3 className="font-heading text-secondary font-semibold mb-2">Client insights</h3>
+              <h3 className="font-heading text-secondary font-semibold mb-2">Know Your Audience</h3>
               <p className="text-sm text-gray-600">
-                Understand who your customers truly are and what they want.
+                Deep insights into customer behavior and preferences.
               </p>
             </article>
 
@@ -406,12 +444,8 @@ export default function Home() {
               <div className="flex items-center justify-center w-12 h-12 bg-primary/80 rounded-full mb-6 mx-auto">
                 <BsGraphUpArrow className="text-white text-2xl" />
               </div>
-              <h3 className="font-heading text-primary  font-semibold mb-2">
-                Increased efficiency
-              </h3>
-              <p className="text-sm text-gray-600">
-                Streamline content operations to save time and scale.
-              </p>
+              <h3 className="font-heading text-primary  font-semibold mb-2">Work Smarter</h3>
+              <p className="text-sm text-gray-600">Optimize workflows and maximize productivity.</p>
             </article>
 
             <article
@@ -422,9 +456,11 @@ export default function Home() {
               <div className="flex items-center justify-center w-12 h-12 bg-secondary/80 rounded-full mb-6 mx-auto">
                 <VscServerProcess className="text-white text-2xl" />
               </div>
-              <h3 className="font-heading text-secondary font-semibold mb-2">Process automation</h3>
+              <h3 className="font-heading text-secondary font-semibold mb-2">
+                Automate for Impact
+              </h3>
               <p className="text-sm text-gray-600">
-                Automate repetitive tasks to focus on strategy.
+                Streamline processes to achieve greater results.
               </p>
             </article>
 
@@ -436,11 +472,9 @@ export default function Home() {
               <div className="flex items-center justify-center w-12 h-12 bg-primary/80 rounded-full mb-6 mx-auto">
                 <BsDatabaseFillGear className="text-white text-2xl" />
               </div>
-              <h3 className="font-heading text-primary  font-semibold mb-2">
-                Data-driven innovation
-              </h3>
+              <h3 className="font-heading text-primary  font-semibold mb-2">Innovate with Data</h3>
               <p className="text-sm text-gray-600">
-                Use analytics to test, learn, and iterate fast.
+                Leverage data for creative and effective solutions.
               </p>
             </article>
 
@@ -450,11 +484,13 @@ export default function Home() {
               tabIndex={0}
             >
               <div className="flex items-center justify-center w-12 h-12 bg-secondary/80 rounded-full mb-6 mx-auto">
-                <FaSackDollar className="text-white text-2xl" />
+                <CgInsights className="text-white text-3xl" />
               </div>
-              <h3 className="font-heading text-secondary font-semibold mb-2">Reduced costs</h3>
+              <h3 className="font-heading text-secondary font-semibold mb-2">
+                Stay Ahead of the Curve
+              </h3>
               <p className="text-sm text-gray-600">
-                Cut expenses, optimize resources, and boost profitability effectively.
+                Anticipate trends and maintain competitive edge.
               </p>
             </article>
 
@@ -466,7 +502,7 @@ export default function Home() {
               <div className="flex items-center justify-center w-12 h-12 bg-primary/80 rounded-full mb-6 mx-auto">
                 <CgInsights className="text-white text-3xl" />
               </div>
-              <h3 className="font-heading text-primary  font-semibold mb-2">Market insights</h3>
+              <h3 className="font-heading text-primary font-semibold mb-2">Market Insights</h3>
               <p className="text-sm text-gray-600">
                 Uncover trends, analyze data, and inform business strategies effectively.
               </p>
@@ -492,13 +528,11 @@ export default function Home() {
               role="article"
               tabIndex={0}
             >
-             <div className="flex items-center justify-center w-12 h-12 bg-primary/80 rounded-full mb-6 mx-auto">
+              <div className="flex items-center justify-center w-12 h-12 bg-primary/80 rounded-full mb-6 mx-auto">
                 <GiThink className="text-white text-2xl" />
               </div>
-              <h4 className="font-heading text-primary  font-semibold mb-2">No guess works</h4>
-              <p className="text-sm text-gray-600">
-                Decisions backed by data, research and insights.
-              </p>
+              <h4 className="font-heading text-primary  font-semibold mb-2">No Guesswork</h4>
+              <p className="text-sm text-gray-600">Data-driven decisions eliminate uncertainty.</p>
             </article>
 
             <article
@@ -509,11 +543,9 @@ export default function Home() {
               <div className="flex items-center justify-center w-12 h-12 bg-primary/80 rounded-full mb-6 mx-auto">
                 <MdAddBusiness className="text-white text-2xl" />
               </div>
-              <h4 className="font-heading text-primary font-semibold mb-2">
-                Small business or a start ups
-              </h4>
+              <h4 className="font-heading text-primary font-semibold mb-2">Small Businesses</h4>
               <p className="text-sm text-gray-600">
-                We care for small businesses and tailor strategies to budgets.
+                Specialized solutions for small businesses and startups.
               </p>
             </article>
 
@@ -525,11 +557,9 @@ export default function Home() {
               <div className="flex items-center justify-center w-12 h-12 bg-primary/80 rounded-full mb-6 mx-auto">
                 <FaHandHoldingDollar className="text-white text-2xl" />
               </div>
-              <h4 className="font-heading text-primary  font-semibold mb-2">
-                Discount and Commitment
-              </h4>
+              <h4 className="font-heading text-primary  font-semibold mb-2">Special Offers</h4>
               <p className="text-sm text-gray-600">
-                50% introductory discount for initial months on select plans.
+                Exclusive discounts and special offers for new clients.
               </p>
             </article>
           </div>
@@ -541,17 +571,16 @@ export default function Home() {
         <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           <div>
             <h2 className="font-heading text-primary text-3xl md:text-4xl font-bold mb-4">
-              House where affordability, expertise and reliability comes together
+              Get to Know ContentOra Media
             </h2>
             <p className="text-gray-700 mb-4">
-              We tailor every strategy according to your business needs using custom digital
-              marketing strategies to ensure you get the correct result so you don't waste your time
-              and effort searching.
+              At ContentOra Media, we combine cutting-edge technology with creative expertise to
+              deliver marketing solutions that drive measurable results. Our team of specialists
+              works closely with you to understand your unique challenges and opportunities.
             </p>
             <p className="text-gray-700">
-              With over 3 years of experience working with an expert freelancers team, we have
-              designed solutions to help businesses grow their online visibility and boost
-              engagement and conversion rates.
+              Crafting strategies that align with your goals and budget, we ensure every campaign is
+              optimized for maximum impact and sustainable growth.
             </p>
           </div>
           <div>
@@ -562,77 +591,23 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Featured Services */}
-      <section className="py-20 px-6 bg-gray-50" data-aos="fade-up">
-        <div className="container mx-auto text-center mb-12">
-          <h2 className="font-heading text-primary text-3xl md:text-4xl font-bold">Our Services</h2>
-          <p className="text-gray-600 mt-4">Custom solutions for your digital growth</p>
-        </div>
-
-        <div ref={featuredRef} className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-          {featuredServices.map((f) => (
-            <div
-              key={f.title}
-              className="service-card featured-card bg-blue-50 border border-gray-200 p-6 rounded-lg shadow-sm h-full flex flex-col"
-            >
-              <ServiceCard title={f.title} description={f.description} icon={<f.icon className="text-white text-2xl" />} />
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Why Us */}
-      <section className="py-20 px-6 bg-white" data-aos="fade-up">
-        <div className="container mx-auto max-w-5xl">
-          <h2 className="font-heading text-3xl text-primary md:text-4xl font-bold text-center mb-6">
-            Why Us?
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-orange-50 p-6 rounded-lg shadow-sm">
-              <h4 className="font-heading text-secondary font-semibold mb-2">
-                No Off-the-Shelf Solutions
-              </h4>
-              <p className="text-sm text-gray-600">
-                We construct your business strategy from ground zero.
-              </p>
-            </div>
-            <div className="bg-orange-50 p-6 rounded-lg shadow-sm">
-              <h4 className="font-heading text-secondary font-semibold mb-2">
-                Work One-on-One with Experts
-              </h4>
-              <p className="text-sm text-gray-600">
-                Direct collaboration with experts, not project managers.
-              </p>
-            </div>
-            <div className="bg-orange-50 p-6 rounded-lg shadow-sm">
-              <h4 className="font-heading text-secondary font-semibold mb-2">
-                Commitment to Results
-              </h4>
-              <p className="text-sm text-gray-600">We focus on impact and measurable outcomes.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Services */}
       <section ref={servicesRef} className="py-20 px-6 bg-white" data-aos="fade-up">
         <div className="container mx-auto text-center mb-12">
           <h2 className="font-heading text-primary text-4xl md:text-5xl font-bold text-gray-900">
-            Our <span className="text-secondary">Content</span> Writing Services
+            Our <span className="text-secondary">Services</span>
           </h2>
           <p className="font-body text-lg text-gray-600 mt-4">
-            We cover a wide range of content types to meet your business needs.
+            Comprehensive digital marketing solutions tailored to your business needs.
           </p>
         </div>
 
         <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          
           {services.map((s) => (
-           <div
+            <div
               key={s.title}
               className="service-card bg-orange-50 border-gray-200 p-6 rounded-lg shadow-sm h-full flex flex-col"
             >
-            
               <ServiceCard
                 title={s.title}
                 description={s.description}
@@ -643,12 +618,120 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Why Us */}
+      <section className="py-20 px-6 bg-white" data-aos="fade-up">
+        <div className="container mx-auto max-w-5xl">
+          <h2 className="font-heading text-3xl md:text-4xl font-bold text-center mb-6">
+            Why <span className="text-secondary">Choose</span> Us?
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <article
+              className="benefit-card bg-orange-50 p-8 rounded-xl shadow-md text-center transform transition-transform hover:-translate-y-3 hover:shadow-xl"
+              role="article"
+              tabIndex={0}
+            >
+              <div className="flex items-center justify-center w-12 h-12 bg-secondary/80 rounded-full mb-6 mx-auto">
+                <FaUsers className="text-white text-2xl" />
+              </div>
+              <h4 className="font-heading text-secondary font-semibold mb-2">
+                We can ONLY Board Clients That We can really help
+              </h4>
+              <p className="text-sm text-gray-600">
+                We are selective in choosing the type of clients with whom we can make a measurable
+                impact, thereby quality, not quantity.
+              </p>
+            </article>
+
+            <article
+              className="benefit-card bg-blue-50 p-8 rounded-xl shadow-md text-center transform transition-transform hover:-translate-y-3 hover:shadow-xl"
+              role="article"
+              tabIndex={0}
+            >
+              <div className="flex items-center justify-center w-12 h-12 bg-primary/80 rounded-full mb-6 mx-auto">
+                <FaStar className="text-white text-2xl" />
+              </div>
+              <h4 className="font-heading text-primary font-semibold mb-2">
+                Your Success is Our Priority
+              </h4>
+              <p className="text-sm text-gray-600">
+                We are very transparent about not being able to produce anything meaningful, and we
+                concentrate on projects that we can make successful.
+              </p>
+            </article>
+
+            <article
+              className="benefit-card bg-orange-50 p-8 rounded-xl shadow-md text-center transform transition-transform hover:-translate-y-3 hover:shadow-xl"
+              role="article"
+              tabIndex={0}
+            >
+              <div className="flex items-center justify-center w-12 h-12 bg-secondary/80 rounded-full mb-6 mx-auto">
+                <SiTaichigraphics className="text-white text-2xl" />
+              </div>
+              <h4 className="font-heading text-secondary font-semibold mb-2">
+                No Off-the-Shelf Solutions
+              </h4>
+              <p className="text-sm text-gray-600">
+                Your strategies are designed individually to suit your individual business needs and
+                goals and will not be generic.
+              </p>
+            </article>
+
+            <article
+              className="benefit-card bg-blue-50 p-8 rounded-xl shadow-md text-center transform transition-transform hover:-translate-y-3 hover:shadow-xl"
+              role="article"
+              tabIndex={0}
+            >
+              <div className="flex items-center justify-center w-12 h-12 bg-primary/80 rounded-full mb-6 mx-auto">
+                <CgInsights className="text-white text-3xl" />
+              </div>
+              <h4 className="font-heading text-primary font-semibold mb-2">
+                Huge Market and Business Study
+              </h4>
+              <p className="text-sm text-gray-600">
+                We study your industry, competition, and customer base to develop evidence-based
+                strategies that can help to achieve the maximum results.
+              </p>
+            </article>
+
+            <article
+              className="benefit-card bg-orange-50 p-8 rounded-xl shadow-md text-center transform transition-transform hover:-translate-y-3 hover:shadow-xl"
+              role="article"
+              tabIndex={0}
+            >
+              <div className="flex items-center justify-center w-12 h-12 bg-primary/80 rounded-full mb-6 mx-auto">
+                <MdAddBusiness className="text-white text-2xl" />
+              </div>
+              <h4 className="font-heading text-secondary font-semibold mb-2">
+                First Hand Access to Industry Experts
+              </h4>
+              <p className="text-sm text-gray-600">
+                You are in direct contact with the experts dealing with your marketing, making
+                decisions quicker and finding unique solutions.
+              </p>
+            </article>
+
+            <article
+              className="benefit-card bg-blue-50 p-8 rounded-xl shadow-md text-center transform transition-transform hover:-translate-y-3 hover:shadow-xl"
+              role="article"
+              tabIndex={0}
+            >
+              <div className="flex items-center justify-center w-12 h-12 bg-secondary/80 rounded-full mb-6 mx-auto">
+                <TbSeo className="text-white text-2xl" />
+              </div>
+              <h4 className="font-heading text-primary font-semibold mb-2">
+                Customized Map to Your Development
+              </h4>
+              <p className="text-sm text-gray-600">
+                Every client is offered his/her own marketing roadmap to expand the engagement,
+                increase ROI, and enhance brand presence.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
       {/* Testimonials */}
-      <section
-        
-        className="py-20 px-6 bg-lightBlue testimonials"
-        data-aos="fade-up"
-      >
+      <section className="py-20 px-6 bg-lightBlue testimonials" data-aos="fade-up">
         <div ref={testimonialsRef} className="container mx-auto text-center mb-12">
           <h2 className="font-heading text-4xl md:text-5xl text-primary font-bold text-gray-900">
             What Our <span className="text-secondary">Clients</span> Say
@@ -793,7 +876,6 @@ export default function Home() {
               FAQ
             </Link>
           </div>
-    
         </div>
       </section>
     </div>
