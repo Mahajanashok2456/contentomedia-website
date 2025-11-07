@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { FaUsers, FaFileAlt, FaPalette, FaStar, FaChevronDown, FaCheck } from 'react-icons/fa';
+import { FaSackDollar } from 'react-icons/fa6';
 
 const services = [
   {
@@ -33,7 +34,7 @@ const services = [
     title: 'Content for Social Media Accounts',
     description:
       'The key factors for engaging social media are creativity and consistency. We write engaging captions, campaign content and storytelling posts that spark conversation and increase your reach.',
-    icon: FaUsers,
+    icon: FaStar,
     stats: ['4 Social Media Managers', '15+ Projects completed', '10 Ongoing projects'],
   },
   {
@@ -288,6 +289,128 @@ export default function Services() {
                 </div>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why We Are The Best Section */}
+      <section className="py-20 px-6 bg-white" data-aos="fade-up">
+        <div className="container mx-auto">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary mb-4">
+              Why We Are The <span className="text-secondary">Best?</span>
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Discover what sets us apart in delivering exceptional content writing services
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <article
+              className="benefit-card bg-orange-50 p-8 rounded-xl shadow-md text-center transform transition-transform hover:-translate-y-3 hover:shadow-xl"
+              role="article"
+              tabIndex={0}
+            >
+              <div className="flex items-center justify-center w-12 h-12 bg-secondary/80 rounded-full mb-6 mx-auto">
+                <FaUsers className="text-white text-2xl" />
+              </div>
+              <h4 className="font-heading text-secondary font-semibold mb-2">
+                Your Brand, Your Voice
+              </h4>
+              <p className="text-sm text-gray-600">
+                We firmly believe that your brand deserves its own unique identity. Your brand
+                awareness depends on the content that is visible on your website and social media
+                handle. We are dedicated to custom designing and making your content that is AI and
+                plagiarism-free.
+              </p>
+            </article>
+
+            <article
+              className="benefit-card bg-blue-50 p-8 rounded-xl shadow-md text-center transform transition-transform hover:-translate-y-3 hover:shadow-xl"
+              role="article"
+              tabIndex={0}
+            >
+              <div className="flex items-center justify-center w-12 h-12 bg-primary/80 rounded-full mb-6 mx-auto">
+                <FaFileAlt className="text-white text-2xl" />
+              </div>
+              <h4 className="font-heading text-primary font-semibold mb-2">Words That Work</h4>
+              <p className="text-sm text-gray-600">
+                Our content is way more than just well-written. It is written to engage, inform and
+                convert.
+              </p>
+            </article>
+
+            <article
+              className="benefit-card bg-orange-50 p-8 rounded-xl shadow-md text-center transform transition-transform hover:-translate-y-3 hover:shadow-xl"
+              role="article"
+              tabIndex={0}
+            >
+              <div className="flex items-center justify-center w-12 h-12 bg-secondary/80 rounded-full mb-6 mx-auto">
+                <FaStar className="text-white text-2xl" />
+              </div>
+              <h4 className="font-heading text-secondary font-semibold mb-2">
+                Original and Authentic
+              </h4>
+              <p className="text-sm text-gray-600">
+                Everything we write is written from scratch. It is double-checked to ensure it is AI
+                and plagiarism-free.
+              </p>
+            </article>
+
+            <article
+              className="benefit-card bg-blue-50 p-8 rounded-xl shadow-md text-center transform transition-transform hover:-translate-y-3 hover:shadow-xl"
+              role="article"
+              tabIndex={0}
+            >
+              <div className="flex items-center justify-center w-12 h-12 bg-primary/80 rounded-full mb-6 mx-auto">
+                <FaSackDollar className="text-white text-2xl" />
+              </div>
+              <h4 className="font-heading text-primary font-semibold mb-2">
+                Affordable Excellence
+              </h4>
+              <p className="text-sm text-gray-600">
+                We don't think that top-notch content has to be accompanied by a lot of money. We
+                have put together budget-friendly packages for you to choose from.
+              </p>
+            </article>
+
+            <article
+              className="benefit-card bg-orange-50 p-8 rounded-xl shadow-md text-center transform transition-transform hover:-translate-y-3 hover:shadow-xl"
+              role="article"
+              tabIndex={0}
+            >
+              <div className="flex items-center justify-center w-12 h-12 bg-secondary/80 rounded-full mb-6 mx-auto">
+                <FaCheck className="text-white text-2xl" />
+              </div>
+              <h4 className="font-heading text-secondary font-semibold mb-2">
+                On Time, Every Time
+              </h4>
+              <p className="text-sm text-gray-600">
+                We respect deadlines as much as we respect quality. Your projects are always
+                delivered when you need them.
+              </p>
+            </article>
+
+            <article
+              className="benefit-card bg-blue-50 p-8 rounded-xl shadow-md text-center transform transition-transform hover:-translate-y-3 hover:shadow-xl"
+              role="article"
+              tabIndex={0}
+            >
+              <div className="flex items-center justify-center w-12 h-12 bg-primary/80 rounded-full mb-6 mx-auto">
+                <FaPalette className="text-white text-2xl" />
+              </div>
+              <h4 className="font-heading text-primary font-semibold mb-2">Diverse Expertise</h4>
+              <p className="text-sm text-gray-600">
+                We create blogs, websites, webpages, e-books, technical documents and creative
+                pieces. We cover a wide range of services under one roof.
+              </p>
+            </article>
           </div>
         </div>
       </section>
