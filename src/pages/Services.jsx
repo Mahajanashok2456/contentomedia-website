@@ -6,27 +6,83 @@ import { FaUsers, FaFileAlt, FaPalette, FaStar, FaChevronDown, FaCheck } from 'r
 const services = [
   {
     id: 1,
-    title: 'Social Media Management',
+    title: 'Blog and Article Writing',
     description:
-      'We manage everything from content creation and scheduling to audience engagement and analytics...',
-    icon: FaUsers,
-    stats: ['4 Social Media Managers', '15+ Projects completed', '10 Ongoing projects'],
-  },
-  {
-    id: 2,
-    title: 'Content Writing',
-    description:
-      'Your words are powerful—use them to your advantage! From search engine optimized blogs...',
+      'We are skilled at creating insightful, engaging and easy-to-read blogs. We write articles that position your brand as an authority. Each piece is well researched and tailored to your audience. The blogs are designed to keep your readers interested from the first line to the last line.',
     icon: FaFileAlt,
     stats: ['5 Content Writers', '20 Companies', '130k Dollars saved in a day'],
   },
   {
-    id: 3,
-    title: 'Graphic Designing',
+    id: 2,
+    title: 'Website Content',
     description:
-      'Give your brand a new visual identity with the help of our graphic design services...',
+      'Your website is your digital identity. We craft homepages, service pages, landing pages and about us sections that are concise, impactful and built to make a lasting impression.',
+    icon: FaUsers,
+    stats: ['4 Social Media Managers', '15+ Projects completed', '10 Ongoing projects'],
+  },
+  {
+    id: 3,
+    title: 'Copywriting',
+    description:
+      "Our services range from product descriptions and ad campaigns to sales pages and email marketing. We deliver content that drives action while staying true to your company's brand values.",
     icon: FaPalette,
     stats: ['3 Graphic designers', '134 Visualizations made', '10 Ongoing projects'],
+  },
+  {
+    id: 4,
+    title: 'Content for Social Media Accounts',
+    description:
+      'The key factors for engaging social media are creativity and consistency. We write engaging captions, campaign content and storytelling posts that spark conversation and increase your reach.',
+    icon: FaUsers,
+    stats: ['4 Social Media Managers', '15+ Projects completed', '10 Ongoing projects'],
+  },
+  {
+    id: 5,
+    title: 'SEO Content Writing',
+    description:
+      'We balance creativity with strategy. Our SEO content naturally blends keywords into blogs and provides SEO-optimized content for product descriptions. This helps your business rank higher without losing the human touch.',
+    icon: FaFileAlt,
+    stats: ['5 Content Writers', '20 Companies', '130k Dollars saved in a day'],
+  },
+  {
+    id: 6,
+    title: 'Technical Writing',
+    description:
+      'We believe that complex ideas need clarity. We specialize in writing manuals, white papers, case studies and product documentation. We provide content that is accurate and easy to understand.',
+    icon: FaPalette,
+    stats: ['3 Graphic designers', '134 Visualizations made', '10 Ongoing projects'],
+  },
+  {
+    id: 7,
+    title: 'Academic and Research Writing',
+    description:
+      'For students and professionals, we provide content structured according to academic needs. We deliver research papers, essays and reports that are well researched, original, properly cited and present abstract thoughts with clarity.',
+    icon: FaUsers,
+    stats: ['4 Social Media Managers', '15+ Projects completed', '10 Ongoing projects'],
+  },
+  {
+    id: 8,
+    title: 'Creative Writing',
+    description:
+      'We can write stories, scripts and speeches with a fresh perspective. Our creative writing services are perfect for any work rooted in creativity and originality.',
+    icon: FaFileAlt,
+    stats: ['5 Content Writers', '20 Companies', '130k Dollars saved in a day'],
+  },
+  {
+    id: 9,
+    title: 'Editing and Proofreading',
+    description:
+      'We believe that good writing needs a careful eye. We are skilled at refining content by checking grammar, tone, style and structure. We ensure it is polished, professional and ready to share.',
+    icon: FaPalette,
+    stats: ['3 Graphic designers', '134 Visualizations made', '10 Ongoing projects'],
+  },
+  {
+    id: 10,
+    title: 'Ghost Writing',
+    description:
+      "If you have ideas but don't have the time to put them into words, we can write for you. With our ghost writing services, you get original human-written content under your name. We write all types of blogs, books and articles while you relax.",
+    icon: FaUsers,
+    stats: ['4 Social Media Managers', '15+ Projects completed', '10 Ongoing projects'],
   },
 ];
 
@@ -169,11 +225,17 @@ export default function Services() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            At Contentora Media, we believe that the right words can transform the way people see your brand. Content creation and writing goes beyond just written material.  The​‍​‌‍​‍‌​‍​‌‍​‍‌ content is specially made to be a true reflection of your brand's distinct personality. Its primary goal is to establish deep relationships with your target audience. Our approach is simple. We help you communicate with your audience in a way that gives them clarity. We aim to provide you with creativity and help you to create a good impact on your audience.
-
+            At Contentora Media, we believe that the right words can transform the way people see
+            your brand. Content creation and writing goes beyond just written material.
+            The​‍​‌‍​‍‌​‍​‌‍​‍‌ content is specially made to be a true reflection of your brand's
+            distinct personality. Its primary goal is to establish deep relationships with your
+            target audience. Our approach is simple. We help you communicate with your audience in a
+            way that gives them clarity. We aim to provide you with creativity and help you to
+            create a good impact on your audience.
             <br />
-
-            Whether you are trying to establish an online presence or to launch a social media campaign, or to strengthen your social media presence.  Our content writing services will help give your brand recognition and credibility.
+            Whether you are trying to establish an online presence or to launch a social media
+            campaign, or to strengthen your social media presence. Our content writing services will
+            help give your brand recognition and credibility.
           </motion.p>
         </div>
       </section>
@@ -312,7 +374,7 @@ export default function Services() {
                   <h3 className="font-heading text-xl font-bold text-primary mb-2">{plan.name}</h3>
                   {/* <div className="flex items-center justify-center">
                     {/* <span className="text-4xl font-bold text-secondary">{plan.price}</span> */}
-                    {/* <span className="text-gray-500 ml-1">{plan.period}</span> */}
+                  {/* <span className="text-gray-500 ml-1">{plan.period}</span> */}
                   {/* </div> */}
                 </div>
 
@@ -441,7 +503,9 @@ export default function Services() {
             >
               {/* Contact Information */}
               <div>
-                <h4 className="font-heading text-2xl font-bold text-primary mb-4 text-center">Get in <span className="text-secondary">Touch</span></h4>
+                <h4 className="font-heading text-2xl font-bold text-primary mb-4 text-center">
+                  Get in <span className="text-secondary">Touch</span>
+                </h4>
                 <div className="space-y-3">
                   {/* <div className="flex items-center">
                     <span className="font-semibold text-gray-800 mr-3">Email:</span>
