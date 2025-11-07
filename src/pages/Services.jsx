@@ -1,89 +1,88 @@
 import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { FaUsers, FaFileAlt, FaPalette, FaStar, FaChevronDown, FaCheck } from 'react-icons/fa';
+import {
+  FaUsers,
+  FaFileAlt,
+  FaPalette,
+  FaStar,
+  FaChevronDown,
+  FaCheck,
+  FaCopyright,
+  FaBloggerB,
+} from 'react-icons/fa';
 import { FaSackDollar } from 'react-icons/fa6';
+import { CgWebsite, CgInsights } from 'react-icons/cg';
+import { TiMediaPlay } from 'react-icons/ti';
+import { TbSeo } from 'react-icons/tb';
+import { DiHtml5Multimedia } from 'react-icons/di';
+import { BiSolidBookContent } from 'react-icons/bi';
+import { MdInsights, MdAddBusiness, MdEmail } from 'react-icons/md';
+import { BsGraphUpArrow, BsDatabaseFillGear } from 'react-icons/bs';
+import { VscServerProcess } from 'react-icons/vsc';
+import { GiThink } from 'react-icons/gi';
+import { RiWhatsappLine } from 'react-icons/ri';
 
 const services = [
   {
-    id: 1,
-    title: 'Blog and Article Writing',
-    description:
-      'We are skilled at creating insightful, engaging and easy-to-read blogs. We write articles that position your brand as an authority. Each piece is well researched and tailored to your audience. The blogs are designed to keep your readers interested from the first line to the last line.',
-    icon: FaFileAlt,
-    stats: ['5 Content Writers', '20 Companies', '130k Dollars saved in a day'],
+    title: 'Social Media Management',
+    description: 'Comprehensive social media strategy and content management.',
+    icon: TiMediaPlay,
   },
   {
-    id: 2,
-    title: 'Website Content',
-    description:
-      'Your website is your digital identity. We craft homepages, service pages, landing pages and about us sections that are concise, impactful and built to make a lasting impression.',
-    icon: FaUsers,
-    stats: ['4 Social Media Managers', '15+ Projects completed', '10 Ongoing projects'],
+    title: 'PPC',
+    description: 'Pay-per-click advertising campaigns for targeted traffic.',
+    icon: BsGraphUpArrow,
   },
   {
-    id: 3,
-    title: 'Copywriting',
-    description:
-      "Our services range from product descriptions and ad campaigns to sales pages and email marketing. We deliver content that drives action while staying true to your company's brand values.",
-    icon: FaPalette,
-    stats: ['3 Graphic designers', '134 Visualizations made', '10 Ongoing projects'],
+    title: 'Content Writing',
+    description: 'High-quality, engaging content for all platforms.',
+    icon: BiSolidBookContent,
   },
   {
-    id: 4,
-    title: 'Content for Social Media Accounts',
-    description:
-      'The key factors for engaging social media are creativity and consistency. We write engaging captions, campaign content and storytelling posts that spark conversation and increase your reach.',
+    title: 'Proofreading',
+    description: 'Professional proofreading and editing services.',
+    icon: FaCopyright,
+  },
+  {
+    title: 'Paid Guest Posting',
+    description: 'Strategic guest posting to build authority.',
+    icon: FaBloggerB,
+  },
+  {
+    title: 'SEO',
+    description: 'Search engine optimization for better visibility.',
+    icon: TbSeo,
+  },
+  {
+    title: 'Hiring',
+    description: 'Talent acquisition and recruitment services.',
+    icon: MdAddBusiness,
+  },
+  {
+    title: 'WhatsApp Marketing',
+    description: 'Direct marketing through WhatsApp channels.',
+    icon: RiWhatsappLine,
+  },
+  {
+    title: 'Email Marketing',
+    description: 'Effective email campaigns to engage audiences.',
+    icon: MdEmail,
+  },
+  {
+    title: 'Reviews',
+    description: 'Managing and generating customer reviews.',
     icon: FaStar,
-    stats: ['4 Social Media Managers', '15+ Projects completed', '10 Ongoing projects'],
   },
   {
-    id: 5,
-    title: 'SEO Content Writing',
-    description:
-      'We balance creativity with strategy. Our SEO content naturally blends keywords into blogs and provides SEO-optimized content for product descriptions. This helps your business rank higher without losing the human touch.',
+    title: 'CV Writing',
+    description: 'Professional CV and resume writing services.',
     icon: FaFileAlt,
-    stats: ['5 Content Writers', '20 Companies', '130k Dollars saved in a day'],
   },
   {
-    id: 6,
-    title: 'Technical Writing',
-    description:
-      'We believe that complex ideas need clarity. We specialize in writing manuals, white papers, case studies and product documentation. We provide content that is accurate and easy to understand.',
-    icon: FaPalette,
-    stats: ['3 Graphic designers', '134 Visualizations made', '10 Ongoing projects'],
-  },
-  {
-    id: 7,
-    title: 'Academic and Research Writing',
-    description:
-      'For students and professionals, we provide content structured according to academic needs. We deliver research papers, essays and reports that are well researched, original, properly cited and present abstract thoughts with clarity.',
-    icon: FaUsers,
-    stats: ['4 Social Media Managers', '15+ Projects completed', '10 Ongoing projects'],
-  },
-  {
-    id: 8,
-    title: 'Creative Writing',
-    description:
-      'We can write stories, scripts and speeches with a fresh perspective. Our creative writing services are perfect for any work rooted in creativity and originality.',
-    icon: FaFileAlt,
-    stats: ['5 Content Writers', '20 Companies', '130k Dollars saved in a day'],
-  },
-  {
-    id: 9,
-    title: 'Editing and Proofreading',
-    description:
-      'We believe that good writing needs a careful eye. We are skilled at refining content by checking grammar, tone, style and structure. We ensure it is polished, professional and ready to share.',
-    icon: FaPalette,
-    stats: ['3 Graphic designers', '134 Visualizations made', '10 Ongoing projects'],
-  },
-  {
-    id: 10,
-    title: 'Ghost Writing',
-    description:
-      "If you have ideas but don't have the time to put them into words, we can write for you. With our ghost writing services, you get original human-written content under your name. We write all types of blogs, books and articles while you relax.",
-    icon: FaUsers,
-    stats: ['4 Social Media Managers', '15+ Projects completed', '10 Ongoing projects'],
+    title: 'Website Development',
+    description: 'Custom website design and development.',
+    icon: CgWebsite,
   },
 ];
 
@@ -252,7 +251,7 @@ export default function Services() {
             viewport={{ once: true }}
           >
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary mb-4">
-              WHAT DO WE <span className="text-secondary">SERVE?</span>
+              Our <span className="text-secondary">Services</span>
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               Comprehensive digital marketing solutions tailored to your business needs
@@ -262,31 +261,201 @@ export default function Services() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <motion.div
-                key={service.id}
-                className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300"
+                key={service.title}
+                className="bg-orange-50 rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <div className="flex items-center justify-center w-16 h-16 bg-secondary rounded-full mb-6 mx-auto">
-                  <service.icon className="text-white text-2xl" />
-                </div>
-
-                <h3 className="font-heading text-xl font-bold text-primary mb-4 text-center">
-                  {service.title}
-                </h3>
-
-                <p className="text-gray-600 mb-6 text-center">{service.description}</p>
-
-                <div className="space-y-3">
-                  {service.stats.map((stat, statIndex) => (
-                    <div key={statIndex} className="flex items-center justify-center">
-                      <div className="w-2 h-2 bg-secondary rounded-full mr-3"></div>
-                      <span className="font-semibold text-gray-800">{stat}</span>
+                {/* Wrap PPC and Content Writing cards with Links to dedicated pages */}
+                {service.title === 'PPC' ? (
+                  <Link
+                    to="/services/ppc"
+                    className="block group focus:outline-none focus:ring-2 focus:ring-secondary rounded-xl"
+                  >
+                    <div className="flex items-center justify-center w-16 h-16 bg-secondary/80 rounded-full mb-6 mx-auto group-hover:scale-105 transition-transform">
+                      <service.icon className="text-white text-2xl" />
                     </div>
-                  ))}
-                </div>
+                    <h3 className="font-heading text-xl font-bold text-primary mb-4 text-center group-hover:text-secondary transition-colors">
+                      {service.title}
+                    </h3>
+                    <p className="text-gray-600 mb-6 text-center">{service.description}</p>
+                    <p className="text-sm text-secondary font-semibold text-center underline">
+                      Read more →
+                    </p>
+                  </Link>
+                ) : service.title === 'Content Writing' ? (
+                  <Link
+                    to="/services/content-writing"
+                    className="block group focus:outline-none focus:ring-2 focus:ring-secondary rounded-xl"
+                  >
+                    <div className="flex items-center justify-center w-16 h-16 bg-secondary/80 rounded-full mb-6 mx-auto group-hover:scale-105 transition-transform">
+                      <service.icon className="text-white text-2xl" />
+                    </div>
+                    <h3 className="font-heading text-xl font-bold text-primary mb-4 text-center group-hover:text-secondary transition-colors">
+                      {service.title}
+                    </h3>
+                    <p className="text-gray-600 mb-6 text-center">{service.description}</p>
+                    <p className="text-sm text-secondary font-semibold text-center underline">
+                      Read more →
+                    </p>
+                  </Link>
+                ) : service.title === 'Proofreading' ? (
+                  <Link
+                    to="/services/proofreading"
+                    className="block group focus:outline-none focus:ring-2 focus:ring-secondary rounded-xl"
+                  >
+                    <div className="flex items-center justify-center w-16 h-16 bg-secondary/80 rounded-full mb-6 mx-auto group-hover:scale-105 transition-transform">
+                      <service.icon className="text-white text-2xl" />
+                    </div>
+                    <h3 className="font-heading text-xl font-bold text-primary mb-4 text-center group-hover:text-secondary transition-colors">
+                      {service.title}
+                    </h3>
+                    <p className="text-gray-600 mb-6 text-center">{service.description}</p>
+                    <p className="text-sm text-secondary font-semibold text-center underline">
+                      Read more →
+                    </p>
+                  </Link>
+                ) : service.title === 'Paid Guest Posting' ? (
+                  <Link
+                    to="/services/paid-guest-posting"
+                    className="block group focus:outline-none focus:ring-2 focus:ring-secondary rounded-xl"
+                  >
+                    <div className="flex items-center justify-center w-16 h-16 bg-secondary/80 rounded-full mb-6 mx-auto group-hover:scale-105 transition-transform">
+                      <service.icon className="text-white text-2xl" />
+                    </div>
+                    <h3 className="font-heading text-xl font-bold text-primary mb-4 text-center group-hover:text-secondary transition-colors">
+                      {service.title}
+                    </h3>
+                    <p className="text-gray-600 mb-6 text-center">{service.description}</p>
+                    <p className="text-sm text-secondary font-semibold text-center underline">
+                      Read more →
+                    </p>
+                  </Link>
+                ) : service.title === 'SEO' ? (
+                  <Link
+                    to="/services/seo"
+                    className="block group focus:outline-none focus:ring-2 focus:ring-secondary rounded-xl"
+                  >
+                    <div className="flex items-center justify-center w-16 h-16 bg-secondary/80 rounded-full mb-6 mx-auto group-hover:scale-105 transition-transform">
+                      <service.icon className="text-white text-2xl" />
+                    </div>
+                    <h3 className="font-heading text-xl font-bold text-primary mb-4 text-center group-hover:text-secondary transition-colors">
+                      {service.title}
+                    </h3>
+                    <p className="text-gray-600 mb-6 text-center">{service.description}</p>
+                    <p className="text-sm text-secondary font-semibold text-center underline">
+                      Read more →
+                    </p>
+                  </Link>
+                ) : service.title === 'Hiring' ? (
+                  <Link
+                    to="/services/hiring"
+                    className="block group focus:outline-none focus:ring-2 focus:ring-secondary rounded-xl"
+                  >
+                    <div className="flex items-center justify-center w-16 h-16 bg-secondary/80 rounded-full mb-6 mx-auto group-hover:scale-105 transition-transform">
+                      <service.icon className="text-white text-2xl" />
+                    </div>
+                    <h3 className="font-heading text-xl font-bold text-primary mb-4 text-center group-hover:text-secondary transition-colors">
+                      {service.title}
+                    </h3>
+                    <p className="text-gray-600 mb-6 text-center">{service.description}</p>
+                    <p className="text-sm text-secondary font-semibold text-center underline">
+                      Read more →
+                    </p>
+                  </Link>
+                ) : service.title === 'WhatsApp Marketing' ? (
+                  <Link
+                    to="/services/whatsapp-marketing"
+                    className="block group focus:outline-none focus:ring-2 focus:ring-secondary rounded-xl"
+                  >
+                    <div className="flex items-center justify-center w-16 h-16 bg-secondary/80 rounded-full mb-6 mx-auto group-hover:scale-105 transition-transform">
+                      <service.icon className="text-white text-2xl" />
+                    </div>
+                    <h3 className="font-heading text-xl font-bold text-primary mb-4 text-center group-hover:text-secondary transition-colors">
+                      {service.title}
+                    </h3>
+                    <p className="text-gray-600 mb-6 text-center">{service.description}</p>
+                    <p className="text-sm text-secondary font-semibold text-center underline">
+                      Read more →
+                    </p>
+                  </Link>
+                ) : service.title === 'Email Marketing' ? (
+                  <Link
+                    to="/services/email-marketing"
+                    className="block group focus:outline-none focus:ring-2 focus:ring-secondary rounded-xl"
+                  >
+                    <div className="flex items-center justify-center w-16 h-16 bg-secondary/80 rounded-full mb-6 mx-auto group-hover:scale-105 transition-transform">
+                      <service.icon className="text-white text-2xl" />
+                    </div>
+                    <h3 className="font-heading text-xl font-bold text-primary mb-4 text-center group-hover:text-secondary transition-colors">
+                      {service.title}
+                    </h3>
+                    <p className="text-gray-600 mb-6 text-center">{service.description}</p>
+                    <p className="text-sm text-secondary font-semibold text-center underline">
+                      Read more →
+                    </p>
+                  </Link>
+                ) : service.title === 'Reviews' ? (
+                  <Link
+                    to="/services/reviews"
+                    className="block group focus:outline-none focus:ring-2 focus:ring-secondary rounded-xl"
+                  >
+                    <div className="flex items-center justify-center w-16 h-16 bg-secondary/80 rounded-full mb-6 mx-auto group-hover:scale-105 transition-transform">
+                      <service.icon className="text-white text-2xl" />
+                    </div>
+                    <h3 className="font-heading text-xl font-bold text-primary mb-4 text-center group-hover:text-secondary transition-colors">
+                      {service.title}
+                    </h3>
+                    <p className="text-gray-600 mb-6 text-center">{service.description}</p>
+                    <p className="text-sm text-secondary font-semibold text-center underline">
+                      Read more →
+                    </p>
+                  </Link>
+                ) : service.title === 'CV Writing' ? (
+                  <Link
+                    to="/services/cv-writing"
+                    className="block group focus:outline-none focus:ring-2 focus:ring-secondary rounded-xl"
+                  >
+                    <div className="flex items-center justify-center w-16 h-16 bg-secondary/80 rounded-full mb-6 mx-auto group-hover:scale-105 transition-transform">
+                      <service.icon className="text-white text-2xl" />
+                    </div>
+                    <h3 className="font-heading text-xl font-bold text-primary mb-4 text-center group-hover:text-secondary transition-colors">
+                      {service.title}
+                    </h3>
+                    <p className="text-gray-600 mb-6 text-center">{service.description}</p>
+                    <p className="text-sm text-secondary font-semibold text-center underline">
+                      Read more →
+                    </p>
+                  </Link>
+                ) : service.title === 'Website Development' ? (
+                  <Link
+                    to="/services/website-development"
+                    className="block group focus:outline-none focus:ring-2 focus:ring-secondary rounded-xl"
+                  >
+                    <div className="flex items-center justify-center w-16 h-16 bg-secondary/80 rounded-full mb-6 mx-auto group-hover:scale-105 transition-transform">
+                      <service.icon className="text-white text-2xl" />
+                    </div>
+                    <h3 className="font-heading text-xl font-bold text-primary mb-4 text-center group-hover:text-secondary transition-colors">
+                      {service.title}
+                    </h3>
+                    <p className="text-gray-600 mb-6 text-center">{service.description}</p>
+                    <p className="text-sm text-secondary font-semibold text-center underline">
+                      Read more →
+                    </p>
+                  </Link>
+                ) : (
+                  <>
+                    <div className="flex items-center justify-center w-16 h-16 bg-secondary/80 rounded-full mb-6 mx-auto">
+                      <service.icon className="text-white text-2xl" />
+                    </div>
+                    <h3 className="font-heading text-xl font-bold text-primary mb-4 text-center">
+                      {service.title}
+                    </h3>
+                    <p className="text-gray-600 mb-6 text-center">{service.description}</p>
+                  </>
+                )}
               </motion.div>
             ))}
           </div>

@@ -4,22 +4,18 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Link } from 'react-router-dom';
 import HighlightCard from '../components/HighlightCard';
-import { FaUsers, FaBloggerB, FaCopyright, FaEdit  } from 'react-icons/fa';
+import ServiceCard from '../components/ServiceCard';
+import { FaUsers, FaBloggerB, FaCopyright, FaStar, FaFileAlt } from 'react-icons/fa';
 import { CgWebsite, CgInsights } from 'react-icons/cg';
-import { TiMediaPlay } from "react-icons/ti";
-import { TbSeo } from "react-icons/tb";
-import { SiCkeditor4  } from "react-icons/si";
-import { RiEdit2Fill } from "react-icons/ri";
-import { DiHtml5Multimedia } from "react-icons/di";
-import { BiSolidBookContent } from "react-icons/bi";
-import { MdInsights, MdAddBusiness } from "react-icons/md";
-import { BsGraphUpArrow, BsDatabaseFillGear } from "react-icons/bs";
-import { VscServerProcess } from "react-icons/vsc";
-import { FaSackDollar, FaHandHoldingDollar } from "react-icons/fa6";
-import { GiThink } from "react-icons/gi";
-import { RiFileCopy2Fill } from "react-icons/ri";
-import { ImBooks } from "react-icons/im";
-
+import { TiMediaPlay } from 'react-icons/ti';
+import { TbSeo } from 'react-icons/tb';
+import { BiSolidBookContent } from 'react-icons/bi';
+import { MdInsights, MdAddBusiness, MdEmail } from 'react-icons/md';
+import { BsGraphUpArrow, BsDatabaseFillGear } from 'react-icons/bs';
+import { VscServerProcess } from 'react-icons/vsc';
+import { FaSackDollar, FaHandHoldingDollar } from 'react-icons/fa6';
+import { GiThink } from 'react-icons/gi';
+import { RiWhatsappLine } from 'react-icons/ri';
 
 import {
   LoadingScreen,
@@ -39,53 +35,64 @@ gsap.registerPlugin(ScrollTrigger);
 
 const services = [
   {
-    title: 'Blog & Article Writing',
-    description: 'We are skilled at creating insightful, engaging and easy-to-read blogs. We write articles that position your brand as an authority. Each piece is well researched and is tailored to your audience. The blogs are designed to keep your readers interested from the first line to the last line.',
-    icon: FaBloggerB,
-  },
-  {
-    title: 'Website Content',
-    description: 'Your website is your digital identity. We craft homepages, service pages, landing pages and about us sections that are concise. These sections are written in such a way that they become impactful. They are built to make a lasting impression.',
-    icon: CgWebsite,
-  },
- 
-  {
-    title: 'Social Media Content',
-    description: 'The key factors for an engaging social media are creativity and consistency. We write engaging captions, campaign content and storytelling posts that spark conversation and will increase your reach.',
+    title: 'Social Media Management',
+    description: 'Comprehensive social media strategy and content management.',
     icon: TiMediaPlay,
   },
   {
-    title: 'SEO Content',
-    description: 'We balance creativity with strategy. Our SEO content naturally blends keywords into blogs. We also provide SEO optimized content for product descriptions. This will help your business rank higher without losing the human touch.',
+    title: 'PPC',
+    description: 'Pay-per-click advertising campaigns for targeted traffic.',
+    icon: BsGraphUpArrow,
+  },
+  {
+    title: 'Content Writing',
+    description: 'High-quality, engaging content for all platforms.',
+    icon: BiSolidBookContent,
+  },
+  {
+    title: 'Proofreading',
+    description: 'Professional proofreading and editing services.',
+    icon: FaCopyright,
+  },
+  {
+    title: 'Paid Guest Posting',
+    description: 'Strategic guest posting to build authority.',
+    icon: FaBloggerB,
+  },
+  {
+    title: 'SEO',
+    description: 'Search engine optimization for better visibility.',
     icon: TbSeo,
   },
   {
-    title: 'Technical Writing',
-    description: 'We believe that complex ideas need clarity. We specialize in writing manuals, white papers, case study and product documentation. We provide content that is accurate and easy to understand. ',
-    icon: ImBooks,
-  },
-
-   {
-    title: 'Academic and research writing ',
-    description: 'For students and professionals, we provide content that is structured according to their academic needs. We provide research papers, essays and reports. Our content is well researched, original and with the right citations. We also present your abstract thoughts with clarity.',
-    icon: FaEdit,
-  },
-
-   {
-    title: 'Creative writing',
-    description: 'We can write stories, scripts and speeches with a fresh perspective. Our creative writing services will be the right choice for any work that is going to be rooted in creativity and originality.',
-    icon: RiEdit2Fill,
-  },
-
-  {
-    title: 'Editing & Proofreading',
-    description: 'We believe that good writing needs a careful eye. We are skilled at refining content by checking grammar, tone, style and structure. We make sure it is polished, professional and ready to share.',
-    icon: RiFileCopy2Fill,
+    title: 'Hiring',
+    description: 'Talent acquisition and recruitment services.',
+    icon: MdAddBusiness,
   },
   {
-    title: 'Ghostwriting',
-    description: 'If you have ideas, but you don\'t have the time to put them into words, we can write for you. With our ghost writing services, you get original human-written content under your name. We write all types of blogs, books and articles. You can be stress-free while we do all the work behind the scenes.',
-    icon: SiCkeditor4,
+    title: 'WhatsApp Marketing',
+    description: 'Direct marketing through WhatsApp channels.',
+    icon: RiWhatsappLine,
+  },
+  {
+    title: 'Email Marketing',
+    description: 'Effective email campaigns to engage audiences.',
+    icon: MdEmail,
+  },
+  {
+    title: 'Reviews',
+    description: 'Managing and generating customer reviews.',
+    icon: FaStar,
+  },
+  {
+    title: 'CV Writing',
+    description: 'Professional CV and resume writing services.',
+    icon: FaFileAlt,
+  },
+  {
+    title: 'Website Development',
+    description: 'Custom website design and development.',
+    icon: CgWebsite,
   },
 ];
 
@@ -120,14 +127,7 @@ export default function About() {
 
     const ctx = gsap.context(() => {
       gsap.from(heroRef.current, { y: 25, opacity: 0, duration: 0.4, ease: 'power3.out' });
-      gsap.from('.service-card', {
-        scrollTrigger: { trigger: servicesRef.current, start: 'top 85%', once: true },
-        y: 20,
-        opacity: 0,
-        stagger: 0.04,
-        duration: 0.4,
-        ease: 'power3.out',
-      });
+      // Removed conflicting service-card GSAP animation to let Framer Motion handle it
       gsap.from(whyRef.current, {
         scrollTrigger: { trigger: whyRef.current, start: 'top 85%', once: true },
         y: 15,
@@ -228,14 +228,14 @@ export default function About() {
       <motion.section
         id="services"
         ref={servicesRef}
-        className="py-20 px-6 bg-gray-50"
+        className="py-20 px-6 bg-white"
         data-aos="fade-up"
         variants={sectionVariants}
         initial="initial"
         animate="animate"
         transition={{ delay: 0.5, duration: 0.4, ease: 'easeOut' }}
       >
-        <div className="container mx-auto">
+        <div className="container mx-auto text-center mb-12">
           <motion.h2
             className="font-heading text-3xl md:text-4xl font-bold text-primary text-center mb-6"
             variants={titleVariants}
@@ -247,7 +247,7 @@ export default function About() {
             Our <span className="text-secondary">Services</span>
           </motion.h2>
           <motion.p
-            className="text-center text-gray-600 max-w-2xl mx-auto mb-10"
+            className="text-center text-gray-600 max-w-2xl mx-auto"
             variants={subtitleVariants}
             initial="initial"
             animate="animate"
@@ -256,25 +256,21 @@ export default function About() {
             Whether you want to build awareness, launch a campaign, or strengthen your online
             presence — our services cover every stage of your content journey.
           </motion.p>
+        </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.map((s, index) => (
-              <motion.div
-                key={s.title}
-                className="service-card bg-blue-50 border border-gray-200 p-6 rounded-lg shadow-sm h-full"
-                variants={cardVariants}
-                initial="initial"
-                animate={cardVariants.animate(index)}
-                whileHover="hover"
-              >
-                <HighlightCard
-                  title={s.title}
-                  description={s.description}
-                  icon={<s.icon className="text-blue-900 text-2xl" />}
-                />
-              </motion.div>
-            ))}
-          </div>
+        <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map((s) => (
+            <div
+              key={s.title}
+              className="service-card bg-blue-50 border-2 border-blue-200 hover:border-blue-400 p-6 rounded-lg shadow-sm h-full flex flex-col"
+            >
+              <ServiceCard
+                title={s.title}
+                description={s.description}
+                icon={<s.icon className="text-white text-2xl" />}
+              />
+            </div>
+          ))}
         </div>
       </motion.section>
 
@@ -295,16 +291,17 @@ export default function About() {
             We guarantee reliable delivery without making any compromises on the quality.
           </p>
 
-           <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary mb-8 mt-20">
+          <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary mb-8 mt-20">
             Why are we the <span className="text-secondary">best?</span>
           </h2>
 
           <div className="grid md:grid-cols-3 gap-6">
-
             <article className="bg-orange-50 border border-gray-200 p-6 rounded-lg shadow-sm">
               <h3 className="font-heading font-semibold mb-2 text-primary">Human first approach</h3>
               <p className="text-sm text-gray-600">
-                We write for people. We make sure our human-written content is ranked high in the algorithm by integrating keywords in it. We also ensure that your message will content automatically with your audience.
+                We write for people. We make sure our human-written content is ranked high in the
+                algorithm by integrating keywords in it. We also ensure that your message will
+                content automatically with your audience.
               </p>
             </article>
 
@@ -313,46 +310,46 @@ export default function About() {
                 Your brand, your voice
               </h3>
               <p className="text-sm text-gray-600">
-               We firmly believe that your brand deserves its own unique identity. Your brand awareness depends on the content that is visible on your website and social media handle. We are dedicated to custom designing and making your content that is AI and plagiarism-free.
-
+                We firmly believe that your brand deserves its own unique identity. Your brand
+                awareness depends on the content that is visible on your website and social media
+                handle. We are dedicated to custom designing and making your content that is AI and
+                plagiarism-free.
               </p>
             </article>
-            
+
             <article className="bg-orange-50 border border-gray-200 p-6 rounded-lg shadow-sm">
               <h3 className="font-heading font-semibold mb-2 text-primary">
                 Affordable excellence
               </h3>
               <p className="text-sm text-gray-600">
-                We don't think that top-notch content has to be accompanied by a lot of money. We have put together budget-friendly packages for you to choose from.
-
+                We don't think that top-notch content has to be accompanied by a lot of money. We
+                have put together budget-friendly packages for you to choose from.
               </p>
             </article>
 
             <article className="bg-orange-50 border border-gray-200 p-6 rounded-lg shadow-sm">
               <h3 className="font-heading font-semibold mb-2 text-primary">
-               Original and authentic 
+                Original and authentic
               </h3>
               <p className="text-sm text-gray-600">
-                Everything we write is written from scratch. It is double-checked to ensure it is AI and plagiarism-free.
+                Everything we write is written from scratch. It is double-checked to ensure it is AI
+                and plagiarism-free.
               </p>
             </article>
 
             <article className="bg-orange-50 border border-gray-200 p-6 rounded-lg shadow-sm">
-              <h3 className="font-heading font-semibold mb-2 text-primary">
-                On time, every time
-              </h3>
+              <h3 className="font-heading font-semibold mb-2 text-primary">On time, every time</h3>
               <p className="text-sm text-gray-600">
-                We respect deadlines as much as we respect quality. Your projects are always delivered when you need them.
+                We respect deadlines as much as we respect quality. Your projects are always
+                delivered when you need them.
               </p>
             </article>
 
             <article className="bg-orange-50 border border-gray-200 p-6 rounded-lg shadow-sm">
-              <h3 className="font-heading font-semibold mb-2 text-primary">
-                Diverse expertise 
-              </h3>
+              <h3 className="font-heading font-semibold mb-2 text-primary">Diverse expertise</h3>
               <p className="text-sm text-gray-600">
-                We create blogs, websites, webpages, e-books, technical documents and creative pieces. We cover a wide range of services under one roof.
-
+                We create blogs, websites, webpages, e-books, technical documents and creative
+                pieces. We cover a wide range of services under one roof.
               </p>
             </article>
           </div>
