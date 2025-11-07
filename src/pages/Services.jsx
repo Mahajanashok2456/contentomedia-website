@@ -1,6 +1,5 @@
 import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import {
   FaUsers,
   FaFileAlt,
@@ -270,9 +269,11 @@ export default function Services() {
               >
                 {/* Wrap PPC and Content Writing cards with Links to dedicated pages */}
                 {service.title === 'PPC' ? (
-                  <Link
-                    to="/services/ppc"
-                    className="block group focus:outline-none focus:ring-2 focus:ring-secondary rounded-xl"
+                  <a
+                    href="/services/ppc"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block h-full"
                   >
                     <div className="flex items-center justify-center w-16 h-16 bg-secondary/80 rounded-full mb-6 mx-auto group-hover:scale-105 transition-transform">
                       <service.icon className="text-white text-2xl" />
@@ -284,11 +285,13 @@ export default function Services() {
                     <p className="text-sm text-secondary font-semibold text-center underline">
                       Read more →
                     </p>
-                  </Link>
+                  </a>
                 ) : service.title === 'Content Writing' ? (
-                  <Link
-                    to="/services/content-writing"
-                    className="block group focus:outline-none focus:ring-2 focus:ring-secondary rounded-xl"
+                  <a
+                    href="/services/content-writing"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block h-full"
                   >
                     <div className="flex items-center justify-center w-16 h-16 bg-secondary/80 rounded-full mb-6 mx-auto group-hover:scale-105 transition-transform">
                       <service.icon className="text-white text-2xl" />
@@ -300,11 +303,13 @@ export default function Services() {
                     <p className="text-sm text-secondary font-semibold text-center underline">
                       Read more →
                     </p>
-                  </Link>
+                  </a>
                 ) : service.title === 'Proofreading' ? (
-                  <Link
-                    to="/services/proofreading"
-                    className="block group focus:outline-none focus:ring-2 focus:ring-secondary rounded-xl"
+                  <a
+                    href="/services/proofreading"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block h-full"
                   >
                     <div className="flex items-center justify-center w-16 h-16 bg-secondary/80 rounded-full mb-6 mx-auto group-hover:scale-105 transition-transform">
                       <service.icon className="text-white text-2xl" />
@@ -316,11 +321,13 @@ export default function Services() {
                     <p className="text-sm text-secondary font-semibold text-center underline">
                       Read more →
                     </p>
-                  </Link>
+                  </a>
                 ) : service.title === 'Paid Guest Posting' ? (
-                  <Link
-                    to="/services/paid-guest-posting"
-                    className="block group focus:outline-none focus:ring-2 focus:ring-secondary rounded-xl"
+                  <a
+                    href="/services/paid-guest-posting"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block h-full"
                   >
                     <div className="flex items-center justify-center w-16 h-16 bg-secondary/80 rounded-full mb-6 mx-auto group-hover:scale-105 transition-transform">
                       <service.icon className="text-white text-2xl" />
@@ -332,11 +339,13 @@ export default function Services() {
                     <p className="text-sm text-secondary font-semibold text-center underline">
                       Read more →
                     </p>
-                  </Link>
+                  </a>
                 ) : service.title === 'SEO' ? (
-                  <Link
-                    to="/services/seo"
-                    className="block group focus:outline-none focus:ring-2 focus:ring-secondary rounded-xl"
+                  <a
+                    href="/services/seo"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block h-full"
                   >
                     <div className="flex items-center justify-center w-16 h-16 bg-secondary/80 rounded-full mb-6 mx-auto group-hover:scale-105 transition-transform">
                       <service.icon className="text-white text-2xl" />
@@ -348,11 +357,13 @@ export default function Services() {
                     <p className="text-sm text-secondary font-semibold text-center underline">
                       Read more →
                     </p>
-                  </Link>
+                  </a>
                 ) : service.title === 'Hiring' ? (
-                  <Link
-                    to="/services/hiring"
-                    className="block group focus:outline-none focus:ring-2 focus:ring-secondary rounded-xl"
+                  <a
+                    href="/services/hiring"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block h-full"
                   >
                     <div className="flex items-center justify-center w-16 h-16 bg-secondary/80 rounded-full mb-6 mx-auto group-hover:scale-105 transition-transform">
                       <service.icon className="text-white text-2xl" />
@@ -364,11 +375,13 @@ export default function Services() {
                     <p className="text-sm text-secondary font-semibold text-center underline">
                       Read more →
                     </p>
-                  </Link>
+                  </a>
                 ) : service.title === 'WhatsApp Marketing' ? (
-                  <Link
-                    to="/services/whatsapp-marketing"
-                    className="block group focus:outline-none focus:ring-2 focus:ring-secondary rounded-xl"
+                  <a
+                    href="/services/whatsapp-marketing"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block h-full"
                   >
                     <div className="flex items-center justify-center w-16 h-16 bg-secondary/80 rounded-full mb-6 mx-auto group-hover:scale-105 transition-transform">
                       <service.icon className="text-white text-2xl" />
@@ -380,11 +393,13 @@ export default function Services() {
                     <p className="text-sm text-secondary font-semibold text-center underline">
                       Read more →
                     </p>
-                  </Link>
+                  </a>
                 ) : service.title === 'Email Marketing' ? (
-                  <Link
-                    to="/services/email-marketing"
-                    className="block group focus:outline-none focus:ring-2 focus:ring-secondary rounded-xl"
+                  <a
+                    href="/services/email-marketing"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block h-full"
                   >
                     <div className="flex items-center justify-center w-16 h-16 bg-secondary/80 rounded-full mb-6 mx-auto group-hover:scale-105 transition-transform">
                       <service.icon className="text-white text-2xl" />
@@ -396,11 +411,13 @@ export default function Services() {
                     <p className="text-sm text-secondary font-semibold text-center underline">
                       Read more →
                     </p>
-                  </Link>
+                  </a>
                 ) : service.title === 'Reviews' ? (
-                  <Link
-                    to="/services/reviews"
-                    className="block group focus:outline-none focus:ring-2 focus:ring-secondary rounded-xl"
+                  <a
+                    href="/services/reviews"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block h-full"
                   >
                     <div className="flex items-center justify-center w-16 h-16 bg-secondary/80 rounded-full mb-6 mx-auto group-hover:scale-105 transition-transform">
                       <service.icon className="text-white text-2xl" />
@@ -412,11 +429,13 @@ export default function Services() {
                     <p className="text-sm text-secondary font-semibold text-center underline">
                       Read more →
                     </p>
-                  </Link>
+                  </a>
                 ) : service.title === 'CV Writing' ? (
-                  <Link
-                    to="/services/cv-writing"
-                    className="block group focus:outline-none focus:ring-2 focus:ring-secondary rounded-xl"
+                  <a
+                    href="/services/cv-writing"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block h-full"
                   >
                     <div className="flex items-center justify-center w-16 h-16 bg-secondary/80 rounded-full mb-6 mx-auto group-hover:scale-105 transition-transform">
                       <service.icon className="text-white text-2xl" />
@@ -428,11 +447,13 @@ export default function Services() {
                     <p className="text-sm text-secondary font-semibold text-center underline">
                       Read more →
                     </p>
-                  </Link>
+                  </a>
                 ) : service.title === 'Website Development' ? (
-                  <Link
-                    to="/services/website-development"
-                    className="block group focus:outline-none focus:ring-2 focus:ring-secondary rounded-xl"
+                  <a
+                    href="/services/website-development"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block h-full"
                   >
                     <div className="flex items-center justify-center w-16 h-16 bg-secondary/80 rounded-full mb-6 mx-auto group-hover:scale-105 transition-transform">
                       <service.icon className="text-white text-2xl" />
@@ -444,7 +465,7 @@ export default function Services() {
                     <p className="text-sm text-secondary font-semibold text-center underline">
                       Read more →
                     </p>
-                  </Link>
+                  </a>
                 ) : (
                   <>
                     <div className="flex items-center justify-center w-16 h-16 bg-secondary/80 rounded-full mb-6 mx-auto">
