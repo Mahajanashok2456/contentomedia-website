@@ -3,7 +3,7 @@ import { RiWhatsappLine } from 'react-icons/ri';
 
 export default function WhatsAppButton() {
   // Replace with your actual WhatsApp business number (include country code, no + sign)
-  const phoneNumber = '919876543210'; // Example: 919876543210 for +91 9876543210
+  const phoneNumber = '918450049035'; // Example: replace for +91 9876543210
 
   // Pre-filled message that opens in WhatsApp
   const message = 'Hello! I need help with your services.';
