@@ -8,6 +8,7 @@ import About from './pages/About';
 import Services from './pages/Services';
 import Projects from './pages/Projects';
 import Blog from './pages/Blog';
+import BlogPost from './pages/BlogPost';
 import FAQ from './pages/FAQ';
 import Contact from './pages/Contact';
 import PrivacyPolicy from './pages/PrivacyPolicy';
@@ -47,9 +48,10 @@ export default function App() {
         <Route path="services/email-marketing" element={<EmailMarketing />} />
         <Route path="services/reviews" element={<Reviews />} />
         <Route path="services/cv-writing" element={<CVWriting />} />
-  <Route path="services/website-development" element={<WebsiteDevelopment />} />
+        <Route path="services/website-development" element={<WebsiteDevelopment />} />
         <Route path="projects" element={<Projects />} />
         <Route path="blog" element={<Blog />} />
+        <Route path="blog/:slug" element={<BlogPost />} />
         <Route path="faq" element={<FAQ />} />
         <Route path="contact" element={<Contact />} />
         <Route path="privacy-policy" element={<PrivacyPolicy />} />

@@ -7,7 +7,7 @@ const projects = [
     title: 'Sunshine Bay Residence',
     description:
       'A stunning luxury waterfront residence featuring contemporary architecture and sustainable design elements. This project showcases our expertise in creating harmonious living spaces that blend modern aesthetics with environmental consciousness.',
-    image: 'https://source.unsplash.com/random/800x600?luxury-residence',
+    image: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&h=600&fit=crop',
     features: [
       'Modern Architecture',
       'Sustainable Design',
@@ -20,7 +20,7 @@ const projects = [
     title: 'Bridgewater Joy Residence',
     description:
       'An architectural masterpiece built on the serene shores of Bridgewater Lake, combining traditional craftsmanship with cutting-edge smart home technology. This residence exemplifies our commitment to creating timeless yet functional living spaces.',
-    image: 'https://source.unsplash.com/random/800x600?lake-house-architecture',
+    image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&h=600&fit=crop',
     features: [
       'Lakefront Property',
       'Smart Home Technology',
@@ -33,7 +33,7 @@ const projects = [
     title: 'Pleasantview Gem Inn',
     description:
       'A boutique family hotel that redefines hospitality with its unique blend of modern comfort and personalized service. Located in the heart of Pleasantview, this inn offers guests an unforgettable experience with attention to every detail.',
-    image: 'https://source.unsplash.com/random/800x600?family-hotel-exterior',
+    image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=600&fit=crop',
     features: ['Boutique Hotel', 'Personalized Service', 'Modern Amenities', 'Prime Location'],
   },
 ];
@@ -149,7 +149,7 @@ export default function Projects() {
                   <div className="flex items-center">
                     <span className="font-semibold text-gray-800 mr-3">Phone:</span>
                     <a href="tel:+15551234567" className="text-secondary hover:underline">
-                       +91 8450049032
+                      +91 8450049032
                     </a>
                   </div>
                 </div>
