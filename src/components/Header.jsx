@@ -108,12 +108,12 @@ export default function Header() {
               >
                 {/* Column: SEO */}
                 <div>
-                  <h4 className="font-heading text-sm uppercase tracking-wide text-gray-500 mb-3">
+                  <h4 className="font-heading text-sm uppercase tracking-wide text-primary mb-3">
                     SEO Services
                   </h4>
                   <ul className="space-y-2">
                     <li>
-                      <Link to="/services/seo" className="block text-primary hover:text-secondary">
+                      <Link to="/services/seo" className="block text-gray-900 hover:text-secondary">
                         SEO
                       </Link>
                     </li>
@@ -122,12 +122,12 @@ export default function Header() {
 
                 {/* Column: PPC */}
                 <div>
-                  <h4 className="font-heading text-sm uppercase tracking-wide text-gray-500 mb-3">
+                  <h4 className="font-heading text-sm uppercase tracking-wide text-primary mb-3">
                     Pay Per Click (PPC)
                   </h4>
                   <ul className="space-y-2">
                     <li>
-                      <Link to="/services/ppc" className="block text-primary hover:text-secondary">
+                      <Link to="/services/ppc" className="block text-gray-900 hover:text-secondary">
                         PPC Marketing
                       </Link>
                     </li>
@@ -136,14 +136,14 @@ export default function Header() {
 
                 {/* Column: Content */}
                 <div>
-                  <h4 className="font-heading text-sm uppercase tracking-wide text-gray-500 mb-3">
+                  <h4 className="font-heading text-sm uppercase tracking-wide text-primary mb-3">
                     Content Marketing
                   </h4>
                   <ul className="space-y-2">
                     <li>
                       <Link
                         to="/services/content-writing"
-                        className="block text-primary hover:text-secondary"
+                        className="block text-gray-900 hover:text-secondary"
                       >
                         Content Writing
                       </Link>
@@ -151,7 +151,7 @@ export default function Header() {
                     <li>
                       <Link
                         to="/services/proofreading"
-                        className="block text-primary hover:text-secondary"
+                        className="block text-gray-900 hover:text-secondary"
                       >
                         Proofreading
                       </Link>
@@ -159,7 +159,7 @@ export default function Header() {
                     <li>
                       <Link
                         to="/services/paid-guest-posting"
-                        className="block text-primary hover:text-secondary"
+                        className="block text-gray-900 hover:text-secondary"
                       >
                         Paid Guest Posting
                       </Link>
@@ -169,14 +169,14 @@ export default function Header() {
 
                 {/* Column: Messaging & Email */}
                 <div>
-                  <h4 className="font-heading text-sm uppercase tracking-wide text-gray-500 mb-3">
+                  <h4 className="font-heading text-sm uppercase tracking-wide text-primary mb-3">
                     Messaging & Email
                   </h4>
                   <ul className="space-y-2">
                     <li>
                       <Link
                         to="/services/email-marketing"
-                        className="block text-primary hover:text-secondary"
+                        className="block text-gray-900 hover:text-secondary"
                       >
                         Email Marketing
                       </Link>
@@ -184,7 +184,7 @@ export default function Header() {
                     <li>
                       <Link
                         to="/services/whatsapp-marketing"
-                        className="block text-primary hover:text-secondary"
+                        className="block text-gray-900 hover:text-secondary"
                       >
                         WhatsApp Marketing
                       </Link>
@@ -194,14 +194,14 @@ export default function Header() {
 
                 {/* Column: Web Development */}
                 <div>
-                  <h4 className="font-heading text-sm uppercase tracking-wide text-gray-500 mb-3">
+                  <h4 className="font-heading text-sm uppercase tracking-wide text-primary mb-3">
                     Web Design & Development
                   </h4>
                   <ul className="space-y-2">
                     <li>
                       <Link
                         to="/services/website-development"
-                        className="block text-primary hover:text-secondary"
+                        className="block text-gray-900 hover:text-secondary"
                       >
                         Website Development
                       </Link>
@@ -211,14 +211,14 @@ export default function Header() {
 
                 {/* Column: Talent & Reputation */}
                 <div>
-                  <h4 className="font-heading text-sm uppercase tracking-wide text-gray-500 mb-3">
+                  <h4 className="font-heading text-sm uppercase tracking-wide text-primary mb-3">
                     Talent & Reputation
                   </h4>
                   <ul className="space-y-2">
                     <li>
                       <Link
                         to="/services/hiring"
-                        className="block text-primary hover:text-secondary"
+                        className="block text-gray-900 hover:text-secondary"
                       >
                         Hiring
                       </Link>
@@ -226,7 +226,7 @@ export default function Header() {
                     <li>
                       <Link
                         to="/services/reviews"
-                        className="block text-primary hover:text-secondary"
+                        className="block text-gray-900 hover:text-secondary"
                       >
                         Reviews Management
                       </Link>
@@ -234,7 +234,7 @@ export default function Header() {
                     <li>
                       <Link
                         to="/services/cv-writing"
-                        className="block text-primary hover:text-secondary"
+                        className="block text-gray-900 hover:text-secondary"
                       >
                         CV Writing
                       </Link>

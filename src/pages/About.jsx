@@ -360,7 +360,7 @@ export default function About() {
       <section className="py-20 px-6 bg-lightBlue" data-aos="fade-up">
         <div className="container mx-auto max-w-5xl">
           <h3 className="font-heading text-2xl md:text-3xl font-semibold mb-6 text-center text-primary">
-            How we <span className="text-secondary">work</span>
+            How we <span className="text-secondary">work?</span>
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-white border border-gray-200 p-6 rounded-lg shadow-sm">
@@ -396,8 +396,8 @@ export default function About() {
             <a href="mailto:info@contentoramedia.com" className="underline">
               info@contentoramedia.com
             </a>
-            <a href="tel:+15551234567" className="underline">
-              +1 (555) 123-4567
+            <a href="tel:+91 8450049035" className="underline">
+              +91 8450049035
             </a>
           </div>
           <div className="mt-8">

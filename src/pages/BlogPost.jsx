@@ -1,6 +1,15 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { FaArrowLeft, FaCalendar, FaClock, FaTag, FaUser } from 'react-icons/fa';
+import authorPhoto from '../assets/images/WhatsApp Image 2025-11-11 at 20.29.28_c36722b8.jpg';
+
+// Default author profile to be used across all blogs
+const defaultAuthor = {
+  name: 'Bavithra P',
+  role: 'Content Writer • Digital marketing, SEO, and storytelling specialist',
+  avatar: authorPhoto,
+  bio: 'As a content writer who loves to write and is a specialist in digital marketing, SEO, and storytelling. Capable of producing lucid, appealing copies which bring about the desired outcomes. Has the experience of writing for blogs, social media, and websites from various industries. Committed to making it easy for brands to relate and expand through attractive stories.',
+};
 
 // Blog posts data - will be expanded as more blogs are added
 const blogPosts = {
@@ -10,11 +19,7 @@ const blogPosts = {
     category: 'PPC Marketing',
     readTime: '8 min read',
     date: 'Nov 11, 2025',
-    author: {
-      name: 'Contentomedia Team',
-      role: 'Digital Marketing Experts',
-      avatar: '/84020349293788418.jpeg',
-    },
+    author: defaultAuthor,
     content: `
       <p class="lead-text">Most entrepreneurs and marketers agree on one fact when dealing with the topic of business growth speed online: time is money. Pay-Per-Click advertising (PPC) is one of the most outstanding digital marketing strategies that can bring almost immediate, measurable, and laser-targeted results. Unlike SEO, content marketing, or social media growth, which require months of hard work before yielding significant fruits, PPC campaigns can almost immediately start to provide the qualified leads and conversions.</p>
 
@@ -86,11 +91,7 @@ const blogPosts = {
     category: 'PPC Marketing',
     readTime: '7 min read',
     date: 'Nov 11, 2025',
-    author: {
-      name: 'Contentomedia Team',
-      role: 'Digital Marketing Experts',
-      avatar: '/84020349293788418.jpeg',
-    },
+    author: defaultAuthor,
     content: `
       <p class="lead-text">In today's digital market, which is extremely competitive, businesses have to always find ways that are not only efficient but also can be measured and that increase their visibility, leads, and sales. Organic means like SEO and content marketing are indeed important in growing the business in the long run, but for showing results immediately, none is as fast and accurate as Pay-Per-Click (PPC) advertising. At Contentdora Media we are confident in developing intelligent PPC advertising strategies that not only help the brands to reach their target audience faster but also sustain their growth.</p>
 
@@ -156,11 +157,7 @@ const blogPosts = {
     category: 'PPC Marketing',
     readTime: '6 min read',
     date: 'Nov 11, 2025',
-    author: {
-      name: 'Contentomedia Team',
-      role: 'Digital Marketing Experts',
-      avatar: '/84020349293788418.jpeg',
-    },
+    author: defaultAuthor,
     content: `
       <p class="lead-text">Lower CPC (Cost Per Click) and higher ROI (Return on Investment) from PPC campaigns are basically the results that can be first time made possible by simply what is going to be called an effective click-through and money use. Simply put, a company that aims to cut down PPC costs can reach such a goal through proper PPC campaign optimization by using a data-driven and strategic approach.</p>
 
@@ -234,11 +231,7 @@ const blogPosts = {
     category: 'Content Writing',
     readTime: '7 min read',
     date: 'Nov 11, 2025',
-    author: {
-      name: 'Contentomedia Team',
-      role: 'Digital Marketing Experts',
-      avatar: '/84020349293788418.jpeg',
-    },
+    author: defaultAuthor,
     content: `
       <p class="lead-text">Every brand story is initially a draft - an idea conceptualized in words. However, what really differentiates good content from great content is its refinement. At Contentora Media, we are committed to taking every piece of writing from its initial draft to perfection. Our Proofreading Expertise is a vehicle that takes content from being simply communicative to being able to connect, persuade, and inspire.</p>
 
@@ -311,10 +304,35 @@ const blogPosts = {
 export default function BlogPost() {
   const { slug } = useParams();
   const post = blogPosts[slug];
+  const [showAuthorCard, setShowAuthorCard] = useState(false);
+  const authorCardRef = useRef(null);
+  const authorBtnRef = useRef(null);
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    setShowAuthorCard(false);
   }, [slug]);
+
+  // Close author card on outside click or Escape
+  useEffect(() => {
+    function handleClickOutside(e) {
+      if (!showAuthorCard) return;
+      const card = authorCardRef.current;
+      const btn = authorBtnRef.current;
+      if (card && !card.contains(e.target) && btn && !btn.contains(e.target)) {
+        setShowAuthorCard(false);
+      }
+    }
+    function handleKey(e) {
+      if (e.key === 'Escape') setShowAuthorCard(false);
+    }
+    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener('keydown', handleKey);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('keydown', handleKey);
+    };
+  }, [showAuthorCard]);
 
   if (!post) {
     return (
@@ -367,19 +385,77 @@ export default function BlogPost() {
           </h1>
 
           {post.author && (
-            <div className="flex items-center gap-4 mt-8">
-              <img
-                src={post.author.avatar}
-                alt={post.author.name}
-                className="w-16 h-16 rounded-full border-2 border-secondary shadow-md"
-              />
-              <div>
-                <p className="text-lg font-semibold text-primary">
-                  Written by <span className="text-secondary">{post.author.name}</span>
-                </p>
-                {post.author.role && <p className="text-sm text-gray-600">{post.author.role}</p>}
+            <>
+              <div className="relative flex items-start gap-4 mt-8">
+                <img
+                  src={post.author.avatar}
+                  alt={post.author.name}
+                  className="w-16 h-16 rounded-full border-2 border-secondary shadow-md object-cover"
+                />
+                <div className="flex-1">
+                  <p className="text-lg font-semibold text-primary">
+                    Written by{' '}
+                    <button
+                      ref={authorBtnRef}
+                      onClick={() => setShowAuthorCard((v) => !v)}
+                      aria-expanded={showAuthorCard}
+                      className="text-secondary underline hover:no-underline focus:outline-none focus:ring-2 focus:ring-secondary rounded"
+                    >
+                      {post.author.name}
+                    </button>
+                  </p>
+                  {post.author.role && <p className="text-sm text-gray-600">{post.author.role}</p>}
+                </div>
               </div>
-            </div>
+
+              {/* Author Bio Modal with Backdrop */}
+              {showAuthorCard && (
+                <>
+                  {/* Backdrop Overlay */}
+                  <div
+                    className="fixed inset-0 bg-black/50 z-40"
+                    onClick={() => setShowAuthorCard(false)}
+                    aria-hidden="true"
+                  />
+                  {/* Card Modal */}
+                  <div
+                    ref={authorCardRef}
+                    role="dialog"
+                    aria-label="Author information"
+                    className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-50 w-[calc(100%-2rem)] max-w-md bg-white border border-gray-200 shadow-2xl rounded-xl p-5"
+                  >
+                    <div className="flex items-start gap-3 mb-3">
+                      <img
+                        src={post.author.avatar}
+                        alt={post.author.name}
+                        className="w-12 h-12 rounded-full border-2 border-secondary object-cover flex-shrink-0"
+                      />
+                      <div className="min-w-0 flex-1">
+                        <p className="font-semibold text-primary leading-tight text-lg">
+                          {post.author.name}
+                        </p>
+                        {post.author.role && (
+                          <p className="text-xs text-gray-600 mt-1">{post.author.role}</p>
+                        )}
+                      </div>
+                    </div>
+                    {post.author.bio && (
+                      <p className="text-sm text-gray-700 leading-relaxed mb-4">
+                        {post.author.bio}
+                      </p>
+                    )}
+                    <div className="text-right">
+                      <button
+                        onClick={() => setShowAuthorCard(false)}
+                        className="px-4 py-2 text-sm bg-primary text-white rounded-md hover:bg-blue-700 transition-colors"
+                      >
+                        Close
+                      </button>
+                    </div>
+                  </div>
+                </>
+              )}
+            </>
           )}
         </div>
       </section>

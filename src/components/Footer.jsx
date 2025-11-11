@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FaFacebook, FaInstagram, FaLinkedin, FaYoutube, FaTwitter } from 'react-icons/fa';
 import ContactForm from './ContactForm';
 import logoBtm from '../assets/images/image.png';
 
@@ -52,6 +53,51 @@ export default function Footer() {
             <a href="tel:+918450049035" className="hover:text-secondary">
               +91 8450049035
             </a>
+          </div>
+
+          {/* Social Media Links */}
+          <div className="mt-4">
+            <div className="font-heading text-lg mb-3 text-white">Follow Us</div>
+            <div className="flex gap-4">
+              <a
+                href="https://www.instagram.com/contentora_media/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-300 hover:text-secondary transition-colors"
+                aria-label="Instagram"
+              >
+                <FaInstagram className="text-2xl" />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/contentora-media"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-300 hover:text-secondary transition-colors"
+                aria-label="LinkedIn"
+              >
+                <FaLinkedin className="text-2xl" />
+              </a>
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-300 hover:text-secondary transition-colors cursor-not-allowed opacity-50"
+                aria-label="YouTube (Coming Soon)"
+                onClick={(e) => e.preventDefault()}
+              >
+                <FaYoutube className="text-2xl" />
+              </a>
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-300 hover:text-secondary transition-colors cursor-not-allowed opacity-50"
+                aria-label="Twitter (Coming Soon)"
+                onClick={(e) => e.preventDefault()}
+              >
+                <FaTwitter className="text-2xl" />
+              </a>
+            </div>
           </div>
 
           {/* <div className="mt-4">

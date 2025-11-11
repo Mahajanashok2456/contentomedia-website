@@ -150,13 +150,15 @@ const Contact = () => {
       </section>
 
       {/* Footer Section */}
-      <footer className="bg-primary text-white py-16 px-6">
+      <footer className="bg-lightBlue py-16 px-6">
         <div className="container mx-auto max-w-6xl">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Newsletter Section */}
             <div>
-              <h3 className="font-heading text-2xl font-bold mb-4">Join our Newsletter!</h3>
-              <p className="text-gray-300 mb-4">
+              <h3 className="font-heading text-primary text-2xl font-bold mb-4">
+                Join our Newsletter!
+              </h3>
+              <p className="text-gray-700 mb-4">
                 Stay updated with our latest news, insights, and exclusive offers.
               </p>
               <div className="flex">
@@ -173,41 +175,52 @@ const Contact = () => {
 
             {/* Hours Section */}
             <div>
-              <h3 className="font-heading text-2xl font-bold mb-4">Hours</h3>
-              <div className="space-y-2 text-gray-300">
+              <h3 className="font-heading text-primary text-2xl font-bold mb-4">Hours</h3>
+              <div className="space-y-2 text-gray-700">
                 <p>
-                  <span className="text-white font-semibold">Monday - Friday:</span> 9:00 AM - 6:00
-                  PM
+                  <span className="text-gray-900 font-semibold">Monday - Friday:</span> 9:00 AM -
+                  6:00 PM
                 </p>
                 <p>
-                  <span className="text-white font-semibold">Saturday:</span> 10:00 AM - 4:00 PM
+                  <span className="text-gray-900 font-semibold">Saturday:</span> 10:00 AM - 4:00 PM
                 </p>
                 <p>
-                  <span className="text-white font-semibold">Sunday:</span> Closed
+                  <span className="text-gray-900 font-semibold">Sunday:</span> Closed
                 </p>
               </div>
             </div>
 
             {/* Contacts Section */}
             <div>
-              <h3 className="font-heading text-2xl font-bold mb-4">Contacts</h3>
-              <div className="space-y-2 text-gray-300">
+              <h3 className="font-heading text-primary text-2xl font-bold mb-4">Contacts</h3>
+              <div className="space-y-2 text-gray-700">
                 <div className="flex items-center">
                   {' '}
-                  <IoMailUnread className="text-lg mr-1.5" /> <p> info@contentora.media </p>
+                  <IoMailUnread className="text-lg mr-1.5" />
+                  <a
+                    href="mailto:info@contentora.media"
+                    className="hover:text-primary transition-colors"
+                  >
+                    info@contentora.media
+                  </a>
                 </div>
                 <div className="flex items-center">
                   {' '}
-                  <FaPhoneAlt className="text-md mr-1.5" /> <p> +91 8450049035 </p>
+                  <FaPhoneAlt className="text-md mr-1.5" />
+                  <a href="tel:+918450049035" className="hover:text-primary transition-colors">
+                    +91 8450049035
+                  </a>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Tagline */}
-          <div className="border-t border-gray-600 mt-12 pt-8 text-center">
-            <p className="text-2xl font-heading font-bold text-secondary">ContentOra Media</p>
-            <p className="text-gray-300 mt-2">
+          <div className="border-t border-gray-300 mt-12 pt-8 text-center">
+            <p className="text-2xl font-heading font-bold">
+              ContentOra <span className="text-secondary">Media</span>
+            </p>
+            <p className="text-gray-700 mt-2">
               Your trusted partner in digital marketing excellence
             </p>
           </div>
