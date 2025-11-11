@@ -8,6 +8,8 @@ import logoPng from '../assets/images/logo.png';
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const location = useLocation();
 
   // Close mobile menu when the route changes
@@ -17,6 +19,7 @@ export default function Header() {
 
   function closeMenu() {
     setOpen(false);
+    setMobileServicesOpen(false);
   }
 
   const navLinks = [
@@ -56,52 +59,228 @@ export default function Header() {
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden md:flex items-center gap-6 font-body font-semibold">
+        <nav className="hidden md:flex items-center gap-6 font-body font-semibold relative">
           <NavLink
             to="/"
-            className={({ isActive }) => (isActive ? 'text-secondary' : 'hover:text-secondary hover:underline')}
+            className={({ isActive }) =>
+              isActive ? 'text-secondary' : 'hover:text-secondary hover:underline'
+            }
           >
             Home
           </NavLink>
           <NavLink
             to="/about"
-            className={({ isActive }) => (isActive ? 'text-secondary' : 'hover:text-secondary hover:underline')}
+            className={({ isActive }) =>
+              isActive ? 'text-secondary' : 'hover:text-secondary hover:underline'
+            }
           >
             About
           </NavLink>
-          <NavLink
-            to="/services"
-            className={({ isActive }) => (isActive ? 'text-secondary' : 'hover:text-secondary hover:underline')}
-          >
-            Services
-          </NavLink>
+          {/* Services mega menu (desktop) */}
+          <div className="relative">
+            <button
+              type="button"
+              onClick={() => setServicesOpen((v) => !v)}
+              onKeyDown={(e) => {
+                if (e.key === 'Escape') setServicesOpen(false);
+                if (e.key === 'ArrowDown') {
+                  const firstLink = document.querySelector('#services-mega-menu a');
+                  firstLink && firstLink.focus();
+                }
+              }}
+              className={`font-semibold ${
+                servicesOpen ? 'text-secondary' : 'hover:text-secondary hover:underline'
+              }`}
+              aria-haspopup="true"
+              aria-expanded={servicesOpen}
+              aria-controls="services-mega-menu"
+            >
+              Services {/** indicator */}
+              <span className="inline-block ml-1 text-xs">{servicesOpen ? '▲' : '▼'}</span>
+            </button>
+
+            {servicesOpen && (
+              <div
+                id="services-mega-menu"
+                className="absolute left-1/2 -translate-x-1/2 top-full w-[min(90vw,1000px)] bg-white border shadow-2xl rounded-xl p-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 z-50 animate-fadeIn"
+                role="menu"
+                onMouseLeave={() => setServicesOpen(false)}
+              >
+                {/* Column: SEO */}
+                <div>
+                  <h4 className="font-heading text-sm uppercase tracking-wide text-gray-500 mb-3">
+                    SEO Services
+                  </h4>
+                  <ul className="space-y-2">
+                    <li>
+                      <Link to="/services/seo" className="block text-primary hover:text-secondary">
+                        SEO
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Column: PPC */}
+                <div>
+                  <h4 className="font-heading text-sm uppercase tracking-wide text-gray-500 mb-3">
+                    Pay Per Click (PPC)
+                  </h4>
+                  <ul className="space-y-2">
+                    <li>
+                      <Link to="/services/ppc" className="block text-primary hover:text-secondary">
+                        PPC Marketing
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Column: Content */}
+                <div>
+                  <h4 className="font-heading text-sm uppercase tracking-wide text-gray-500 mb-3">
+                    Content Marketing
+                  </h4>
+                  <ul className="space-y-2">
+                    <li>
+                      <Link
+                        to="/services/content-writing"
+                        className="block text-primary hover:text-secondary"
+                      >
+                        Content Writing
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="/services/proofreading"
+                        className="block text-primary hover:text-secondary"
+                      >
+                        Proofreading
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="/services/paid-guest-posting"
+                        className="block text-primary hover:text-secondary"
+                      >
+                        Paid Guest Posting
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Column: Messaging & Email */}
+                <div>
+                  <h4 className="font-heading text-sm uppercase tracking-wide text-gray-500 mb-3">
+                    Messaging & Email
+                  </h4>
+                  <ul className="space-y-2">
+                    <li>
+                      <Link
+                        to="/services/email-marketing"
+                        className="block text-primary hover:text-secondary"
+                      >
+                        Email Marketing
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="/services/whatsapp-marketing"
+                        className="block text-primary hover:text-secondary"
+                      >
+                        WhatsApp Marketing
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Column: Web Development */}
+                <div>
+                  <h4 className="font-heading text-sm uppercase tracking-wide text-gray-500 mb-3">
+                    Web Design & Development
+                  </h4>
+                  <ul className="space-y-2">
+                    <li>
+                      <Link
+                        to="/services/website-development"
+                        className="block text-primary hover:text-secondary"
+                      >
+                        Website Development
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Column: Talent & Reputation */}
+                <div>
+                  <h4 className="font-heading text-sm uppercase tracking-wide text-gray-500 mb-3">
+                    Talent & Reputation
+                  </h4>
+                  <ul className="space-y-2">
+                    <li>
+                      <Link
+                        to="/services/hiring"
+                        className="block text-primary hover:text-secondary"
+                      >
+                        Hiring
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="/services/reviews"
+                        className="block text-primary hover:text-secondary"
+                      >
+                        Reviews Management
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="/services/cv-writing"
+                        className="block text-primary hover:text-secondary"
+                      >
+                        CV Writing
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            )}
+          </div>
           <NavLink
             to="/projects"
-            className={({ isActive }) => (isActive ? 'text-secondary' : 'hover:text-secondary hover:underline')}
+            className={({ isActive }) =>
+              isActive ? 'text-secondary' : 'hover:text-secondary hover:underline'
+            }
           >
             Projects
           </NavLink>
           <NavLink
             to="/blog"
-            className={({ isActive }) => (isActive ? 'text-secondary' : 'hover:text-secondary hover:underline')}
+            className={({ isActive }) =>
+              isActive ? 'text-secondary' : 'hover:text-secondary hover:underline'
+            }
           >
             Blog
           </NavLink>
           <NavLink
             to="/faq"
-            className={({ isActive }) => (isActive ? 'text-secondary' : 'hover:text-secondary hover:underline')}
+            className={({ isActive }) =>
+              isActive ? 'text-secondary' : 'hover:text-secondary hover:underline'
+            }
           >
             FAQ
           </NavLink>
           <NavLink
             to="/contact"
-            className={({ isActive }) => (isActive ? 'text-secondary' : 'hover:text-secondary hover:underline')}
+            className={({ isActive }) =>
+              isActive ? 'text-secondary' : 'hover:text-secondary hover:underline'
+            }
           >
             Contact
           </NavLink>
           <NavLink
             to="/privacy-policy"
-            className={({ isActive }) => (isActive ? 'text-secondary' : 'hover:text-secondary hover:underline')}
+            className={({ isActive }) =>
+              isActive ? 'text-secondary' : 'hover:text-secondary hover:underline'
+            }
           >
             Privacy Policy
           </NavLink>
@@ -140,9 +319,55 @@ export default function Header() {
             <Link to="/about" onClick={closeMenu} className="block font-body">
               About
             </Link>
-            <Link to="/services" onClick={closeMenu} className="block font-body">
-              Services
-            </Link>
+            {/* Mobile Services accordion */}
+            <div>
+              <button
+                type="button"
+                onClick={() => setMobileServicesOpen((v) => !v)}
+                className="w-full text-left font-body font-semibold flex items-center justify-between"
+                aria-expanded={mobileServicesOpen}
+              >
+                Services
+                <span className="ml-2">{mobileServicesOpen ? '−' : '+'}</span>
+              </button>
+              {mobileServicesOpen && (
+                <div className="mt-2 pl-4 space-y-2">
+                  <Link to="/services/seo" onClick={closeMenu} className="block">
+                    SEO
+                  </Link>
+                  <Link to="/services/ppc" onClick={closeMenu} className="block">
+                    PPC Marketing
+                  </Link>
+                  <Link to="/services/content-writing" onClick={closeMenu} className="block">
+                    Content Writing
+                  </Link>
+                  <Link to="/services/proofreading" onClick={closeMenu} className="block">
+                    Proofreading
+                  </Link>
+                  <Link to="/services/paid-guest-posting" onClick={closeMenu} className="block">
+                    Paid Guest Posting
+                  </Link>
+                  <Link to="/services/email-marketing" onClick={closeMenu} className="block">
+                    Email Marketing
+                  </Link>
+                  <Link to="/services/whatsapp-marketing" onClick={closeMenu} className="block">
+                    WhatsApp Marketing
+                  </Link>
+                  <Link to="/services/website-development" onClick={closeMenu} className="block">
+                    Website Development
+                  </Link>
+                  <Link to="/services/hiring" onClick={closeMenu} className="block">
+                    Hiring
+                  </Link>
+                  <Link to="/services/reviews" onClick={closeMenu} className="block">
+                    Reviews
+                  </Link>
+                  <Link to="/services/cv-writing" onClick={closeMenu} className="block">
+                    CV Writing
+                  </Link>
+                </div>
+              )}
+            </div>
             <Link to="/projects" onClick={closeMenu} className="block font-body">
               Projects
             </Link>
