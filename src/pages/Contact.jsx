@@ -218,7 +218,8 @@ const Contact = () => {
           {/* Tagline */}
           <div className="border-t border-gray-300 mt-12 pt-8 text-center">
             <p className="text-2xl font-heading font-bold">
-              ContentOra <span className="text-secondary">Media</span>
+              <span className="text-primary">ContentOra</span>{' '}
+              <span className="text-secondary">Media</span>
             </p>
             <p className="text-gray-700 mt-2">
               Your trusted partner in digital marketing excellence
