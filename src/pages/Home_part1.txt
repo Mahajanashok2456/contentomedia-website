@@ -1,0 +1,64 @@
+import React, { useLayoutEffect, useRef, useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { motion, AnimatePresence, useInView } from 'framer-motion';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import ServiceCard from '../components/ServiceCard';
+import TestimonialSlider from '../components/TestimonialSlider';
+import { FaUsers, FaBloggerB, FaCopyright } from 'react-icons/fa';
+import { CgWebsite, CgInsights } from 'react-icons/cg';
+import { TiMediaPlay } from "react-icons/ti";
+import { TbSeo } from "react-icons/tb";
+import { SiTaichigraphics } from "react-icons/si";
+import { DiHtml5Multimedia } from "react-icons/di";
+import { BiSolidBookContent } from "react-icons/bi";
+import { MdInsights, MdAddBusiness } from "react-icons/md";
+import { BsGraphUpArrow, BsDatabaseFillGear } from "react-icons/bs";
+import { VscServerProcess } from "react-icons/vsc";
+import { FaSackDollar, FaHandHoldingDollar } from "react-icons/fa6";
+import { GiThink } from "react-icons/gi";
+
+import {
+  LoadingScreen,
+  FloatingElements,
+  ScrollProgress,
+  pageVariants,
+  heroVariants,
+  titleVariants,
+  subtitleVariants,
+  sectionVariants,
+  cardVariants,
+} from '../utils/pageAnimations.jsx';
+import homeVideo from '../assets/videos/homeVideo.mp4';
+import bigImage from '../assets/images/bigImage.png';
+
+gsap.registerPlugin(ScrollTrigger);
+
+const services = [
+  {
+    title: 'Blog Writing',
+    description: 'Engaging blog posts that attract and retain readers.',
+    icon: FaBloggerB,
+  },
+  {
+    title: 'Website Content',
+    description: 'Clear, SEO-friendly website pages that convert.',
+    icon: CgWebsite,
+  },
+  { title: 'Copywriting', description: 'High-converting sales and landing page copy.', icon: FaCopyright },
+  {
+    title: 'Social Media Content',
+    description: 'Short-form content tailored to each platform.',
+    icon: TiMediaPlay,
+  },
+  {
+    title: 'SEO Writing',
+    description: 'Keyword-optimized content for organic growth.',
+    icon: TbSeo,
+  },
+  {
+    title: 'Graphic Designing',
+    description: 'Visuals that communicate your brand message.',
+    icon: SiTaichigraphics,
+  },
+];
