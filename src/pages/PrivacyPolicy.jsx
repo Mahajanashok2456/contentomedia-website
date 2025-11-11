@@ -204,8 +204,8 @@ const PrivacyPolicy = () => {
             <div className="bg-gray-50 p-6 rounded-lg space-y-2">
               <p className="text-lg text-gray-700">
                 {' '}
-                <a href="tel:+918450049032" className="text-secondary hover:underline">
-                  +91 8450049032
+                <a href="tel:+918450049035" className="text-secondary hover:underline">
+                  +91 8450049035
                 </a>
               </p>
               <p className="text-lg text-gray-700">

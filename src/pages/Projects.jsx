@@ -148,8 +148,8 @@ export default function Projects() {
                   </div>
                   <div className="flex items-center">
                     <span className="font-semibold text-gray-800 mr-3">Phone:</span>
-                    <a href="tel:+15551234567" className="text-secondary hover:underline">
-                      +91 8450049032
+                    <a href="tel:+918450049035" className="text-secondary hover:underline">
+                      +91 8450049035
                     </a>
                   </div>
                 </div>

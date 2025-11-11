@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaLinkedin, FaInstagram, FaTwitter, FaFacebookSquare, FaPhoneAlt } from 'react-icons/fa';
-import { IoMailUnread } from "react-icons/io5";
+import { IoMailUnread } from 'react-icons/io5';
 
 const Contact = () => {
   return (
@@ -9,7 +9,8 @@ const Contact = () => {
       <section className="py-20 px-6 bg-gradient-to-br from-lightBlue to-white" data-aos="fade-up">
         <div className="container mx-auto max-w-4xl text-center">
           <h1 className="font-heading text-4xl md:text-5xl font-bold text-primary mb-8">
-            Want to Get in <span className="text-secondary">Touch</span>? Write to <span className="text-secondary">us!</span>
+            Want to Get in <span className="text-secondary">Touch</span>? Write to{' '}
+            <span className="text-secondary">us!</span>
           </h1>
           <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
             For any enquiries, or if you are in the market for freelance digital marketing
@@ -191,8 +192,14 @@ const Contact = () => {
             <div>
               <h3 className="font-heading text-2xl font-bold mb-4">Contacts</h3>
               <div className="space-y-2 text-gray-300">
-                <div className="flex items-center"> <IoMailUnread className='text-lg mr-1.5' /> <p> info@contentora.media </p></div>
-                <div className="flex items-center"> <FaPhoneAlt className='text-md mr-1.5' /> <p> +91 8450049032 </p></div>
+                <div className="flex items-center">
+                  {' '}
+                  <IoMailUnread className="text-lg mr-1.5" /> <p> info@contentora.media </p>
+                </div>
+                <div className="flex items-center">
+                  {' '}
+                  <FaPhoneAlt className="text-md mr-1.5" /> <p> +91 8450049035 </p>
+                </div>
               </div>
             </div>
           </div>

@@ -49,8 +49,8 @@ export default function Footer() {
           </div>
           <div className="text-sm mt-2">
             Phone:{' '}
-            <a href="tel:+15551234567" className="hover:text-secondary">
-              +91 8450049032
+            <a href="tel:+918450049035" className="hover:text-secondary">
+              +91 8450049035
             </a>
           </div>
 

@@ -126,7 +126,6 @@ export default function Home() {
   const featuredRef = useRef();
   const testimonialsRef = useRef();
   const benefitsRef = useRef();
-  const pricingRef = useRef();
   const blogsRef = useRef();
   const newsletterRef = useRef();
   const progressRef = useRef(null);
@@ -165,19 +164,6 @@ export default function Home() {
         gsap.from('.hero-sub, .welcome-sub', { y: 20, opacity: 0, duration: 0.3, delay: 0.1 });
         gsap.from('.hero-cta, .welcome-cta', { y: 15, opacity: 0, duration: 0.3, delay: 0.2 });
       }
-
-      gsap.from('.pricing-card', {
-        scrollTrigger: {
-          trigger: pricingRef.current,
-          start: 'top 80%',
-          once: true,
-        },
-        y: prefersReduced ? 0 : 20,
-        opacity: 0,
-        stagger: 0.05,
-        duration: prefersReduced ? 0.2 : 0.4,
-        ease: 'power3.out',
-      });
 
       // Blogs Section
 
@@ -317,21 +303,29 @@ export default function Home() {
               </motion.p>
 
               <motion.div
-                className="flex items-center gap-4 mb-6"
+                className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mb-6"
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4, duration: 0.3, ease: 'easeOut' }}
               >
-                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="w-full sm:w-auto"
+                >
                   <Link
                     to="/about"
-                    className="hero-cta bg-primary text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition font-semibold"
+                    className="hero-cta bg-primary text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition font-semibold block text-center"
                   >
                     Get Your Free Consultation
                   </Link>
                 </motion.div>
-                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                  <Link to="/services" className="text-primary font-medium">
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="w-full sm:w-auto"
+                >
+                  <Link to="/services" className="text-primary font-medium block text-center py-3">
                     Explore Services
                   </Link>
                 </motion.div>
@@ -740,42 +734,6 @@ export default function Home() {
 
         <div className="container mx-auto">
           <TestimonialSlider />
-        </div>
-      </section>
-
-      {/* Pricing / Plans */}
-      <section ref={pricingRef} className="py-20 px-6 bg-white" data-aos="fade-up">
-        <div className="container mx-auto text-center mb-8">
-          <h2 className="font-heading text-3xl md:text-4xl text-primary font-bold">
-            Allot your <span className="text-secondary">budget</span> rationally with us
-          </h2>
-          <p className="font-body text-lg text-gray-800 my-6 px-8">
-            We don't claim us best but we prove with results. We have all prices fair put in front
-            of you. A smooth responsive expert team of freelancers earned name recognition for its
-            consistent delivery and commitment. We prioritise results over money. That's why you
-            find a 50% discount on any service you pick for an initial 3 to 6 months and after
-            delivering top results we charge as per market standards unlike other agencies.
-          </p>
-        </div>
-
-        <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="pricing-card bg-white p-6 rounded-lg shadow-md text-center">
-            <h3 className="font-heading text-xl font-semibold text-secondary">Simple Plan</h3>
-            {/* <div className="text-2xl font-bold mt-2">$240/month</div> */}
-            <p className="mt-4 text-sm text-gray-600">Best for freelancers or small startups</p>
-          </div>
-          <div className="pricing-card bg-white p-6 rounded-lg shadow-md text-center border-2 border-primary">
-            <h3 className="font-heading text-xl font-semibold text-secondary">Business Plan</h3>
-            {/* <div className="text-2xl font-bold mt-2">$120/month</div> */}
-            <p className="mt-4 text-sm text-gray-600">Ideal for growing brands or SMEs</p>
-          </div>
-          <div className="pricing-card bg-white p-6 rounded-lg shadow-md text-center">
-            <h3 className="font-heading text-xl font-semibold text-secondary">Premium Plan</h3>
-            {/* <div className="text-2xl font-bold mt-2">$240/month</div> */}
-            <p className="mt-4 text-sm text-gray-600">
-              Designed for established brands with aggressive growth goals
-            </p>
-          </div>
         </div>
       </section>
 
