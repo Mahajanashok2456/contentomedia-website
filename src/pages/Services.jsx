@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -200,6 +200,11 @@ const faqs = [
 ];
 
 export default function Services() {
+  // Scroll to top on component mount
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const [expandedFaq, setExpandedFaq] = useState(null);
   const [newsletterEmail, setNewsletterEmail] = useState('');
 
