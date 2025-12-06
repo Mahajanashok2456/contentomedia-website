@@ -40,15 +40,15 @@ gsap.registerPlugin(ScrollTrigger);
 // Service routes mapping for internal links
 const serviceRoutes = {
   'Social Media Management': '/services/social-media',
-  'PPC': '/services/ppc',
+  PPC: '/services/ppc',
   'Content Writing': '/services/content-writing',
-  'Proofreading': '/services/proofreading',
+  Proofreading: '/services/proofreading',
   'Paid Guest Posting': '/services/paid-guest-posting',
-  'SEO': '/services/seo',
-  'Hiring': '/services/hiring',
+  SEO: '/services/seo',
+  Hiring: '/services/hiring',
   'WhatsApp Marketing': '/services/whatsapp-marketing',
   'Email Marketing': '/services/email-marketing',
-  'Reviews': '/services/reviews',
+  Reviews: '/services/reviews',
   'CV Writing': '/services/cv-writing',
   'Website Development': '/services/website-development',
 };
@@ -641,11 +641,7 @@ export default function Home() {
 
           <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((s) => (
-              <Link
-                key={s.title}
-                to={serviceRoutes[s.title]}
-                className="service-card no-underline"
-              >
+              <Link key={s.title} to={serviceRoutes[s.title]} className="service-card no-underline">
                 <div className="bg-orange-50 border-gray-200 p-6 rounded-lg shadow-sm h-full flex flex-col">
                   <ServiceCard
                     title={s.title}
