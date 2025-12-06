@@ -1,5 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
 import FAQItem from '../components/FAQItem';
 import undrawIllustration from '../assets/images/undraw_on-the-way_zwi3.svg';
 
@@ -100,25 +101,30 @@ export default function FAQ() {
   const rightColumnFaqs = faqs.filter((_, index) => index % 2 === 1);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-lightBlue to-white py-20 px-4 relative overflow-hidden">
-      {/* Animated Illustration */}
-      <motion.div
-        ref={illustrationRef}
-        className="fixed left-0 bottom-10 z-40 w-20 h-20 pointer-events-none"
-        initial={{ x: -100, opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
-        transition={{ delay: 1.2, duration: 0.8, ease: 'easeOut' }}
-        whileHover={{ scale: 1.1, rotate: 5 }}
-      >
-        <img
-          src={undrawIllustration}
-          alt="Moving Illustration"
-          className="w-full h-full drop-shadow-lg"
-        />
-      </motion.div>
+    <>
+      <Helmet>
+        <title>FAQ | Contentora Media</title>
+      </Helmet>
 
-      {/* Floating Background Elements */}
-      {/* <motion.div
+      <div className="min-h-screen bg-gradient-to-br from-lightBlue to-white py-20 px-4 relative overflow-hidden">
+        {/* Animated Illustration */}
+        <motion.div
+          ref={illustrationRef}
+          className="fixed left-0 bottom-10 z-40 w-20 h-20 pointer-events-none"
+          initial={{ x: -100, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ delay: 1.2, duration: 0.8, ease: 'easeOut' }}
+          whileHover={{ scale: 1.1, rotate: 5 }}
+        >
+          <img
+            src={undrawIllustration}
+            alt="Moving Illustration"
+            className="w-full h-full drop-shadow-lg"
+          />
+        </motion.div>
+
+        {/* Floating Background Elements */}
+        {/* <motion.div
         className="absolute top-20 left-10 w-32 h-32 bg-primary opacity-5 rounded-full"
         animate={{
           y: [0, -20, 0],
@@ -144,95 +150,96 @@ export default function FAQ() {
         }}
       /> */}
 
-      {/* Hero Section */}
-      <motion.div
-        className="max-w-7xl mx-auto mb-16"
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.1, duration: 0.4, ease: 'easeOut' }}
-      >
+        {/* Hero Section */}
         <motion.div
-          className="text-center mb-16"
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.2, duration: 0.3, ease: 'easeOut' }}
-        >
-          <motion.h1
-            className="font-heading text-4xl md:text-5xl font-bold text-primary tracking-tight mb-4"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3, duration: 0.3, ease: 'easeOut' }}
-            whileHover={{ scale: 1.02 }}
-          >
-            Frequently <span className="text-secondary">Asked</span> Questions
-          </motion.h1>
-          <motion.p
-            className="text-lg text-gray-700 max-w-2xl mx-auto"
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4, duration: 0.3, ease: 'easeOut' }}
-          >
-            Find answers to common questions about our content writing services, process, and how to
-            get started.
-          </motion.p>
-        </motion.div>
-
-        {/* Two-Column FAQ Layout */}
-        <motion.div
-          className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto"
+          className="max-w-7xl mx-auto mb-16"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5, duration: 0.4, ease: 'easeOut' }}
+          transition={{ delay: 0.1, duration: 0.4, ease: 'easeOut' }}
         >
-          {/* Left Column */}
           <motion.div
-            className="space-y-0"
-            initial={{ x: -30, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ delay: 0.6, duration: 0.3, ease: 'easeOut' }}
+            className="text-center mb-16"
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.2, duration: 0.3, ease: 'easeOut' }}
           >
-            {leftColumnFaqs.map((faq, index) => (
-              <FAQItem
-                key={faq.id}
-                question={faq.question}
-                answer={faq.answer}
-                iconType={faq.iconType}
-                color={faq.color}
-                index={index}
-              />
-            ))}
+            <motion.h1
+              className="font-heading text-4xl md:text-5xl font-bold text-primary tracking-tight mb-4"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.3, ease: 'easeOut' }}
+              whileHover={{ scale: 1.02 }}
+            >
+              Frequently <span className="text-secondary">Asked</span> Questions
+            </motion.h1>
+            <motion.p
+              className="text-lg text-gray-700 max-w-2xl mx-auto"
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4, duration: 0.3, ease: 'easeOut' }}
+            >
+              Find answers to common questions about our content writing services, process, and how
+              to get started.
+            </motion.p>
           </motion.div>
 
-          {/* Right Column */}
+          {/* Two-Column FAQ Layout */}
           <motion.div
-            className="space-y-0"
-            initial={{ x: 30, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ delay: 0.7, duration: 0.3, ease: 'easeOut' }}
+            className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5, duration: 0.4, ease: 'easeOut' }}
           >
-            {rightColumnFaqs.map((faq, index) => (
-              <FAQItem
-                key={faq.id}
-                question={faq.question}
-                answer={faq.answer}
-                iconType={faq.iconType}
-                color={faq.color}
-                index={index + 4}
-              />
-            ))}
+            {/* Left Column */}
+            <motion.div
+              className="space-y-0"
+              initial={{ x: -30, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ delay: 0.6, duration: 0.3, ease: 'easeOut' }}
+            >
+              {leftColumnFaqs.map((faq, index) => (
+                <FAQItem
+                  key={faq.id}
+                  question={faq.question}
+                  answer={faq.answer}
+                  iconType={faq.iconType}
+                  color={faq.color}
+                  index={index}
+                />
+              ))}
+            </motion.div>
+
+            {/* Right Column */}
+            <motion.div
+              className="space-y-0"
+              initial={{ x: 30, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ delay: 0.7, duration: 0.3, ease: 'easeOut' }}
+            >
+              {rightColumnFaqs.map((faq, index) => (
+                <FAQItem
+                  key={faq.id}
+                  question={faq.question}
+                  answer={faq.answer}
+                  iconType={faq.iconType}
+                  color={faq.color}
+                  index={index + 4}
+                />
+              ))}
+            </motion.div>
           </motion.div>
         </motion.div>
-      </motion.div>
 
-      {/* Scroll Progress Indicator */}
-      <div className="fixed top-0 left-0 w-full h-1 bg-gray-200 z-30">
-        <motion.div
-          ref={progressRef}
-          className="h-full bg-primary origin-left"
-          initial={{ scaleX: 0 }}
-          transition={{ duration: 0.1 }}
-        />
+        {/* Scroll Progress Indicator */}
+        <div className="fixed top-0 left-0 w-full h-1 bg-gray-200 z-30">
+          <motion.div
+            ref={progressRef}
+            className="h-full bg-primary origin-left"
+            initial={{ scaleX: 0 }}
+            transition={{ duration: 0.1 }}
+          />
+        </div>
       </div>
-    </div>
+    </>
   );
 }
