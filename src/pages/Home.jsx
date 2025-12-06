@@ -150,6 +150,11 @@ export default function Home() {
 
   const [newsletterEmail, setNewsletterEmail] = useState('');
 
+  // Scroll to top on component mount
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;

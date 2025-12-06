@@ -104,6 +104,12 @@ export default function About() {
   const whyRef = useRef(null);
   const contactRef = useRef(null);
   const progressRef = useRef(null);
+
+  // Scroll to top on component mount
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;

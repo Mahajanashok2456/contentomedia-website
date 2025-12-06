@@ -12,7 +12,6 @@ import BlogPost from './pages/BlogPost';
 import FAQ from './pages/FAQ';
 import Contact from './pages/Contact';
 import PrivacyPolicy from './pages/PrivacyPolicy';
-import Sitemap from './pages/Sitemap';
 import PPC from './pages/PPC';
 import ContentWriting from './pages/ContentWriting';
 import Proofreading from './pages/Proofreading';
@@ -56,7 +55,6 @@ export default function App() {
         <Route path="faq" element={<FAQ />} />
         <Route path="contact" element={<Contact />} />
         <Route path="privacy-policy" element={<PrivacyPolicy />} />
-        <Route path="sitemap" element={<Sitemap />} />
       </Route>
     </Routes>
   );

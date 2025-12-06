@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FaBookOpen } from 'react-icons/fa';
 import { Helmet } from 'react-helmet-async';
@@ -49,6 +49,11 @@ const allBlogPosts = [
 ];
 
 export default function Blog() {
+  // Scroll to top on component mount
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const [currentPage, setCurrentPage] = useState(1);
   const postsPerPage = 4;
 

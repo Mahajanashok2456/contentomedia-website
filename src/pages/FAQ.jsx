@@ -74,6 +74,12 @@ const faqs = [
 export default function FAQ() {
   const illustrationRef = useRef(null);
   const progressRef = useRef(null);
+
+  // Scroll to top on component mount
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   useEffect(() => {
     const handleScroll = () => {
       if (!illustrationRef.current) return;
