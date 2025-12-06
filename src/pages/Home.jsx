@@ -270,6 +270,10 @@ export default function Home() {
         <title>
           Contentora the Best Digital Marketing Company | Best Digital Marketing Agency for Business
         </title>
+        <meta
+          name="description"
+          content="Contentora Media is a leading digital marketing company in India offering SEO, PPC, SMM, content writing, website development, email marketing, and more. We help businesses grow with data-driven strategies and measurable results."
+        />
       </Helmet>
 
       <div className="relative overflow-hidden">

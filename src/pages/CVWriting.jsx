@@ -7,6 +7,10 @@ export default function CVWriting() {
     <>
       <Helmet>
         <title>Professional CV and Resume Writing Services | Resume Writing Services Online</title>
+        <meta
+          name="description"
+          content="Get professionally crafted resumes with Contentora media online resume writing services. We create job-winning resumes, CVs, and LinkedIn profiles that help you stand out and get hired faster."
+        />
       </Helmet>
 
       <div className="min-h-screen bg-white">

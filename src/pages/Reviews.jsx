@@ -7,6 +7,10 @@ export default function Reviews() {
     <>
       <Helmet>
         <title>Review Service Provider | Best Reviews and Ratings Company in India</title>
+        <meta
+          name="description"
+          content="Boost trust with Contentora media professional reviews and ratings services. We help brands improve reputation, attract more customers, and build online credibility across leading platforms."
+        />
       </Helmet>
 
       <div className="min-h-screen bg-white">

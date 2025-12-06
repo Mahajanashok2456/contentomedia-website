@@ -33,6 +33,9 @@ export default function Footer() {
             <Link to="/faq" className="hover:text-secondary">
               FAQ
             </Link>
+            <Link to="/sitemap" className="hover:text-secondary">
+              Sitemap
+            </Link>
             <Link to="/privacy-policy" className="hover:text-secondary">
               Privacy Policy
             </Link>
@@ -49,7 +52,7 @@ export default function Footer() {
           </div>
           <div className="text-sm mt-2">
             Phone:{' '}
-            <a href="tel:+15551234567" className="hover:text-secondary">
+            <a href="tel:+91 8450049032" className="hover:text-secondary">
               +91 8450049032
             </a>
           </div>

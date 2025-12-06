@@ -7,6 +7,10 @@ export default function ContentWriting() {
     <>
       <Helmet>
         <title>Best Content Writing Company in India | Content Writing Agency in India</title>
+        <meta
+          name="description"
+          content="Contentora Media is India's most trusted content writing agency offering SEO content, blog writing, website copy, and creative brand storytelling. High-quality, plagiarism-free content that boosts visibility and drives results."
+        />
       </Helmet>
 
       <div className="min-h-screen bg-white">
