@@ -9,6 +9,10 @@ export default function EmailMarketing() {
         <title>
           Top Email Marketing Service Provider in India | Full-Service Email Marketing Agency
         </title>
+        <meta
+          name="description"
+          content="Contentora media is a full-service email marketing agency delivering personalized, automated email campaigns that boost conversions and customer engagement. Ideal for startups, SMEs, and growing brands."
+        />
       </Helmet>
 
       <div className="min-h-screen bg-white">

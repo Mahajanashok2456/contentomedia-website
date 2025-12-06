@@ -7,6 +7,10 @@ export default function Proofreading() {
     <>
       <Helmet>
         <title>Proofreading Services in India | Online Proofreading Services</title>
+        <meta
+          name="description"
+          content="Contentora media offers expert online proofreading services in India for business, students, and professionals. We ensure error-free, polished, and well-structured content with 100% accuracy."
+        />
       </Helmet>
 
       <div className="min-h-screen bg-white">

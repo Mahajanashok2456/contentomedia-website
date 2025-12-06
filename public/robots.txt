@@ -1,0 +1,46 @@
+# Robots.txt for Contentora Media
+# Controls search engine crawler access to your website
+
+# Allow all crawlers to access all pages
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /api
+Disallow: /*.pdf$
+Disallow: /*.doc$
+
+# Specific rules for Google
+User-agent: Googlebot
+Allow: /
+
+# Specific rules for Bing
+User-agent: Bingbot
+Allow: /
+
+# Specific rules for other crawlers
+User-agent: Yandex
+Allow: /
+
+User-agent: Baidu
+Allow: /
+
+# Crawl delay to be respectful to server resources
+Crawl-delay: 1
+
+# Sitemap locations
+Sitemap: https://contentoramedia.com/sitemap.xml
+Sitemap: https://contentoramedia.com/sitemap
+
+# Block bad bots
+User-agent: MJ12bot
+Allow: /
+
+User-agent: AhrefsBot
+Allow: /
+
+User-agent: SemrushBot
+Allow: /
+
+# Standard comment format
+# This file helps search engines understand your site structure
+# and respects crawler crawl limits

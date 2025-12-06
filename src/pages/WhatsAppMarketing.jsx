@@ -9,6 +9,10 @@ export default function WhatsAppMarketing() {
         <title>
           Best & Affordable WhatsApp Marketing Services | Bulk WhatsApp Marketing Agency
         </title>
+        <meta
+          name="description"
+          content="Reach customers instantly with Contentora media bulk WhatsApp marketing services. We help businesses automate messaging, improve engagement, and drive sales through WhatsApp Business."
+        />
       </Helmet>
 
       <div className="min-h-screen bg-white">

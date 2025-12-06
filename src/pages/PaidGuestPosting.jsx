@@ -7,6 +7,10 @@ export default function PaidGuestPosting() {
     <>
       <Helmet>
         <title>High Quality Guest Posting Services | Best Guest Posting Services</title>
+        <meta
+          name="description"
+          content="Build authority and secure quality backlinks with Contentora Media premium guest posting services. We offer genuine outreach, high-authority sites, and niche-relevant placements for better SEO ranking."
+        />
       </Helmet>
 
       <div className="min-h-screen bg-white">

@@ -9,6 +9,10 @@ export default function Hiring() {
         <title>
           Best Recruitment Agency in India | Top Hiring & Recruitment Services Company in India
         </title>
+        <meta
+          name="description"
+          content="Contentora media provides top hiring and recruitment services across India. We help businesses find skilled talent quickly with efficient, reliable, and industry-focused hiring solutions."
+        />
       </Helmet>
 
       <div className="min-h-screen bg-white">

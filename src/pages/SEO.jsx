@@ -7,6 +7,10 @@ export default function SEO() {
     <>
       <Helmet>
         <title>India's Best SEO Company | Top SEO Marketing Agency in India</title>
+        <meta
+          name="description"
+          content="Contentora Media is a top SEO marketing agency in India offering complete on-page, off-page, and technical SEO services. Rank higher, increase organic traffic, and outperform your competitors with proven SEO strategies."
+        />
       </Helmet>
 
       <div className="min-h-screen bg-white">

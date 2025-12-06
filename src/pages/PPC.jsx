@@ -8,6 +8,10 @@ export default function PPC() {
     <>
       <Helmet>
         <title>Best PPC Company in India | Pay Per Click Marketing Service Company</title>
+        <meta
+          name="description"
+          content="Boost conversions with Contentora Media, India's leading PPC marketing service company. We create data-driven Google Ads campaigns that reduce cost and maximize ROI for business of all sizes."
+        />
       </Helmet>
 
       <div className="min-h-screen bg-white">

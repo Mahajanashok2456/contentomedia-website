@@ -9,6 +9,10 @@ export default function WebsiteDevelopment() {
         <title>
           India’s Best Web Design and Development Company | Professional Website Development Agency
         </title>
+        <meta
+          name="description"
+          content="Build a high-performing, SEO-friendly website with Contentora media, India's professional website development agency. Custom designs, fast loading speed, mobile responsiveness, and modern UI/UX for business growth."
+        />
       </Helmet>
 
       <div className="min-h-screen bg-white">
