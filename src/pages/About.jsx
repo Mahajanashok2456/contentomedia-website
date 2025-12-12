@@ -177,7 +177,7 @@ export default function About() {
         {/* Hero */}
         <motion.section
           ref={heroRef}
-          className="py-24 px-6 bg-gradient-to-br from-lightBlue to-white"
+          className="py-12 sm:py-24 px-4 sm:px-6 bg-gradient-to-br from-lightBlue to-white"
           initial={{ opacity: 0, y: 25 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1, duration: 0.4, ease: 'easeOut' }}
@@ -185,7 +185,7 @@ export default function About() {
           <div className="container mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
             <div className="md:col-span-7">
               <motion.h1
-                className="font-heading text-4xl md:text-5xl font-bold text-primary mb-4"
+                className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4"
                 variants={titleVariants}
                 initial="initial"
                 animate="animate"
@@ -196,7 +196,7 @@ export default function About() {
                 transform your brand
               </motion.h1>
               <motion.p
-                className="text-lg text-gray-700 max-w-3xl leading-relaxed"
+                className="text-base sm:text-lg text-gray-700 max-w-3xl leading-relaxed"
                 variants={subtitleVariants}
                 initial="initial"
                 animate="animate"
@@ -240,7 +240,7 @@ export default function About() {
         <motion.section
           id="services"
           ref={servicesRef}
-          className="py-20 px-6 bg-white"
+          className="py-12 sm:py-20 px-4 sm:px-6 bg-white"
           data-aos="fade-up"
           variants={sectionVariants}
           initial="initial"
@@ -249,7 +249,7 @@ export default function About() {
         >
           <div className="container mx-auto text-center mb-12">
             <motion.h2
-              className="font-heading text-3xl md:text-4xl font-bold text-primary text-center mb-6"
+              className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold text-primary text-center mb-6"
               variants={titleVariants}
               initial="initial"
               animate="animate"
@@ -259,7 +259,7 @@ export default function About() {
               Our <span className="text-secondary">Services</span>
             </motion.h2>
             <motion.p
-              className="text-center text-gray-600 max-w-2xl mx-auto"
+              className="text-center text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-4 sm:px-0"
               variants={subtitleVariants}
               initial="initial"
               animate="animate"
@@ -287,12 +287,12 @@ export default function About() {
         </motion.section>
 
         {/* Why choose us */}
-        <section className="py-20 px-6 bg-white" data-aos="fade-up">
+        <section className="py-12 sm:py-20 px-4 sm:px-6 bg-white" data-aos="fade-up">
           <div ref={whyRef} className="container mx-auto max-w-5xl text-center">
-            <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary mb-4">
+            <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-4">
               Why choose Contentora <span className="text-secondary">Media</span>?
             </h2>
-            <p className="text-gray-700 mb-7">
+            <p className="text-base sm:text-lg text-gray-700 mb-7 px-4 sm:px-0 leading-relaxed">
               We focus on delivering our clients content that is impactful. The content delivered
               will connect with your audience and brand value. We ensure that it feels unique and
               relatable. We custom-edit and make our content to reflect your brand's unique identity
@@ -303,7 +303,7 @@ export default function About() {
               delay. We guarantee reliable delivery without making any compromises on the quality.
             </p>
 
-            <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary mb-8 mt-20">
+            <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-8 mt-12 sm:mt-20">
               Why are we the <span className="text-secondary">best?</span>
             </h2>
 
@@ -373,9 +373,9 @@ export default function About() {
         </section>
 
         {/* Values & process */}
-        <section className="py-20 px-6 bg-lightBlue" data-aos="fade-up">
+        <section className="py-12 sm:py-20 px-4 sm:px-6 bg-lightBlue" data-aos="fade-up">
           <div className="container mx-auto max-w-5xl">
-            <h3 className="font-heading text-2xl md:text-3xl font-semibold mb-6 text-center text-primary">
+            <h3 className="font-heading text-xl sm:text-2xl md:text-3xl font-semibold mb-6 text-center text-primary">
               How we <span className="text-secondary">work</span>
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -402,10 +402,10 @@ export default function About() {
         </section>
 
         {/* Contact */}
-        <section className="py-20 px-6 bg-orange-400 text-white" data-aos="fade-up">
+        <section className="py-12 sm:py-20 px-4 sm:px-6 bg-orange-400 text-white" data-aos="fade-up">
           <div ref={contactRef} className="container mx-auto text-center">
-            <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4">Get in touch</h2>
-            <p className="mb-6">
+            <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Get in touch</h2>
+            <p className="mb-6 text-base sm:text-lg px-4 sm:px-0">
               Have a project or an idea? Tell us about it — we’ll help you bring it to life.
             </p>
             <div className="flex gap-6 justify-center">

@@ -321,12 +321,12 @@ export default function Home() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1, duration: 0.4, ease: 'easeOut' }}
         >
-          <div className="container mx-auto px-6 py-16">
+          <div className="container mx-auto px-4 sm:px-6 py-12 sm:py-16">
             <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
               {/* Left: content */}
               <div className="md:col-span-6 lg:col-span-7">
                 <motion.h1
-                  className="hero-title font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-6"
+                  className="hero-title font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-4 sm:mb-6 leading-tight"
                   variants={titleVariants}
                   initial="initial"
                   animate="animate"
@@ -336,7 +336,7 @@ export default function Home() {
                   Welcome to ContentOra<span className="text-secondary"> Media</span>
                 </motion.h1>
                 <motion.p
-                  className="hero-sub font-body text-lg md:text-xl text-gray-700 mb-6 max-w-prose"
+                  className="hero-sub font-body text-base sm:text-lg md:text-xl text-gray-700 mb-6 max-w-prose leading-relaxed"
                   variants={subtitleVariants}
                   initial="initial"
                   animate="animate"
@@ -351,15 +351,15 @@ export default function Home() {
                 </motion.p>
 
                 <motion.div
-                  className="flex items-center gap-4 mb-6"
+                  className="flex flex-col sm:flex-row items-center gap-4 mb-6"
                   initial={{ opacity: 0, y: 15 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4, duration: 0.3, ease: 'easeOut' }}
                 >
-                  <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                  <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="w-full sm:w-auto">
                     <Link
                       to="/about"
-                      className="hero-cta bg-primary text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition font-semibold"
+                      className="hero-cta bg-primary text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition font-semibold block text-center sm:inline-block"
                     >
                       Get Your Free Consultation
                     </Link>
@@ -441,13 +441,13 @@ export default function Home() {
         </motion.section>
 
         {/* Welcome / Value props */}
-        <section className="py-16 px-6 bg-white" data-aos="fade-up">
+        <section className="py-12 sm:py-16 px-4 sm:px-6 bg-white" data-aos="fade-up">
           <div className="container mx-auto">
-            <div className="max-w-4xl mx-auto text-center mb-8">
-              <h2 className="welcome-title font-heading text-3xl md:text-4xl font-bold text-primary">
+            <div className="max-w-4xl mx-auto text-center mb-8 px-4 sm:px-0">
+              <h2 className="welcome-title font-heading text-2xl sm:text-3xl md:text-4xl font-bold text-primary">
                 How will you <span className="text-secondary">benefit?</span>
               </h2>
-              <p className="welcome-sub font-body text-lg text-gray-700 mt-4">
+              <p className="welcome-sub font-body text-base sm:text-lg text-gray-700 mt-4 leading-relaxed">
                 Understanding your business tendencies and market environment enables informed
                 decisions and resource exploitation. Early identification of opportunities and
                 challenges allows you to outperform competitors, saving time and money while
@@ -552,12 +552,12 @@ export default function Home() {
         </section>
 
         {/* You are not just Our Client */}
-        <section className="py-16 px-6 bg-gray-50" data-aos="fade-up">
+        <section className="py-12 sm:py-16 px-4 sm:px-6 bg-gray-50" data-aos="fade-up">
           <div className="container mx-auto max-w-5xl text-center">
-            <h2 className="font-heading text-3xl md:text-4xl text-primary font-bold mb-4">
+            <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl text-primary font-bold mb-4">
               You are not just <span className="text-secondary">Our</span> Client!
             </h2>
-            <p className="mb-6 text-gray-700">
+            <p className="mb-6 text-gray-700 text-base sm:text-lg leading-relaxed px-4 sm:px-0">
               We are committed to helping businesses across industries using analytics and tracking
               to deliver data-driven growth with affordable digital marketing services.
             </p>
@@ -609,18 +609,18 @@ export default function Home() {
         </section>
 
         {/* About / House where affordability... */}
-        <section className="py-20 px-6 bg-white" data-aos="fade-up">
-          <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+        <section className="py-12 sm:py-20 px-4 sm:px-6 bg-white" data-aos="fade-up">
+          <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 items-center">
             <div>
-              <h2 className="font-heading text-primary text-3xl md:text-4xl font-bold mb-4">
+              <h2 className="font-heading text-primary text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
                 Get to Know ContentOra Media
               </h2>
-              <p className="text-gray-700 mb-4">
+              <p className="text-gray-700 mb-4 text-base sm:text-lg leading-relaxed text-left">
                 At ContentOra Media, we combine cutting-edge technology with creative expertise to
                 deliver marketing solutions that drive measurable results. Our team of specialists
                 works closely with you to understand your unique challenges and opportunities.
               </p>
-              <p className="text-gray-700">
+              <p className="text-gray-700 text-base sm:text-lg leading-relaxed text-left">
                 Crafting strategies that align with your goals and budget, we ensure every campaign
                 is optimized for maximum impact and sustainable growth.
               </p>
@@ -634,12 +634,12 @@ export default function Home() {
         </section>
 
         {/* Services */}
-        <section ref={servicesRef} className="py-20 px-6 bg-white" data-aos="fade-up">
+        <section ref={servicesRef} className="py-12 sm:py-20 px-4 sm:px-6 bg-white" data-aos="fade-up">
           <div className="container mx-auto text-center mb-12">
-            <h2 className="font-heading text-primary text-4xl md:text-5xl font-bold text-gray-900">
+            <h2 className="font-heading text-primary text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900">
               Our <span className="text-secondary">Services</span>
             </h2>
-            <p className="font-body text-lg text-gray-600 mt-4">
+            <p className="font-body text-base sm:text-lg text-gray-600 mt-4 px-4 sm:px-0">
               Comprehensive digital marketing solutions tailored to your business needs.
             </p>
           </div>
@@ -772,9 +772,9 @@ export default function Home() {
         </section>
 
         {/* Testimonials */}
-        <section className="py-20 px-6 bg-lightBlue testimonials" data-aos="fade-up">
+        <section className="py-12 sm:py-20 px-4 sm:px-6 bg-lightBlue testimonials" data-aos="fade-up">
           <div ref={testimonialsRef} className="container mx-auto text-center mb-12">
-            <h2 className="font-heading text-4xl md:text-5xl text-primary font-bold text-gray-900">
+            <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-primary font-bold text-gray-900">
               What Our <span className="text-secondary">Clients</span> Say
             </h2>
           </div>
@@ -785,12 +785,12 @@ export default function Home() {
         </section>
 
         {/* Pricing / Plans */}
-        <section ref={pricingRef} className="py-20 px-6 bg-white" data-aos="fade-up">
+        <section ref={pricingRef} className="py-12 sm:py-20 px-4 sm:px-6 bg-white" data-aos="fade-up">
           <div className="container mx-auto text-center mb-8">
-            <h2 className="font-heading text-3xl md:text-4xl text-primary font-bold">
+            <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl text-primary font-bold">
               Allot your <span className="text-secondary">budget</span> rationally with us
             </h2>
-            <p className="font-body text-lg text-gray-800 my-6 px-8">
+            <p className="font-body text-base sm:text-lg text-gray-800 my-6 px-4 sm:px-8 leading-relaxed">
               We don't claim us best but we prove with results. We have all prices fair put in front
               of you. A smooth responsive expert team of freelancers earned name recognition for its
               consistent delivery and commitment. We prioritise results over money. That's why you
@@ -821,16 +821,16 @@ export default function Home() {
         </section>
 
         {/* Projects / Social proof CTA */}
-        <section className="py-20 px-6 bg-orange-100" data-aos="fade-up">
+        <section className="py-12 sm:py-20 px-4 sm:px-6 bg-orange-100" data-aos="fade-up">
           <div className="container mx-auto text-center mb-8">
-            <h2 className="font-heading text-3xl md:text-4xl text-secondary font-bold">
+            <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl text-secondary font-bold">
               Our Projects
             </h2>
-            <p className="font-body text-xl font-bold text-gray-800 mt-4">
+            <p className="font-body text-base sm:text-lg md:text-xl font-bold text-gray-800 mt-4 px-4 sm:px-0">
               These are some of the successful projects delivered to our clients.
             </p>
 
-            <p className="font-body text-lg text-gray-800 my-4 mb-10">
+            <p className="font-body text-base sm:text-lg text-gray-800 my-4 mb-10 px-4 sm:px-0 leading-relaxed">
               Our projects by an expert team of freelancers will set examples to create magic for
               your businesses too!
             </p>
@@ -851,10 +851,10 @@ export default function Home() {
 
         {/* Blogs */}
 
-        <section ref={blogsRef} className="py-20 px-6 bg-white" data-aos="fade-up">
+        <section ref={blogsRef} className="py-12 sm:py-20 px-4 sm:px-6 bg-white" data-aos="fade-up">
           <div className="container mx-auto text-center mb-8">
-            <h2 className="font-heading text-3xl md:text-4xl text-primary font-bold">Our Blogs</h2>
-            <p className="font-body text-xl font-bold text-gray-800 mt-4 mb-8">
+            <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl text-primary font-bold">Our Blogs</h2>
+            <p className="font-body text-lg sm:text-xl font-bold text-gray-800 mt-4 mb-8 px-4 sm:px-0">
               Read our blogs and get to know more about us on this journey!!
             </p>
 
@@ -868,12 +868,12 @@ export default function Home() {
         </section>
 
         {/* Newsletter */}
-        <section className="py-12 px-6 bg-lightBlue" data-aos="fade-up">
+        <section className="py-12 px-4 sm:px-6 bg-lightBlue" data-aos="fade-up">
           <div ref={newsletterRef} className="container mx-auto max-w-2xl text-center">
-            <h3 className="font-heading text-primary text-2xl font-bold mb-4">
+            <h3 className="font-heading text-primary text-xl sm:text-2xl font-bold mb-4">
               Join our Newsletter
             </h3>
-            <p className="mb-4">
+            <p className="mb-4 text-sm sm:text-base px-4 sm:px-0 leading-relaxed">
               Our newsletter shares freelance marketing tips, digital marketing trends and case
               studies.
             </p>
@@ -897,12 +897,12 @@ export default function Home() {
         </section>
 
         {/* CTA */}
-        <section className="py-16 px-6 bg-orange-400  text-white" data-aos="fade-up">
+        <section className="py-12 sm:py-16 px-4 sm:px-6 bg-orange-400 text-white" data-aos="fade-up">
           <div className="container mx-auto text-center">
-            <h2 className="font-heading text-3xl md:text-4xl font-bold">
+            <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold">
               Ready to Elevate Your Content?
             </h2>
-            <p className="font-body text-lg mt-4 mb-8">
+            <p className="font-body text-base sm:text-lg mt-4 mb-8 px-4 sm:px-0">
               Contact us to discuss your content needs and get a custom quote.
             </p>
             <div className="flex flex-col md:flex-row items-center justify-center gap-4">

@@ -17,15 +17,15 @@ const Contact = () => {
       <div className="min-h-screen">
         {/* Hero/Intro Section */}
         <section
-          className="py-20 px-6 bg-gradient-to-br from-lightBlue to-white"
+          className="py-12 sm:py-20 px-4 sm:px-6 bg-gradient-to-br from-lightBlue to-white"
           data-aos="fade-up"
         >
           <div className="container mx-auto max-w-4xl text-center">
-            <h1 className="font-heading text-4xl md:text-5xl font-bold text-primary mb-8">
+            <h1 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-8">
               Want to Get in <span className="text-secondary">Touch</span>? Write to{' '}
               <span className="text-secondary">us!</span>
             </h1>
-            <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed px-4 sm:px-0">
               For any enquiries, or if you are in the market for freelance digital marketing
               services...
             </p>
@@ -33,13 +33,13 @@ const Contact = () => {
         </section>
 
         {/* Social Media Section */}
-        <section className="py-16 px-6 bg-white" data-aos="fade-up">
+        <section className="py-12 sm:py-16 px-4 sm:px-6 bg-white" data-aos="fade-up">
           <div className="container mx-auto max-w-4xl">
             <div className="text-center mb-12">
-              <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary mb-4">
+              <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-4">
                 <span className="text-secondary">Follow</span> us!
               </h2>
-              <p className="text-lg text-gray-700">
+              <p className="text-base sm:text-lg text-gray-700">
                 Stay connected with ContentOra Media on social media
               </p>
             </div>
@@ -82,13 +82,13 @@ const Contact = () => {
         </section>
 
         {/* Contact Form Section */}
-        <section className="py-16 px-6 bg-gray-50" data-aos="fade-up">
+        <section className="py-12 sm:py-16 px-4 sm:px-6 bg-gray-50" data-aos="fade-up">
           <div className="container mx-auto max-w-4xl">
             <div className="text-center mb-12">
-              <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary mb-4">
+              <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-4">
                 Contact <span className="text-secondary">us</span>
               </h2>
-              <p className="text-lg text-gray-700">
+              <p className="text-base sm:text-lg text-gray-700 px-4 sm:px-0">
                 Whether you have a request, a query, or want to work with us, use the form below to
                 get in touch with our team.
               </p>
@@ -169,7 +169,7 @@ const Contact = () => {
         </section>
 
         {/* Footer Section */}
-        <footer className="bg-lightBlue py-16 px-6">
+        <footer className="bg-lightBlue py-12 sm:py-16 px-4 sm:px-6">
           <div className="container mx-auto max-w-6xl">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {/* Newsletter Section */}

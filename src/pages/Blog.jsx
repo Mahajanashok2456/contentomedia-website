@@ -46,6 +46,56 @@ const allBlogPosts = [
     date: 'Nov 11, 2025',
     image: 'https://images.unsplash.com/photo-1455390582262-044cdead277a?w=600&h=400&fit=crop',
   },
+  {
+    id: 5,
+    title: 'Why Your Business Needs a Social Media Strategy Today',
+    excerpt:
+      "Establishing an online presence across various social media platforms is essential for effective outreach and brand visibility. A robust social media presence ensures that you're connected with your audience...",
+    category: 'Social Media Marketing',
+    readTime: '9 min read',
+    date: 'Dec 12, 2025',
+    image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=400&fit=crop',
+  },
+  {
+    id: 6,
+    title: 'Top Social Media Marketing Trends Every Brand Should Follow',
+    excerpt:
+      'The discourse regarding online brand presence is louder than ever. Large companies, start-ups, B2B or B2C brands are looking towards social media marketing to amplify their lead targeting and conversions...',
+    category: 'Social Media Marketing',
+    readTime: '10 min read',
+    date: 'Dec 12, 2025',
+    image: 'https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=600&h=400&fit=crop',
+  },
+  {
+    id: 7,
+    title: 'How Contentdora Media Creates SEO-Friendly Content That Converts',
+    excerpt:
+      'In the online marketplace, the success of ad campaigns is measured by the number of visiting clients who are convinced to convert. At Contentora Media, we create content that is highly user-friendly as well as SEO-friendly...',
+    category: 'SEO & Content Writing',
+    readTime: '11 min read',
+    date: 'Dec 12, 2025',
+    image: 'https://images.unsplash.com/photo-1542744094-3a31f272c490?w=600&h=400&fit=crop',
+  },
+  {
+    id: 8,
+    title: 'Proofreading Done Right: How Contentora Media Helps You Avoid Common Writing Pitfalls',
+    excerpt:
+      'Written content is still the foundation of every type of marketing. Typos, formatting and grammatical errors can lead to a bad first impression or worse, confuse your intended message and make your brand appear unprofessional...',
+    category: 'Content Writing',
+    readTime: '10 min read',
+    date: 'Dec 12, 2025',
+    image: 'https://images.unsplash.com/photo-1455390582262-044cdead277a?w=600&h=400&fit=crop',
+  },
+  {
+    id: 9,
+    title: 'Why Paid Guest Posting is the Key to Building Credibility and Driving Traffic',
+    excerpt:
+      'Paid guest posting is a content marketing strategy where a fee is paid to publish an article on another website. Guest posting directly on credible, high-quality, niche-specific domains is a guaranteed tool for building credibility...',
+    category: 'Content Marketing',
+    readTime: '12 min read',
+    date: 'Dec 12, 2025',
+    image: 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=600&h=400&fit=crop',
+  },
 ];
 
 export default function Blog() {
@@ -72,17 +122,17 @@ export default function Blog() {
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
         <section
-          className="py-20 px-6 bg-gradient-to-br from-lightBlue to-white"
+          className="py-12 sm:py-20 px-4 sm:px-6 bg-gradient-to-br from-lightBlue to-white"
           data-aos="fade-up"
         >
           <div className="container mx-auto max-w-4xl text-center">
             <div className="flex items-center justify-center mb-6">
-              <FaBookOpen className="text-6xl text-primary mr-4" />
+              <FaBookOpen className="text-4xl sm:text-5xl md:text-6xl text-primary mr-4" />
             </div>
-            <h1 className="font-heading text-4xl md:text-5xl font-bold text-primary mb-6">
+            <h1 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-6">
               What's <span className="text-secondary">cooking</span> inside our house?
             </h1>
-            <p className="text-lg md:text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto px-4 sm:px-0">
               Get the latest tips, discussions, market trends, and expert insights on digital
               marketing, eCommerce strategies, health & wellness, and sustainable agriculture
               practices.
@@ -91,9 +141,9 @@ export default function Blog() {
         </section>
 
         {/* Blog Posts Grid */}
-        <section className="py-16 px-6 bg-gray-50" data-aos="fade-up">
+        <section className="py-12 sm:py-16 px-4 sm:px-6 bg-gray-50" data-aos="fade-up">
           <div className="container mx-auto max-w-6xl">
-            <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary text-center mb-12">
+            <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold text-primary text-center mb-12">
               The <span className="text-secondary">more</span> you know
             </h2>
 

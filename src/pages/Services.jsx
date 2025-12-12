@@ -220,10 +220,10 @@ export default function Services() {
 
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
-        <section className="py-20 px-6 bg-gradient-to-br from-lightBlue to-white">
+        <section className="py-12 sm:py-20 px-4 sm:px-6 bg-gradient-to-br from-lightBlue to-white">
           <div className="container mx-auto max-w-4xl text-center">
             <motion.h1
-              className="font-heading text-4xl md:text-5xl font-bold text-primary mb-8"
+              className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-8"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -231,7 +231,7 @@ export default function Services() {
               Content Writing <span className="text-secondary">Services</span>
             </motion.h1>
             <motion.p
-              className="text-lg md:text-xl text-gray-700 leading-relaxed max-w-8xl mx-auto"
+              className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed max-w-8xl mx-auto px-4 sm:px-0"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -252,7 +252,7 @@ export default function Services() {
         </section>
 
         {/* Services Section */}
-        <section className="py-20 px-6 bg-gray-50" data-aos="fade-up">
+        <section className="py-12 sm:py-20 px-4 sm:px-6 bg-gray-50" data-aos="fade-up">
           <div className="container mx-auto">
             <motion.div
               className="text-center mb-16"
@@ -261,10 +261,10 @@ export default function Services() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary mb-4">
+              <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-4">
                 Our <span className="text-secondary">Services</span>
               </h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">
+              <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-4 sm:px-0">
                 Comprehensive digital marketing solutions tailored to your business needs
               </p>
             </motion.div>
