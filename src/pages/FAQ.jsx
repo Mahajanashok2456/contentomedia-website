@@ -112,7 +112,7 @@ export default function FAQ() {
         <title>FAQ | Contentora Media</title>
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-lightBlue to-white py-20 px-4 relative overflow-hidden">
+      <div className="min-h-screen bg-gradient-to-br from-lightBlue to-white py-12 sm:py-20 px-4 relative overflow-hidden">
         {/* Animated Illustration */}
         <motion.div
           ref={illustrationRef}
@@ -170,7 +170,7 @@ export default function FAQ() {
             transition={{ delay: 0.2, duration: 0.3, ease: 'easeOut' }}
           >
             <motion.h1
-              className="font-heading text-4xl md:text-5xl font-bold text-primary tracking-tight mb-4"
+              className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary tracking-tight mb-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.3, ease: 'easeOut' }}
@@ -179,7 +179,7 @@ export default function FAQ() {
               Frequently <span className="text-secondary">Asked</span> Questions
             </motion.h1>
             <motion.p
-              className="text-lg text-gray-700 max-w-2xl mx-auto"
+              className="text-base sm:text-lg text-gray-700 max-w-2xl mx-auto px-4 sm:px-0"
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.3, ease: 'easeOut' }}

@@ -110,4 +110,80 @@
   .blog-content blockquote {
     @apply border-l-4 border-secondary bg-lightBlue p-6 my-6 italic text-gray-700;
   }
+
+  /* Mobile Optimizations */
+  @media (max-width: 640px) {
+    body {
+      @apply text-base;
+    }
+
+    /* Better text alignment and spacing on mobile */
+    p {
+      @apply text-left leading-relaxed;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      @apply leading-tight;
+    }
+
+    /* Mobile-friendly containers */
+    .container {
+      @apply px-4;
+    }
+
+    /* Better touch targets for mobile */
+    button,
+    a {
+      min-height: 44px;
+      @apply inline-flex items-center justify-center;
+    }
+
+    /* Optimize card spacing on mobile */
+    .service-card,
+    .highlight-card,
+    .benefit-card,
+    .client-card {
+      @apply mb-4;
+    }
+
+    /* Better paragraph formatting for mobile */
+    .blog-content p {
+      @apply text-base leading-7 mb-4 text-left;
+    }
+
+    .blog-content .lead-text {
+      @apply text-lg leading-8 mb-6 text-left;
+    }
+
+    .blog-content h2 {
+      @apply text-xl mt-8 mb-4 text-left;
+    }
+
+    .blog-content h3 {
+      @apply text-lg mt-6 mb-3 text-left;
+    }
+
+    /* Mobile-friendly lists */
+    .blog-content ul,
+    .blog-content ol {
+      @apply ml-4 text-left;
+    }
+
+    .blog-content ul li,
+    .blog-content ol li {
+      @apply text-sm leading-6 mb-2;
+    }
+  }
+
+  /* Tablet optimizations */
+  @media (min-width: 641px) and (max-width: 1024px) {
+    .container {
+      @apply px-6;
+    }
+  }
 }

@@ -20,13 +20,13 @@ export default function PPC() {
 
       <div className="min-h-screen bg-white">
         {/* Hero */}
-        <section className="py-16 px-6 bg-gradient-to-br from-orange-50 via-white to-blue-50">
+        <section className="py-12 sm:py-16 px-4 sm:px-6 bg-gradient-to-br from-orange-50 via-white to-blue-50">
           <div className="max-w-5xl mx-auto text-center">
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="font-heading text-4xl md:text-5xl font-bold text-primary mb-6"
+              className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-6"
             >
               PPC <span className="text-secondary">Management</span>
             </motion.h1>
@@ -34,7 +34,7 @@ export default function PPC() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.15 }}
-              className="text-lg md:text-xl text-gray-700 leading-relaxed"
+              className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed px-4 sm:px-0"
             >
               Making the most of site visits with accuracy. Drive qualified traffic with precision
               and maximise value out of every advertising investment.
@@ -43,7 +43,7 @@ export default function PPC() {
         </section>
 
         {/* Content Body */}
-        <section className="px-6 pb-24">
+        <section className="px-4 sm:px-6 pb-16 sm:pb-24">
           <div className="max-w-4xl mx-auto space-y-12 text-gray-700">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
