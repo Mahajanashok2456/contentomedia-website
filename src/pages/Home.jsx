@@ -356,7 +356,11 @@ export default function Home() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4, duration: 0.3, ease: 'easeOut' }}
                 >
-                  <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="w-full sm:w-auto">
+                  <motion.div
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="w-full sm:w-auto"
+                  >
                     <Link
                       to="/about"
                       className="hero-cta bg-primary text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition font-semibold block text-center sm:inline-block"
@@ -634,7 +638,11 @@ export default function Home() {
         </section>
 
         {/* Services */}
-        <section ref={servicesRef} className="py-12 sm:py-20 px-4 sm:px-6 bg-white" data-aos="fade-up">
+        <section
+          ref={servicesRef}
+          className="py-12 sm:py-20 px-4 sm:px-6 bg-white"
+          data-aos="fade-up"
+        >
           <div className="container mx-auto text-center mb-12">
             <h2 className="font-heading text-primary text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900">
               Our <span className="text-secondary">Services</span>
@@ -772,7 +780,10 @@ export default function Home() {
         </section>
 
         {/* Testimonials */}
-        <section className="py-12 sm:py-20 px-4 sm:px-6 bg-lightBlue testimonials" data-aos="fade-up">
+        <section
+          className="py-12 sm:py-20 px-4 sm:px-6 bg-lightBlue testimonials"
+          data-aos="fade-up"
+        >
           <div ref={testimonialsRef} className="container mx-auto text-center mb-12">
             <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-primary font-bold text-gray-900">
               What Our <span className="text-secondary">Clients</span> Say
@@ -785,7 +796,11 @@ export default function Home() {
         </section>
 
         {/* Pricing / Plans */}
-        <section ref={pricingRef} className="py-12 sm:py-20 px-4 sm:px-6 bg-white" data-aos="fade-up">
+        <section
+          ref={pricingRef}
+          className="py-12 sm:py-20 px-4 sm:px-6 bg-white"
+          data-aos="fade-up"
+        >
           <div className="container mx-auto text-center mb-8">
             <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl text-primary font-bold">
               Allot your <span className="text-secondary">budget</span> rationally with us
@@ -853,7 +868,9 @@ export default function Home() {
 
         <section ref={blogsRef} className="py-12 sm:py-20 px-4 sm:px-6 bg-white" data-aos="fade-up">
           <div className="container mx-auto text-center mb-8">
-            <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl text-primary font-bold">Our Blogs</h2>
+            <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl text-primary font-bold">
+              Our Blogs
+            </h2>
             <p className="font-body text-lg sm:text-xl font-bold text-gray-800 mt-4 mb-8 px-4 sm:px-0">
               Read our blogs and get to know more about us on this journey!!
             </p>
@@ -897,7 +914,10 @@ export default function Home() {
         </section>
 
         {/* CTA */}
-        <section className="py-12 sm:py-16 px-4 sm:px-6 bg-orange-400 text-white" data-aos="fade-up">
+        <section
+          className="py-12 sm:py-16 px-4 sm:px-6 bg-orange-400 text-white"
+          data-aos="fade-up"
+        >
           <div className="container mx-auto text-center">
             <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold">
               Ready to Elevate Your Content?

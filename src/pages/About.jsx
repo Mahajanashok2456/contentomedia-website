@@ -402,9 +402,14 @@ export default function About() {
         </section>
 
         {/* Contact */}
-        <section className="py-12 sm:py-20 px-4 sm:px-6 bg-orange-400 text-white" data-aos="fade-up">
+        <section
+          className="py-12 sm:py-20 px-4 sm:px-6 bg-orange-400 text-white"
+          data-aos="fade-up"
+        >
           <div ref={contactRef} className="container mx-auto text-center">
-            <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Get in touch</h2>
+            <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
+              Get in touch
+            </h2>
             <p className="mb-6 text-base sm:text-lg px-4 sm:px-0">
               Have a project or an idea? Tell us about it — we’ll help you bring it to life.
             </p>

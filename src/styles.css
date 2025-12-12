@@ -122,7 +122,12 @@
       @apply text-left leading-relaxed;
     }
 
-    h1, h2, h3, h4, h5, h6 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
       @apply leading-tight;
     }
 
@@ -132,7 +137,8 @@
     }
 
     /* Better touch targets for mobile */
-    button, a {
+    button,
+    a {
       min-height: 44px;
       @apply inline-flex items-center justify-center;
     }
